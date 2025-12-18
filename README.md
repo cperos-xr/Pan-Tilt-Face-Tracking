@@ -25,6 +25,11 @@ This app lets you control a pan-tilt camera rig using face tracking, directly fr
 	- Face tracking status (ON/OFF)
 
 
+
+## ESP32 Setup
+
+To use the pan-tilt hardware, you must install the ESP32 control files (firmware) from this GitHub repository onto your ESP32 device. Use ArduinoIDE or a similar process to upload the firmware. See the ESP32 Files folder in the repo for details.
+
 ## How to Use
 
 1. **Install the APK** on your Android device.

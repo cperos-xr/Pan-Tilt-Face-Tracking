@@ -1,3 +1,9 @@
+# 3D Printed Pan-Tilt Rig
+
+You can download the 3D model for the pan-tilt camera rig here:
+
+[Download 3D Model on Thingiverse](https://www.thingiverse.com/thing:7233469)
+
 ![App Screenshot](./newColors.png)
 
 # Pan-Tilt Face Tracking App

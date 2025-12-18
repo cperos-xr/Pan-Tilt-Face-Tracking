@@ -24,19 +24,22 @@ This app lets you control a pan-tilt camera rig using face tracking, directly fr
 - **Status Display:**
 	- Face tracking status (ON/OFF)
 
+
 ## How to Use
 
 1. **Install the APK** on your Android device.
-2. **Launch the app.**
-3. The camera feed will appear at the top, with face tracking enabled by default.
-4. Use the on-screen controls to:
-	 - Adjust tracking sensitivity and movement
-	 - Manually control the pan-tilt rig
-	 - Toggle camera and display modes
-	 - Change camera source (front/rear)
-5. For fullscreen camera view, tap the expand button in the top right corner.
-6. To restore regular size, tap the restore button.
-7. All controls are touch-friendly and designed for quick access.
+2. **Connect your pan-tilt hardware via USB.**
+	- **Note:** BLE (Bluetooth Low Energy) channel is not active yet, but will be available soon. For now, use USB connection for hardware control.
+3. **Launch the app.**
+4. The camera feed will appear at the top, with face tracking enabled by default.
+5. Use the on-screen controls to:
+	- Adjust tracking sensitivity and movement
+	- Manually control the pan-tilt rig
+	- Toggle camera and display modes
+	- Change camera source (front/rear)
+6. For fullscreen camera view, tap the expand button in the top right corner.
+7. To restore regular size, tap the restore button.
+8. All controls are touch-friendly and designed for quick access.
 
 ## Reference UI
 
@@ -44,18 +47,9 @@ The screenshot below shows all available controls and features:
 
 ![App Screenshot](./newColors.png)
 
-## FAQ
-
-- **Do I need Unity or OpenCV knowledge?**
-	- No! Just use the APK. All features are available out of the box.
-- **Can I use this with my own pan-tilt hardware?**
-	- Yes, if your hardware supports the ESP32 JSON command protocol.
-- **Where do I get the APK?**
-	- Check the Releases section for the latest APK.
-
 ## Support
 
-For troubleshooting or hardware setup, see the included documentation or contact the project maintainer.
+For troubleshooting or hardware setup, see the included documentation
 
 ---
 MIT License. ESP32 firmware and third-party assets subject to their own licenses.

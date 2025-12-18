@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "ESP32.sln"
+    "dotnet.defaultSolution": "Pan-Tilt-Face-Tracking.sln"
 }

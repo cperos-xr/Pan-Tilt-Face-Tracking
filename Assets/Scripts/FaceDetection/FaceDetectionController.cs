@@ -23,6 +23,9 @@ public class FaceDetectionController : MonoBehaviour
     /// </summary>
     public RawImage resultPreview;
 
+    [Tooltip("The RawImage for fullscreen previewing the result. (Optional)")]
+    public RawImage fullscreenPreview;
+
     [Header("Camera Rotation Fix")]
     [Tooltip("Enable this if your webcam feed appears rotated 90 degrees")]
     public bool rotate90Degree = false;
@@ -85,8 +88,11 @@ public class FaceDetectionController : MonoBehaviour
     {
         fpsMonitor = GetComponent<OpenCVForUnityExample.FpsMonitor>();
 
+
         multiSource2MatHelper = gameObject.GetComponent<MultiSource2MatHelper>();
         multiSource2MatHelper.outputColorFormat = Source2MatHelperColorFormat.RGBA;
+        // Select front facing camera by default
+        multiSource2MatHelper.requestedIsFrontFacing = true;
 
         // Asynchronously retrieves the readable file path from the StreamingAssets directory.
         if (fpsMonitor != null)
@@ -171,6 +177,13 @@ public class FaceDetectionController : MonoBehaviour
         {
             resultPreview.texture = texture;
             var aspectFitter = resultPreview.GetComponent<AspectRatioFitter>();
+            if (aspectFitter != null)
+                aspectFitter.aspectRatio = (float)texture.width / texture.height;
+        }
+        if (fullscreenPreview != null)
+        {
+            fullscreenPreview.texture = texture;
+            var aspectFitter = fullscreenPreview.GetComponent<AspectRatioFitter>();
             if (aspectFitter != null)
                 aspectFitter.aspectRatio = (float)texture.width / texture.height;
         }

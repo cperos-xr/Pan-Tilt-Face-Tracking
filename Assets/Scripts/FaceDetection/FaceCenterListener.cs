@@ -6,17 +6,17 @@ public class FaceCenterListener : MonoBehaviour
 {
     [SerializeField] private PanTiltController controller;
     // Thresholds in pixels (adjust as needed)
-    public float thresholdX = 35f;
+    public float thresholdX = 70f;
     public float thresholdY = 35f;
 
     [Tooltip("Base degrees to nudge per correction step.")]
-    public float stepDegrees = 5f;
+    public float stepDegrees = 3f;
 
     [Tooltip("Clamp step size to avoid over-correction.")]
-    public float maxStepDegrees = 10f;
+    public float maxStepDegrees = 7f;
 
     [Tooltip("Minimum step when correction triggers.")]
-    public float minStepDegrees = 1.5f;
+    public float minStepDegrees = 1f;
 
     [Tooltip("Scale step by how far past the threshold the face is.")]
     public bool scaleStepByError = true;

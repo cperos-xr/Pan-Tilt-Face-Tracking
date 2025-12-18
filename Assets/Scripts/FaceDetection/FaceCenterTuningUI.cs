@@ -14,6 +14,7 @@ public class FaceCenterTuningUI : MonoBehaviour
     [SerializeField] private TMP_InputField stepField;
     [SerializeField] private TMP_InputField minStepField;
     [SerializeField] private TMP_InputField maxStepField;
+    [SerializeField] private Button faceTrackingToggleButton;
     [SerializeField] private Toggle allowDiagonalToggle;
     [SerializeField] private Toggle scaleByErrorToggle;
 
@@ -36,11 +37,44 @@ public class FaceCenterTuningUI : MonoBehaviour
         Bind(minStepField, () => listener.minStepDegrees, v => listener.minStepDegrees = Mathf.Max(0f, v));
         Bind(maxStepField, () => listener.maxStepDegrees, v => listener.maxStepDegrees = Mathf.Max(listener.minStepDegrees, v));
 
+        if (faceTrackingToggleButton !=null)
+        {
+            faceTrackingToggleButton.onClick.AddListener(ToggleFaceTracking);
+            ToggleFaceTracking();
+        }
         if (allowDiagonalToggle != null)
+        {
             allowDiagonalToggle.onValueChanged.AddListener(val => listener.allowDiagonal = val);
+        }
         if (scaleByErrorToggle != null)
+        {
             scaleByErrorToggle.onValueChanged.AddListener(val => listener.scaleStepByError = val);
+        }
     }
+
+    private void ToggleFaceTracking()
+    {
+        if (listener.faceTrackingIsOn)
+        {
+            listener.faceTrackingIsOn = false;
+            TextMeshProUGUI btnText = faceTrackingToggleButton.GetComponentInChildren<TextMeshProUGUI>();
+            if (btnText != null)
+            {
+                btnText.text = "Face Tracking: OFF";
+            }
+        }
+        else
+        {
+            listener.faceTrackingIsOn = true;
+            TextMeshProUGUI btnText = faceTrackingToggleButton.GetComponentInChildren<TextMeshProUGUI>();
+            if (btnText != null)
+            {
+                btnText.text = "Face Tracking: ON";
+            }
+        }
+    }
+
+
 
     private void OnDisable()
     {

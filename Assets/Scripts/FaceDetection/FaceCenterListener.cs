@@ -32,6 +32,8 @@ public class FaceCenterListener : MonoBehaviour
     [SerializeField] private Color activeColor = new Color(1f, 0.35f, 0.2f, 0.85f);
     [SerializeField] private Color idleColor = new Color(1f, 1f, 1f, 0.15f);
 
+    public bool faceTrackingIsOn = true;
+
     void OnEnable()
     {
         YuNetV2FaceDetector.OnFaceOffsetVector2Sent += HandleFaceOffset;
@@ -44,58 +46,61 @@ public class FaceCenterListener : MonoBehaviour
 
     private void HandleFaceOffset(Vector2 offset)
     {
-        Debug.Log($"Face offset from center: X={offset.x:F1}, Y={offset.y:F1}");
-
-        // Explicit directional cases
-        bool moveLeft = offset.x < -thresholdX;
-        bool moveRight = offset.x > thresholdX;
-        bool moveUp = offset.y < -thresholdY;
-        bool moveDown = offset.y > thresholdY;
-
-        float dx = 0f;
-        float dy = 0f;
-
-        if (allowDiagonal)
+        if(faceTrackingIsOn)
         {
-            float stepX = ComputeStepMagnitude(offset.x, thresholdX);
-            float stepY = ComputeStepMagnitude(offset.y, thresholdY);
+            Debug.Log($"Face offset from center: X={offset.x:F1}, Y={offset.y:F1}");
 
-            if (moveLeft) dx -= stepX;
-            if (moveRight) dx += stepX;
-            if (moveUp) dy -= stepY;
-            if (moveDown) dy += stepY;
-        }
-        else
-        {
-            // Move on the dominant axis only
-            float absX = Mathf.Abs(offset.x);
-            float absY = Mathf.Abs(offset.y);
-            if (absX > absY)
+            // Explicit directional cases
+            bool moveLeft = offset.x < -thresholdX;
+            bool moveRight = offset.x > thresholdX;
+            bool moveUp = offset.y < -thresholdY;
+            bool moveDown = offset.y > thresholdY;
+
+            float dx = 0f;
+            float dy = 0f;
+
+            if (allowDiagonal)
             {
                 float stepX = ComputeStepMagnitude(offset.x, thresholdX);
-                if (moveLeft) dx = -stepX;
-                else if (moveRight) dx = stepX;
+                float stepY = ComputeStepMagnitude(offset.y, thresholdY);
+
+                if (moveLeft) dx -= stepX;
+                if (moveRight) dx += stepX;
+                if (moveUp) dy -= stepY;
+                if (moveDown) dy += stepY;
             }
             else
             {
-                float stepY = ComputeStepMagnitude(offset.y, thresholdY);
-                if (moveUp) dy = -stepY;
-                else if (moveDown) dy = stepY;
+                // Move on the dominant axis only
+                float absX = Mathf.Abs(offset.x);
+                float absY = Mathf.Abs(offset.y);
+                if (absX > absY)
+                {
+                    float stepX = ComputeStepMagnitude(offset.x, thresholdX);
+                    if (moveLeft) dx = -stepX;
+                    else if (moveRight) dx = stepX;
+                }
+                else
+                {
+                    float stepY = ComputeStepMagnitude(offset.y, thresholdY);
+                    if (moveUp) dy = -stepY;
+                    else if (moveDown) dy = stepY;
+                }
             }
-        }
 
-        if (dx != 0f || dy != 0f)
-        {
-            string dir = $"dx={dx:F1}, dy={dy:F1}";
-            Debug.LogWarning($"PanTilt adjust | {dir} | offset X={offset.x:F1}, Y={offset.y:F1}");
-            controller?.Adjust("xy", dx, dy);
-        }
+            if (dx != 0f || dy != 0f)
+            {
+                string dir = $"dx={dx:F1}, dy={dy:F1}";
+                Debug.LogWarning($"PanTilt adjust | {dir} | offset X={offset.x:F1}, Y={offset.y:F1}");
+                controller?.Adjust("xy", dx, dy);
+            }
 
-        // Update UI indicators to show commanded direction
-        SetIndicator(leftIndicator, moveLeft);
-        SetIndicator(rightIndicator, moveRight);
-        SetIndicator(upIndicator, moveUp);
-        SetIndicator(downIndicator, moveDown);
+            // Update UI indicators to show commanded direction
+            SetIndicator(leftIndicator, moveLeft);
+            SetIndicator(rightIndicator, moveRight);
+            SetIndicator(upIndicator, moveUp);
+            SetIndicator(downIndicator, moveDown);
+        }
     }
 
     private void SetIndicator(Image img, bool active)

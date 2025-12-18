@@ -1,4 +1,4 @@
-![App Screenshot](./screenshot.png)
+![App Screenshot](./newColors.png)
 
 # Pan-Tilt Face Tracking App
 
@@ -42,7 +42,7 @@ This app lets you control a pan-tilt camera rig using face tracking, directly fr
 
 The screenshot below shows all available controls and features:
 
-![App Screenshot](./screenshot.png)
+![App Screenshot](./newColors.png)
 
 ## FAQ
 

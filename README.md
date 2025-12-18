@@ -52,11 +52,7 @@ To use the pan-tilt hardware, you must install the ESP32 control files (firmware
 7. To restore regular size, tap the restore button.
 8. All controls are touch-friendly and designed for quick access.
 
-## Reference UI
 
-The screenshot below shows all available controls and features:
-
-![App Screenshot](./newColors.png)
 
 ## Support
 

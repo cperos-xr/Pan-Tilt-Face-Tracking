@@ -1,3 +1,6 @@
+# Required Unity Asset
+
+This project requires the paid [OpenCVForUnity](https://assetstore.unity.com/packages/tools/integration/opencv-for-unity-21088) asset from the Unity Asset Store. You must purchase and import this asset into your Unity project for the app to function. The asset is not included in this repository due to licensing restrictions.
 # 3D Printed Pan-Tilt Rig
 
 You can download the 3D model for the pan-tilt camera rig here:

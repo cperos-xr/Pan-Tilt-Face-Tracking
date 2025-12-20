@@ -22,7 +22,7 @@ public class CameraUIControls : MonoBehaviour
     public MultiSource2MatHelper multiSource2MatHelper;
 
     private bool cameraOn = true;
-    private bool isFullscreen = false;
+    //private bool isFullscreen = false;
 
     void Start()
     {
@@ -66,7 +66,7 @@ public class CameraUIControls : MonoBehaviour
     {
         if (fullscreenPanel != null) fullscreenPanel.SetActive(true);
         if (regularPanel != null) regularPanel.SetActive(false);
-        isFullscreen = true;
+        //isFullscreen = true;
     }
 
     // Show regular panel, hide fullscreen
@@ -74,7 +74,7 @@ public class CameraUIControls : MonoBehaviour
     {
         if (fullscreenPanel != null) fullscreenPanel.SetActive(false);
         if (regularPanel != null) regularPanel.SetActive(true);
-        isFullscreen = false;
+        //isFullscreen = false;
     }
 
     // Helper to ensure only regular panel is shown at start
@@ -82,6 +82,6 @@ public class CameraUIControls : MonoBehaviour
     {
         if (fullscreenPanel != null) fullscreenPanel.SetActive(false);
         if (regularPanel != null) regularPanel.SetActive(true);
-        isFullscreen = false;
+        //isFullscreen = false;
     }
 }

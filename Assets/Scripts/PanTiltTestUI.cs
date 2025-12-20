@@ -2,10 +2,12 @@ using UnityEngine;
 using UnityEngine.UI;
 
 // Simple test UI wiring for Pan/Tilt controller.
+
 public class PanTiltTestUI : MonoBehaviour
 {
     [Header("Refs")]
     [SerializeField] private PanTiltController controller;
+    [SerializeField] private ConnectionTypeHandler connectionHandler;
 
     [Header("Buttons")]
     [SerializeField] private Button upButton;
@@ -25,19 +27,26 @@ public class PanTiltTestUI : MonoBehaviour
     [SerializeField] private float sweepDuration = 5f;
     [SerializeField] private float sweepDwell = 0.1f;
 
+
     private void Awake()
     {
-        Bind(upButton,    () => controller?.Adjust("y", 0f,  -stepDegrees));
-        Bind(downButton,  () => controller?.Adjust("y", 0f, stepDegrees));
-        Bind(leftButton,  () => controller?.Adjust("x", -stepDegrees, 0f));
-        Bind(rightButton, () => controller?.Adjust("x",  stepDegrees, 0f));
-        Bind(sweepXButton, () => controller?.Sweep("x", -90f, 90f, sweepDuration, 3, sweepDwell));
-        Bind(sweepYButton, () => controller?.Sweep("y", -90f, 90f, sweepDuration, 3, sweepDwell));
-        Bind(stopButton, () => controller?.StopAll());
-        Bind(clearQueueButton, () => controller?.ClearQueue());
-        Bind(flipXButton, () => controller?.ToggleInvertX());
-        Bind(flipYButton, () => controller?.ToggleInvertY());
-        Bind(centerButton, () => controller?.Center());
+        Bind(upButton,    () => Send(controller?.GetAdjustCommand("y", 0f,  -stepDegrees)));
+        Bind(downButton,  () => Send(controller?.GetAdjustCommand("y", 0f, stepDegrees)));
+        Bind(leftButton,  () => Send(controller?.GetAdjustCommand("x", -stepDegrees, 0f)));
+        Bind(rightButton, () => Send(controller?.GetAdjustCommand("x",  stepDegrees, 0f)));
+        Bind(sweepXButton, () => Send(controller?.GetSweepCommand("x", -90f, 90f, sweepDuration, 3, sweepDwell)));
+        Bind(sweepYButton, () => Send(controller?.GetSweepCommand("y", -90f, 90f, sweepDuration, 3, sweepDwell)));
+        Bind(stopButton, () => Send(controller?.GetStopAllCommand()));
+        Bind(clearQueueButton, () => Send(controller?.GetClearQueueCommand()));
+        Bind(flipXButton, () => Send(controller?.GetToggleInvertXCommand()));
+        Bind(flipYButton, () => Send(controller?.GetToggleInvertYCommand()));
+        Bind(centerButton, () => Send(controller?.GetCenterCommand()));
+    }
+
+    private void Send(string json)
+    {
+        if (!string.IsNullOrEmpty(json) && connectionHandler != null)
+            connectionHandler.SendPanTiltCommand(json);
     }
 
     private void Bind(Button btn, System.Action action)

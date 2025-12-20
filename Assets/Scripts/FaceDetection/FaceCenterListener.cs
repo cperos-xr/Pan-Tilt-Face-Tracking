@@ -5,6 +5,12 @@ using OpenCVForUnityExample.DnnModel;
 public class FaceCenterListener : MonoBehaviour
 {
     [SerializeField] private PanTiltController controller;
+    [SerializeField] private ConnectionTypeHandler connectionHandler;
+
+    [Header("BLE Rate Limiting")]
+    [Tooltip("Minimum seconds between BLE commands (0.05 = 20Hz, 0.1 = 10Hz)")]
+    public float bleCommandInterval = 0.08f;
+    private float lastBleCommandTime = -100f;
     // Thresholds in pixels (adjust as needed)
     public float thresholdX = 70f;
     public float thresholdY = 35f;
@@ -92,7 +98,18 @@ public class FaceCenterListener : MonoBehaviour
             {
                 string dir = $"dx={dx:F1}, dy={dy:F1}";
                 Debug.LogWarning($"PanTilt adjust | {dir} | offset X={offset.x:F1}, Y={offset.y:F1}");
-                controller?.Adjust("xy", dx, dy);
+                if (controller != null && connectionHandler != null)
+                {
+                    bool isBLE = connectionHandler.CurrentConnectionType == ConnectionType.BLE;
+                    if (isBLE)
+                    {
+                        if (Time.time - lastBleCommandTime < bleCommandInterval)
+                            return;
+                        lastBleCommandTime = Time.time;
+                    }
+                    string json = controller.GetAdjustCommand("xy", dx, dy);
+                    connectionHandler.SendPanTiltCommand(json);
+                }
             }
 
             // Update UI indicators to show commanded direction

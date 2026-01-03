@@ -64,22 +64,25 @@ public class QRCodeScanner : MonoBehaviour
 
     public QRCode GetCurrentQRCodeFromText(string text)
     {
-        // Example format: id|index|total|data
+        // Example format: id|type|index|total|data
         if (string.IsNullOrEmpty(text))
             return null;
 
         var parts = text.Split('|');
-        if (parts.Length < 4)
+        if (parts.Length < 5)
             return null;
 
         QRCode qr = new QRCode();
         qr.Id = parts[0];
+        QRCodeType parsedType = QRCodeType.SDP;
+        Enum.TryParse(parts[1], out parsedType);
+        qr.Type = parsedType;
         int idx, tot;
-        if (int.TryParse(parts[1], out idx))
+        if (int.TryParse(parts[2], out idx))
             qr.Index = idx;
-        if (int.TryParse(parts[2], out tot))
+        if (int.TryParse(parts[3], out tot))
             qr.Total = tot;
-        qr.Data = parts[3];
+        qr.Data = string.Join("|", parts, 4, parts.Length - 4);
         return qr;
     }
 

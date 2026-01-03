@@ -12,26 +12,30 @@ public static class QRCodeUtil
     private class QRChunk
     {
         public string id;
+        public QRCodeType type;
         public int index;
         public int total;
         public string data;
 
         public override string ToString()
         {
-            // Compact pipe-delimited format
-            return $"{id}|{index}|{total}|{data}";
+            // Format: id|type|index|total|data
+            return $"{id}|{type}|{index}|{total}|{data}";
         }
 
         public static QRChunk Parse(string chunkStr)
         {
             var parts = chunkStr.Split('|');
-            if (parts.Length < 4) return null;
+            if (parts.Length < 5) return null;
+            QRCodeType parsedType = QRCodeType.SDP;
+            Enum.TryParse(parts[1], out parsedType);
             return new QRChunk
             {
                 id = parts[0],
-                index = int.Parse(parts[1]),
-                total = int.Parse(parts[2]),
-                data = string.Join("|", parts, 3, parts.Length - 3)
+                type = parsedType,
+                index = int.Parse(parts[2]),
+                total = int.Parse(parts[3]),
+                data = string.Join("|", parts, 4, parts.Length - 4)
             };
         }
     }
@@ -98,6 +102,11 @@ public static class QRCodeUtil
     /// </summary>
     public static List<string> SplitToChunks(string input, int maxDataLen)
     {
+        return SplitToChunksWithType(input, maxDataLen, QRCodeType.SDP);
+    }
+
+    public static List<string> SplitToChunksWithType(string input, int maxDataLen, QRCodeType type)
+    {
         var id = Guid.NewGuid().ToString("N");
         var chunks = new List<string>();
         int total = (input.Length + maxDataLen - 1) / maxDataLen;
@@ -108,6 +117,7 @@ public static class QRCodeUtil
             var chunk = new QRChunk
             {
                 id = id,
+                type = type,
                 index = i,
                 total = total,
                 data = input.Substring(start, len)

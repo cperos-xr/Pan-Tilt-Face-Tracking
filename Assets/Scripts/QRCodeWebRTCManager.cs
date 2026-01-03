@@ -15,6 +15,7 @@ public enum QRCodeType
 public class QRCode
 {
     public string Id;
+    public QRCodeType Type;
     public int Index;
     public int Total;
     public string Data;
@@ -52,6 +53,8 @@ public class QRCodeWebRTCManager : MonoBehaviour
 
     [TextArea(5, 10)]
     public string compressedSDPData = "";
+    [TextArea(5, 10)]
+    public string compressedICEData = "";
 
     private QRCodeType qrCodeType = QRCodeType.SDP;
     //private bool qrCodeType = true;
@@ -99,14 +102,14 @@ public class QRCodeWebRTCManager : MonoBehaviour
     private void OnICECreated(string desc)
     {
         Debug.Log("ICE Created: " + desc);
-        ICEData = desc;
+        compressedICEData = StringCompressor.CompressToBase64(desc);
         totalICEChunks = 1;
-        if (ICEData.Length > 1000)
+        if (compressedICEData.Length > 1000)
         {
-            totalICEChunks = Mathf.CeilToInt((float)ICEData.Length / maxChunkDataLen);
+            totalICEChunks = Mathf.CeilToInt((float)compressedICEData.Length / maxChunkDataLen);
         }
         // Convert ICE to QR code chunks
-        qrICEChunksPreview = QRCodeUtil.EncodeStringToQRChunks(ICEData, maxChunkDataLen, totalICEChunks);
+        qrICEChunksPreview = QRCodeUtil.EncodeStringToQRChunks(compressedICEData, maxChunkDataLen, totalICEChunks);
         currentICEChunkIndex = 0;
         totalICEChunks = qrICEChunksPreview.Count;
     }
@@ -114,18 +117,15 @@ public class QRCodeWebRTCManager : MonoBehaviour
     private void OnSDPCreated(string desc)
     {
         Debug.Log("SDP Created: " + desc);
-        SDPData = desc;
-        string compressedText = StringCompressor.CompressToBase64(SDPData);
-        compressedSDPData = compressedText;
+        string compressedSDPData = StringCompressor.CompressToBase64(desc);
+        this.compressedSDPData = compressedSDPData;
         totalSDPChunks = 1;
-        if (compressedText.Length > 1000)
+        if (compressedSDPData.Length > 1000)
         {
             totalSDPChunks = Mathf.CeilToInt((float)desc.Length / maxChunkDataLen);
         }
-        
         // Convert SDP to QR code chunks
-        qrSDPChunksPreview = QRCodeUtil.EncodeStringToQRChunks(compressedText, maxChunkDataLen, totalSDPChunks);
-        
+        qrSDPChunksPreview = QRCodeUtil.EncodeStringToQRChunks(compressedSDPData, maxChunkDataLen, totalSDPChunks);
         currentSDPChunkIndex = 0;
         totalSDPChunks = qrSDPChunksPreview.Count;
     }

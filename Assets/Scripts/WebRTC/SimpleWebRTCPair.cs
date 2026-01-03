@@ -81,6 +81,7 @@ public class SimpleWebRTCPair : MonoBehaviour
     public TMP_InputField localSdpOutput; // multiline
     [Tooltip("Local ICE candidates gathered (one per line) to copy/paste.")]
     public TMP_InputField localIceOutput; // multiline
+    private string allLocalIceOutput = "";
 
     [Header("UI - Video")]
     public RawImage localVideoImage;
@@ -430,7 +431,14 @@ public class SimpleWebRTCPair : MonoBehaviour
 
         _pc.OnIceCandidate = OnIceCandidate;
         _pc.OnIceConnectionChange = state => Log($"ICE connection state: {state}");
-        _pc.OnIceGatheringStateChange = state => Log($"ICE gathering state: {state}");
+        _pc.OnIceGatheringStateChange = state =>
+        {
+            Log($"ICE gathering state: {state}");
+            if (state == RTCIceGatheringState.Complete)
+            {
+                ICECreated?.Invoke(allLocalIceOutput);
+            }
+        };
         _pc.OnConnectionStateChange = state => Log($"Peer connection state: {state}");
 
         _pc.OnTrack = e =>
@@ -513,9 +521,7 @@ public class SimpleWebRTCPair : MonoBehaviour
             Log($"Local ICE gathered: {Truncate(json, 180)}");
 
         AppendInputFieldLine(localIceOutput, json);
-
-        // ICE created event invocation
-        ICECreated?.Invoke(json);
+        allLocalIceOutput += json + "\n";
     }
 
     // =========================

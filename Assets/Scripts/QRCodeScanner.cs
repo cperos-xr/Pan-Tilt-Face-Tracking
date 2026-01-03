@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using ZXing;
 using System;
+using Unity.VisualScripting;
 
 public class QRCodeScanner : MonoBehaviour
 {
@@ -24,9 +25,9 @@ public class QRCodeScanner : MonoBehaviour
     public Button popUpButton;
 
 
-    private string qrText = "";
+    //private string qrText = "";
 
-    public delegate void OnReadQRCode(string decodedText);
+    public delegate void OnReadQRCode(ConnectionData decodedText);
     public static event OnReadQRCode QRCodeRead;
 
     private WebCamTexture _webCamTexture;
@@ -51,14 +52,17 @@ public class QRCodeScanner : MonoBehaviour
         {
             decompressedText += QRCodesArray[i].Data;
         }
+
         decompressedText = StringCompressor.DecompressFromBase64(decompressedText);
         if(resultText != null)
         {
-            qrText = decompressedText;
-            resultText.text = decompressedText;
+            //qrText = decompressedText;
             Debug.Log("Decompressed QR Text: " + decompressedText);
+            ConnectionData connectionDataText = new ConnectionData();
+            connectionDataText.data = decompressedText;
+            connectionDataText.type = QRCodesArray[0].Type;
 
-            QRCodeRead?.Invoke(decompressedText);
+            QRCodeRead?.Invoke(connectionDataText);
         }
     }
 
@@ -74,8 +78,9 @@ public class QRCodeScanner : MonoBehaviour
 
         QRCode qr = new QRCode();
         qr.Id = parts[0];
-        QRCodeType parsedType = QRCodeType.SDP;
-        Enum.TryParse(parts[1], out parsedType);
+        QRCodeType parsedType;
+        if (!Enum.TryParse(parts[1], true, out parsedType)) // true = ignore case
+            parsedType = QRCodeType.SDP; // fallback default
         qr.Type = parsedType;
         int idx, tot;
         if (int.TryParse(parts[2], out idx))
@@ -83,6 +88,7 @@ public class QRCodeScanner : MonoBehaviour
         if (int.TryParse(parts[3], out tot))
             qr.Total = tot;
         qr.Data = string.Join("|", parts, 4, parts.Length - 4);
+        Debug.Log($"Parsed QR Chunk - ID: {qr.Id}, Type: {qr.Type}, Index: {qr.Index}, Total: {qr.Total}");
         return qr;
     }
 
@@ -90,8 +96,9 @@ public class QRCodeScanner : MonoBehaviour
     {
         if (_isScanning) return;
         popUpWindow.SetActive(false);
-        qrText = "";
+        //qrText = "";
         //QRCodes.Clear();
+        //Clear out QRCodesArray
         QRCodesArray = null;
         statusText.text = "Starting camera...";
         StartCoroutine(StartCamera());
@@ -171,11 +178,11 @@ public class QRCodeScanner : MonoBehaviour
                 {
                     _isScanning = false;
                     _webCamTexture.Stop();
-                    qrText += result.Text;
+                    //qrText += result.Text;
                     //resultText.text = qrText;
                     QRCode qRCode = GetCurrentQRCodeFromText(result.Text);
 
-                    if (QRCodesArray == null || QRCodesArray.Length != qRCode.Total)
+                    if (QRCodesArray == null)
                     {
                         QRCodesArray = new QRCode[qRCode.Total];
                     }
@@ -188,11 +195,11 @@ public class QRCodeScanner : MonoBehaviour
                         int totalQrCodesRemaining = qrCodesRemaining(QRCodesArray);
                         if (totalQrCodesRemaining == 0)
                         {
-                            statusText.text = $"All {qRCode.Total} chunks scanned for QR Code {qRCode.Id}. You can now decompress.";
+                            statusText.text = $"All {qRCode.Total} chunks scanned for QR Code {qRCode.Id}. Decompressing.";
                             Debug.Log($"All {qRCode.Total} chunks scanned for QR Code {qRCode.Id}.");
                             DecompressText();
                             popUpWindow.SetActive(true);
-                            popUpWindowText.text = $"All {qRCode.Total} chunks scanned successfully.\nYou can now decompress the data.";
+                            popUpWindowText.text = $"All {qRCode.Total} chunks scanned successfully.\nWe can now decompress the data.";
                         }
                         else
                         {

@@ -8416,6 +8416,7 @@ GameObject:
   - component: {fileID: 2094472842}
   - component: {fileID: 2094472843}
   - component: {fileID: 2094472844}
+  - component: {fileID: 2094472845}
   m_Layer: 0
   m_Name: QRCode
   m_TagString: Untagged
@@ -8458,6 +8459,7 @@ MonoBehaviour:
   SDPData: 
   ICEData: 
   compressedSDPData: 
+  compressedICEData: 
 --- !u!114 &2094472844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8478,6 +8480,23 @@ MonoBehaviour:
   popUpWindow: {fileID: 965349036}
   popUpWindowText: {fileID: 2097847496}
   popUpButton: {fileID: 1460953581}
+--- !u!114 &2094472845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094472840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f4765c026ac464c9adfb06d98ea4d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  completeConnectionDataSet:
+    SdpData: 
+    IceData: 
+  readQRPanel: {fileID: 117676163}
+  ConnectionEstablishedPanel: {fileID: 598454828}
 --- !u!1 &2097847494
 GameObject:
   m_ObjectHideFlags: 0

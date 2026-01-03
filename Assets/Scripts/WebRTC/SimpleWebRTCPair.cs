@@ -116,13 +116,13 @@ public class SimpleWebRTCPair : MonoBehaviour
 
     // Static Event/Delegate instance to manage subscription/unsubscription
     public delegate void OnSDPCreated(string desc);
-    public static event OnSDPCreated SDPCreated;
+    public static event OnSDPCreated SdpCreated;
 
     public delegate void OnICECreated(string desc);
-    public static event OnICECreated ICECreated;
+    public static event OnICECreated IceCreated;
 
     public delegate void OnRead();
-    public static event OnRead ReadSDP;
+    public static event OnRead ReadSdp;
     
 
 
@@ -148,6 +148,22 @@ public class SimpleWebRTCPair : MonoBehaviour
     private void Awake()
     {
         UnityMainThreadDispatcher.EnsureExists();
+    }
+
+    void OnEnable()
+    {
+        ConnectionManager.ConnectionDataCompleted += OnConnectionDataCompleted;
+    }
+
+    void OnDisable()
+    {
+        ConnectionManager.ConnectionDataCompleted -= OnConnectionDataCompleted;
+    }
+
+    private void OnConnectionDataCompleted(ConnectionDataSet connectionData)
+    {
+        SetRemoteSdpRoutine(connectionData.SdpData);
+        SetRemoteIceCandidates(connectionData.IceData);
     }
 
     private void Start()
@@ -251,7 +267,7 @@ public class SimpleWebRTCPair : MonoBehaviour
 
         EnsurePeerConnection();
         Log("Receiver ready. Paste remote OFFER into Remote SDP and click Set Remote SDP.");
-        ReadSDP?.Invoke();
+        ReadSdp?.Invoke();
     }
 
     public void SetRemoteSdp()
@@ -262,7 +278,7 @@ public class SimpleWebRTCPair : MonoBehaviour
             return;
         }
 
-        var text = remoteSdpInput != null ? remoteSdpInput.text : null;
+        string text = remoteSdpInput != null ? remoteSdpInput.text : null;
         if (string.IsNullOrWhiteSpace(text))
         {
             LogWarning("Remote SDP input is empty.");
@@ -280,16 +296,20 @@ public class SimpleWebRTCPair : MonoBehaviour
             return;
         }
 
-        var text = remoteIceInput != null ? remoteIceInput.text : null;
+        string text = remoteIceInput != null ? remoteIceInput.text : null;
         if (string.IsNullOrWhiteSpace(text))
         {
             LogWarning("Remote ICE input is empty.");
             return;
         }
+        SetRemoteIceCandidates(text);
+    }
 
+    private void SetRemoteIceCandidates(string iceCandidates)
+    {
         int added = 0, failed = 0;
 
-        foreach (var line in SplitNonEmptyLines(text))
+        foreach (var line in SplitNonEmptyLines(iceCandidates))
         {
             if (!TryParseIce(line, out var ice))
             {
@@ -359,7 +379,7 @@ public class SimpleWebRTCPair : MonoBehaviour
         string offerDescString = SerializeSdpJson(offerDesc);
         SetInputFieldText(localSdpOutput, offerDescString);
         // Sender SDP created event invocation
-        SDPCreated?.Invoke(offerDescString);
+        SdpCreated?.Invoke(offerDescString);
 
         Log("Local SDP (offer) ready for copy/paste.");
     }
@@ -413,7 +433,7 @@ public class SimpleWebRTCPair : MonoBehaviour
             string answerDescString = SerializeSdpJson(answerDesc);
             SetInputFieldText(localSdpOutput, answerDescString);
             //Receiver SDP created event invocation
-            SDPCreated?.Invoke(answerDescString);
+            SdpCreated?.Invoke(answerDescString);
             Log("Local SDP (answer) ready for copy/paste.");
         }
     }
@@ -436,7 +456,7 @@ public class SimpleWebRTCPair : MonoBehaviour
             Log($"ICE gathering state: {state}");
             if (state == RTCIceGatheringState.Complete)
             {
-                ICECreated?.Invoke(allLocalIceOutput);
+                IceCreated?.Invoke(allLocalIceOutput);
             }
         };
         _pc.OnConnectionStateChange = state => Log($"Peer connection state: {state}");

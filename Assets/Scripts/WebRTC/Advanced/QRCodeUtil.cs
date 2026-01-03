@@ -27,7 +27,7 @@ public static class QRCodeUtil
         {
             var parts = chunkStr.Split('|');
             if (parts.Length < 5) return null;
-            QRCodeType parsedType = QRCodeType.SDP;
+            QRCodeType parsedType = QRCodeType.sdp;
             Enum.TryParse(parts[1], out parsedType);
             return new QRChunk
             {
@@ -102,7 +102,7 @@ public static class QRCodeUtil
     /// </summary>
     public static List<string> SplitToChunks(string input, int maxDataLen)
     {
-        return SplitToChunksWithType(input, maxDataLen, QRCodeType.SDP);
+        return SplitToChunksWithType(input, maxDataLen, QRCodeType.sdp);
     }
 
     public static List<string> SplitToChunksWithType(string input, int maxDataLen, QRCodeType type)

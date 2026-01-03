@@ -7,18 +7,27 @@ using UnityEngine.UI;
 [Serializable]
 public enum QRCodeType
 {
-    SDP,
-    ICE
+    sdp,
+    ice
 }
 
 [Serializable]
 public class QRCode
 {
-    public string Id;
-    public QRCodeType Type;
-    public int Index;
-    public int Total;
-    public string Data;
+    public string id;
+
+    public ConnectionData connectionData;
+    //public QRCodeType Type;
+    public int index;
+    public int total;
+    //public string Data;
+}
+
+[Serializable]
+public class ConnectionData
+{
+    public QRCodeType type;
+    public string data;
 }
 
 public class QRCodeWebRTCManager : MonoBehaviour
@@ -26,44 +35,44 @@ public class QRCodeWebRTCManager : MonoBehaviour
     public GameObject qrCodePanel;
     public RawImage qrPreview;
 
-    public TextMeshProUGUI QrIdText;
+    public TextMeshProUGUI qrIdText;
 
     public Button showNextChunkButton;
     public Button showPreviousChunkButton;
 
     //private List<Texture2D> qrChunksPreview; // For multi-QR chunk preview
 
-    private List<Texture2D> qrSDPChunksPreview; // For multi-QR chunk preview
-    private List<Texture2D> qrICEChunksPreview; // For multi-QR chunk preview
+    private List<Texture2D> qrSdpChunksPreview; // For multi-QR chunk preview
+    private List<Texture2D> qrIceChunksPreview; // For multi-QR chunk preview
 
     //private int currentChunkIndex = 0;
 
-    private int currentSDPChunkIndex = 0;
-    private int currentICEChunkIndex = 0;
+    private int currentSdpChunkIndex = 0;
+    private int currentIceChunkIndex = 0;
 
     private int maxChunkDataLen = 800; // Tune for QR capacity
     //private int totalChunks = 1;
-    private int totalSDPChunks = 1;
-    private int totalICEChunks = 1;
+    private int totalSdpChunks = 1;
+    private int totalIceChunks = 1;
 
     [TextArea(5, 10)]
-    public string SDPData = "";
+    public string SdpData = "";
     [TextArea(5, 10)]
-    public string ICEData = "";
+    public string IceData = "";
 
     [TextArea(5, 10)]
-    public string compressedSDPData = "";
+    public string compressedSdpData = "";
     [TextArea(5, 10)]
-    public string compressedICEData = "";
+    public string compressedIceData = "";
 
-    private QRCodeType qrCodeType = QRCodeType.SDP;
+    private QRCodeType qrCodeType = QRCodeType.sdp;
     //private bool qrCodeType = true;
     
     private void OnEnable()
     {
-        SimpleWebRTCPair.SDPCreated += OnSDPCreated;
-        SimpleWebRTCPair.ICECreated += OnICECreated;
-        SimpleWebRTCPair.ReadSDP += OnReadSDP;
+        SimpleWebRTCPair.SdpCreated += OnSdpCreated;
+        SimpleWebRTCPair.IceCreated += OnIceCreated;
+        SimpleWebRTCPair.ReadSdp += OnReadSdp;
         //assign button listeners
         if (showNextChunkButton != null)
         {
@@ -79,9 +88,9 @@ public class QRCodeWebRTCManager : MonoBehaviour
 
     private void OnDisable()
     {
-        SimpleWebRTCPair.SDPCreated -= OnSDPCreated;
-        SimpleWebRTCPair.ICECreated -= OnICECreated;
-        SimpleWebRTCPair.ReadSDP -= OnReadSDP;
+        SimpleWebRTCPair.SdpCreated -= OnSdpCreated;
+        SimpleWebRTCPair.IceCreated -= OnIceCreated;
+        SimpleWebRTCPair.ReadSdp -= OnReadSdp;
 
         //remove button listeners
         if (showNextChunkButton != null)
@@ -94,93 +103,93 @@ public class QRCodeWebRTCManager : MonoBehaviour
         }
     }
 
-    private void OnReadSDP()
+    private void OnReadSdp()
     {
         StartCoroutine(ScanQRChunksCoroutine());
     }
 
-    private void OnICECreated(string desc)
+    private void OnIceCreated(string desc)
     {
         Debug.Log("ICE Created: " + desc);
-        compressedICEData = StringCompressor.CompressToBase64(desc);
-        totalICEChunks = 1;
-        if (compressedICEData.Length > 1000)
+        compressedIceData = StringCompressor.CompressToBase64(desc);
+        totalIceChunks = 1;
+        if (compressedIceData.Length > 1000)
         {
-            totalICEChunks = Mathf.CeilToInt((float)compressedICEData.Length / maxChunkDataLen);
+            totalIceChunks = Mathf.CeilToInt((float)compressedIceData.Length / maxChunkDataLen);
         }
         // Convert ICE to QR code chunks
-        qrICEChunksPreview = QRCodeUtil.EncodeStringToQRChunks(compressedICEData, maxChunkDataLen, totalICEChunks);
-        currentICEChunkIndex = 0;
-        totalICEChunks = qrICEChunksPreview.Count;
+        qrIceChunksPreview = QRCodeUtil.EncodeStringToQRChunks(compressedIceData, maxChunkDataLen, totalIceChunks);
+        currentIceChunkIndex = 0;
+        totalIceChunks = qrIceChunksPreview.Count;
     }
 
-    private void OnSDPCreated(string desc)
+    private void OnSdpCreated(string desc)
     {
         Debug.Log("SDP Created: " + desc);
-        string compressedSDPData = StringCompressor.CompressToBase64(desc);
-        this.compressedSDPData = compressedSDPData;
-        totalSDPChunks = 1;
-        if (compressedSDPData.Length > 1000)
+        string compressedSdpData = StringCompressor.CompressToBase64(desc);
+        this.compressedSdpData = compressedSdpData;
+        totalSdpChunks = 1;
+        if (compressedSdpData.Length > 1000)
         {
-            totalSDPChunks = Mathf.CeilToInt((float)desc.Length / maxChunkDataLen);
+            totalSdpChunks = Mathf.CeilToInt((float)desc.Length / maxChunkDataLen);
         }
         // Convert SDP to QR code chunks
-        qrSDPChunksPreview = QRCodeUtil.EncodeStringToQRChunks(compressedSDPData, maxChunkDataLen, totalSDPChunks);
-        currentSDPChunkIndex = 0;
-        totalSDPChunks = qrSDPChunksPreview.Count;
+        qrSdpChunksPreview = QRCodeUtil.EncodeStringToQRChunks(compressedSdpData, maxChunkDataLen, totalSdpChunks);
+        currentSdpChunkIndex = 0;
+        totalSdpChunks = qrSdpChunksPreview.Count;
     }
 
     public void ShowICEQR()
     {
-        qrCodeType = QRCodeType.ICE;
+        qrCodeType = QRCodeType.ice;
         qrCodePanel.SetActive(true);
-        currentICEChunkIndex = 0;
-        qrPreview.texture = qrICEChunksPreview[currentICEChunkIndex];
-        QrIdText.text = "ICE QR Chunk: "+ (currentICEChunkIndex + 1) + " / " + totalICEChunks;
+        currentIceChunkIndex = 0;
+        qrPreview.texture = qrIceChunksPreview[currentIceChunkIndex];
+        qrIdText.text = "ICE QR Chunk: "+ (currentIceChunkIndex + 1) + " / " + totalIceChunks;
     }
 
     public void ShowSDPQR()
     {
-        qrCodeType = QRCodeType.SDP;
+        qrCodeType = QRCodeType.sdp;
         qrCodePanel.SetActive(true);
-        currentSDPChunkIndex = 0;
-        qrPreview.texture = qrSDPChunksPreview[currentSDPChunkIndex];
-        QrIdText.text = "SDP QR Chunk: "+ (currentSDPChunkIndex + 1) + " / " + totalSDPChunks;
+        currentSdpChunkIndex = 0;
+        qrPreview.texture = qrSdpChunksPreview[currentSdpChunkIndex];
+        qrIdText.text = "SDP QR Chunk: "+ (currentSdpChunkIndex + 1) + " / " + totalSdpChunks;
     }
 
     public void closeQRCodePanel()
     {
         qrCodePanel.SetActive(false);
-        currentSDPChunkIndex = 0;
-        currentICEChunkIndex = 0;
+        currentSdpChunkIndex = 0;
+        currentIceChunkIndex = 0;
         qrPreview.texture = null;
     }
 
     private void ShowPreviousQRChunk()
     {
         Debug.Log("ShowPreviousQRChunk called");
-        if(qrCodeType == QRCodeType.SDP)
+        if(qrCodeType == QRCodeType.sdp)
         {
-            currentSDPChunkIndex--;
-            if (currentSDPChunkIndex < 0)
+            currentSdpChunkIndex--;
+            if (currentSdpChunkIndex < 0)
             {
-                currentSDPChunkIndex = totalSDPChunks - 1;
+                currentSdpChunkIndex = totalSdpChunks - 1;
             }
             // update tmp text
-            QrIdText.text = "SDP QR Chunk: "+ (currentSDPChunkIndex + 1) + " / " + totalSDPChunks;
-            qrPreview.texture = qrSDPChunksPreview[currentSDPChunkIndex];
+            qrIdText.text = "SDP QR Chunk: "+ (currentSdpChunkIndex + 1) + " / " + totalSdpChunks;
+            qrPreview.texture = qrSdpChunksPreview[currentSdpChunkIndex];
 
         }
         else
         {
-            currentICEChunkIndex--;
-            if (currentICEChunkIndex < 0)
+            currentIceChunkIndex--;
+            if (currentIceChunkIndex < 0)
             {
-                currentICEChunkIndex = totalICEChunks - 1;
+                currentIceChunkIndex = totalIceChunks - 1;
             }
             // update tmp text
-            QrIdText.text = "ICE QR Chunk: "+ (currentICEChunkIndex + 1) + " / " + totalICEChunks;
-            qrPreview.texture = qrICEChunksPreview[currentICEChunkIndex];
+            qrIdText.text = "ICE QR Chunk: "+ (currentIceChunkIndex + 1) + " / " + totalIceChunks;
+            qrPreview.texture = qrIceChunksPreview[currentIceChunkIndex];
         }
 
 
@@ -189,25 +198,25 @@ public class QRCodeWebRTCManager : MonoBehaviour
     private void ShowNextQRChunk()
     {
         Debug.Log("ShowNextQRChunk called");
-        if(qrCodeType == QRCodeType.SDP)
+        if(qrCodeType == QRCodeType.sdp)
         {
-            currentSDPChunkIndex++;
-            if (currentSDPChunkIndex >= totalSDPChunks)
+            currentSdpChunkIndex++;
+            if (currentSdpChunkIndex >= totalSdpChunks)
             {
-                currentSDPChunkIndex = 0;
+                currentSdpChunkIndex = 0;
             }
-            QrIdText.text = "SDP QR Chunk: "+  (currentSDPChunkIndex + 1)  + " / " + totalSDPChunks;
-            qrPreview.texture = qrSDPChunksPreview[currentSDPChunkIndex];
+            qrIdText.text = "SDP QR Chunk: "+  (currentSdpChunkIndex + 1)  + " / " + totalSdpChunks;
+            qrPreview.texture = qrSdpChunksPreview[currentSdpChunkIndex];
         }
         else
         {   
-            currentICEChunkIndex++;
-            if (currentICEChunkIndex >= totalICEChunks)
+            currentIceChunkIndex++;
+            if (currentIceChunkIndex >= totalIceChunks)
             {
-                currentICEChunkIndex = 0;
+                currentIceChunkIndex = 0;
             }
-            QrIdText.text = "ICE QR Chunk: "+ (currentICEChunkIndex + 1) + " / " + totalICEChunks;
-            qrPreview.texture = qrICEChunksPreview[currentICEChunkIndex];
+            qrIdText.text = "ICE QR Chunk: "+ (currentIceChunkIndex + 1) + " / " + totalIceChunks;
+            qrPreview.texture = qrIceChunksPreview[currentIceChunkIndex];
         }
     }
 
@@ -231,7 +240,7 @@ public class QRCodeWebRTCManager : MonoBehaviour
         float startTime = Time.time;
         bool done = false;
 
-        QrIdText.text = "Scanning for QR chunks...";
+        qrIdText.text = "Scanning for QR chunks...";
         qrCodePanel.SetActive(true);
         qrPreview.texture = webcamTexture;
 
@@ -350,18 +359,18 @@ public class QRCodeWebRTCManager : MonoBehaviour
                 foundChunks.Add(decoded);
                 lastFoundIndex = chunkIndex;
                 lastChunkType = chunkType;
-                QrIdText.text = $"{chunkType} chunk {chunkIndex + 1} found. Scan {chunkType} chunk {foundChunks.Count + 1}...";
+                qrIdText.text = $"{chunkType} chunk {chunkIndex + 1} found. Scan {chunkType} chunk {foundChunks.Count + 1}...";
             }
             else if (total > 0)
             {
-                QrIdText.text = $"Scan {lastChunkType} chunk {foundChunks.Count + 1} of {total}...";
+                qrIdText.text = $"Scan {lastChunkType} chunk {foundChunks.Count + 1} of {total}...";
             }
 
             // If we have all chunks, stop
             if (total > 0 && foundChunks.Count >= total)
             {
                 done = true;
-                QrIdText.text = $"All {lastChunkType} chunks found!";
+                qrIdText.text = $"All {lastChunkType} chunks found!";
             }
 
             Destroy(square);
@@ -379,28 +388,28 @@ public class QRCodeWebRTCManager : MonoBehaviour
             {
                 // Try to decompress to SDP or ICE
                 string uncompressed = StringCompressor.DecompressFromBase64(combined);
-                QrIdText.text = "Decoded!";
+                qrIdText.text = "Decoded!";
                 // Heuristic: if it starts with v=0, it's SDP; else ICE
                 if (uncompressed.StartsWith("v=0"))
                 {
-                    SDPData = uncompressed;
+                    SdpData = uncompressed;
                     Debug.Log("Decoded SDP from QR");
                 }
                 else
                 {
-                    ICEData = uncompressed;
+                    IceData = uncompressed;
                     Debug.Log("Decoded ICE from QR");
                 }
             }
             else
             {
-                QrIdText.text = "Failed to assemble all chunks.";
+                qrIdText.text = "Failed to assemble all chunks.";
                 Debug.LogWarning("Failed to decode/assemble from QR chunks.");
             }
         }
         else
         {
-            QrIdText.text = "No QR chunks found.";
+            qrIdText.text = "No QR chunks found.";
         }
     }
 }

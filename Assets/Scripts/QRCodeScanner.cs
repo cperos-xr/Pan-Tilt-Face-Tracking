@@ -23,10 +23,7 @@ public class QRCodeScanner : MonoBehaviour
     public TMP_Text popUpWindowText;
     public Button popUpButton;
 
-
-    private string qrText = "";
-
-    public delegate void OnReadQRCode(string decodedText);
+    public delegate void OnReadQRCode(ConnectionData connectionData);
     public static event OnReadQRCode QRCodeRead;
 
     private WebCamTexture _webCamTexture;
@@ -49,16 +46,20 @@ public class QRCodeScanner : MonoBehaviour
         string decompressedText = "";
         for (int i = 0; i < QRCodesArray.Length; i++)
         {
-            decompressedText += QRCodesArray[i].Data;
+            decompressedText += QRCodesArray[i].connectionData.data;
         }
+        //QRCodeType qrType = QRCodesArray[0].connectionData.Type;
+
+
         decompressedText = StringCompressor.DecompressFromBase64(decompressedText);
         if(resultText != null)
         {
-            qrText = decompressedText;
             resultText.text = decompressedText;
             Debug.Log("Decompressed QR Text: " + decompressedText);
-
-            QRCodeRead?.Invoke(decompressedText);
+            ConnectionData connectionData = new ConnectionData();
+            connectionData.type = QRCodesArray[0].connectionData.type;
+            connectionData.data = decompressedText;
+            QRCodeRead?.Invoke(connectionData);
         }
     }
 
@@ -73,16 +74,16 @@ public class QRCodeScanner : MonoBehaviour
             return null;
 
         QRCode qr = new QRCode();
-        qr.Id = parts[0];
-        QRCodeType parsedType = QRCodeType.SDP;
+        qr.id = parts[0];
+        QRCodeType parsedType = QRCodeType.sdp;
         Enum.TryParse(parts[1], out parsedType);
-        qr.Type = parsedType;
+        qr.connectionData.type = parsedType;
         int idx, tot;
         if (int.TryParse(parts[2], out idx))
-            qr.Index = idx;
+            qr.index = idx;
         if (int.TryParse(parts[3], out tot))
-            qr.Total = tot;
-        qr.Data = string.Join("|", parts, 4, parts.Length - 4);
+            qr.total = tot;
+        qr.connectionData.data = string.Join("|", parts, 4, parts.Length - 4);
         return qr;
     }
 
@@ -90,7 +91,6 @@ public class QRCodeScanner : MonoBehaviour
     {
         if (_isScanning) return;
         popUpWindow.SetActive(false);
-        qrText = "";
         //QRCodes.Clear();
         QRCodesArray = null;
         statusText.text = "Starting camera...";
@@ -171,38 +171,36 @@ public class QRCodeScanner : MonoBehaviour
                 {
                     _isScanning = false;
                     _webCamTexture.Stop();
-                    qrText += result.Text;
-                    //resultText.text = qrText;
                     QRCode qRCode = GetCurrentQRCodeFromText(result.Text);
 
-                    if (QRCodesArray == null || QRCodesArray.Length != qRCode.Total)
+                    if (QRCodesArray == null || QRCodesArray.Length != qRCode.total)
                     {
-                        QRCodesArray = new QRCode[qRCode.Total];
+                        QRCodesArray = new QRCode[qRCode.total];
                     }
 
                     if (qRCode != null)
                     {
-                        QRCodesArray[qRCode.Index] = qRCode;
-                        Debug.Log($"Scanned QR Code Chunk: ID={qRCode.Id}, Index={qRCode.Index}, Total={qRCode.Total}");
-                        statusText.text = $"QR Code {qRCode.Id} found! Chunk {qRCode.Index + 1} of {qRCode.Total} added.";
+                        QRCodesArray[qRCode.index] = qRCode;
+                        Debug.Log($"Scanned QR Code Chunk: ID={qRCode.id}, Index={qRCode.index}, Total={qRCode.total}");
+                        statusText.text = $"QR Code {qRCode.id} found! Chunk {qRCode.index + 1} of {qRCode.total} added.";
                         int totalQrCodesRemaining = qrCodesRemaining(QRCodesArray);
                         if (totalQrCodesRemaining == 0)
                         {
-                            statusText.text = $"All {qRCode.Total} chunks scanned for QR Code {qRCode.Id}. You can now decompress.";
-                            Debug.Log($"All {qRCode.Total} chunks scanned for QR Code {qRCode.Id}.");
+                            statusText.text = $"All {qRCode.total} chunks scanned for QR Code {qRCode.id}. You can now decompress.";
+                            Debug.Log($"All {qRCode.total} chunks scanned for QR Code {qRCode.id}.");
                             DecompressText();
                             popUpWindow.SetActive(true);
-                            popUpWindowText.text = $"All {qRCode.Total} chunks scanned successfully.\nYou can now decompress the data.";
+                            popUpWindowText.text = $"All {qRCode.total} chunks scanned successfully.\nYou can now decompress the data.";
                         }
                         else
                         {
                             popUpWindow.SetActive(true);
-                            popUpWindowText.text = $"Scanned chunk {qRCode.Index + 1} of {qRCode.Total}.\n{totalQrCodesRemaining} chunks remaining.";
+                            popUpWindowText.text = $"Scanned chunk {qRCode.index + 1} of {qRCode.total}.\n{totalQrCodesRemaining} chunks remaining.";
                         }
                         
 
                         
-                        Debug.Log($"QR Code {qRCode.Id} decoded: {qRCode.Data}");
+                        Debug.Log($"QR Code {qRCode.id} decoded: {qRCode.connectionData.data}");
                     }
                     else
                     {

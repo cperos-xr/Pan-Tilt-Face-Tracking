@@ -6329,13 +6329,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   qrCodePanel: {fileID: 925545852}
   qrPreview: {fileID: 27345224}
-  QrIdText: {fileID: 1431636740}
+  qrIdText: {fileID: 1431636740}
   showNextChunkButton: {fileID: 1969828721}
   showPreviousChunkButton: {fileID: 610035107}
-  SDPData: 
-  ICEData: 
-  compressedSDPData: 
-  compressedICEData: 
+  SdpData: 
+  IceData: 
+  compressedSdpData: 
+  compressedIceData: 
 --- !u!114 &2094472844
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -108,8 +108,8 @@ public class QRCodeWebRTCManager : MonoBehaviour
         {
             totalICEChunks = Mathf.CeilToInt((float)compressedICEData.Length / maxChunkDataLen);
         }
-        // Convert ICE to QR code chunks
-        qrICEChunksPreview = QRCodeUtil.EncodeStringToQRChunks(compressedICEData, maxChunkDataLen, totalICEChunks);
+        // Convert ICE to QR code chunks with ICE type
+        qrICEChunksPreview = QRCodeUtil.EncodeStringToQRChunksWithType(compressedICEData, maxChunkDataLen, QRCodeType.ICE, totalICEChunks);
         currentICEChunkIndex = 0;
         totalICEChunks = qrICEChunksPreview.Count;
     }
@@ -124,8 +124,8 @@ public class QRCodeWebRTCManager : MonoBehaviour
         {
             totalSDPChunks = Mathf.CeilToInt((float)desc.Length / maxChunkDataLen);
         }
-        // Convert SDP to QR code chunks
-        qrSDPChunksPreview = QRCodeUtil.EncodeStringToQRChunks(compressedSDPData, maxChunkDataLen, totalSDPChunks);
+        // Convert SDP to QR code chunks with SDP type
+        qrSDPChunksPreview = QRCodeUtil.EncodeStringToQRChunksWithType(compressedSDPData, maxChunkDataLen, QRCodeType.SDP, totalSDPChunks);
         currentSDPChunkIndex = 0;
         totalSDPChunks = qrSDPChunksPreview.Count;
     }

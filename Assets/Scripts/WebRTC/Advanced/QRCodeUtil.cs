@@ -159,7 +159,15 @@ public static class QRCodeUtil
     /// </summary>
     public static List<Texture2D> EncodeStringToQRChunks(string input, int maxDataLen, int qrSize = 512)
     {
-        var chunkStrings = SplitToChunks(input, maxDataLen);
+        return EncodeStringToQRChunksWithType(input, maxDataLen, QRCodeType.SDP, qrSize);
+    }
+
+    /// <summary>
+    /// One-call: Split a long string into a list of QR code Texture2Ds with specified type, each encoding a chunk.
+    /// </summary>
+    public static List<Texture2D> EncodeStringToQRChunksWithType(string input, int maxDataLen, QRCodeType type, int qrSize = 512)
+    {
+        var chunkStrings = SplitToChunksWithType(input, maxDataLen, type);
         var qrList = new List<Texture2D>(chunkStrings.Count);
         foreach (var chunk in chunkStrings)
         {

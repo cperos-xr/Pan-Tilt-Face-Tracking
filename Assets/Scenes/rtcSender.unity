@@ -6333,6 +6333,7 @@ MonoBehaviour:
   showPreviousChunkButton: {fileID: 610035107}
   SDPData: 
   ICEData: 
+  compressedSDPData: 
 --- !u!1 &2109892265
 GameObject:
   m_ObjectHideFlags: 0

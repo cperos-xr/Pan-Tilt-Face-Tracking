@@ -113,6 +113,18 @@ public class SimpleWebRTCPair : MonoBehaviour
 
     private Coroutine _webrtcUpdateCoroutine;
 
+    // Static Event/Delegate instance to manage subscription/unsubscription
+    public delegate void OnSDPCreated(string desc);
+    public static event OnSDPCreated SDPCreated;
+
+    public delegate void OnICECreated(string desc);
+    public static event OnICECreated ICECreated;
+
+    public delegate void OnRead();
+    public static event OnRead ReadSDP;
+    
+
+
     // IMPORTANT: Use Unity.WebRTC.OnVideoReceived (NOT Action<Texture>) in your package line
     private OnVideoReceived _onRemoteVideoReceivedHandler;
 
@@ -238,6 +250,7 @@ public class SimpleWebRTCPair : MonoBehaviour
 
         EnsurePeerConnection();
         Log("Receiver ready. Paste remote OFFER into Remote SDP and click Set Remote SDP.");
+        ReadSDP?.Invoke();
     }
 
     public void SetRemoteSdp()
@@ -329,7 +342,7 @@ public class SimpleWebRTCPair : MonoBehaviour
             yield break;
         }
 
-        var offerDesc = offerOp.Desc;
+        RTCSessionDescription offerDesc = offerOp.Desc;
         Log($"SDP offer created. type={offerDesc.type}");
 
         var setLocalOp = _pc.SetLocalDescription(ref offerDesc);
@@ -342,7 +355,11 @@ public class SimpleWebRTCPair : MonoBehaviour
         }
 
         Log("LocalDescription set (offer).");
-        SetInputFieldText(localSdpOutput, SerializeSdpJson(offerDesc));
+        string offerDescString = SerializeSdpJson(offerDesc);
+        SetInputFieldText(localSdpOutput, offerDescString);
+        // Sender SDP created event invocation
+        SDPCreated?.Invoke(offerDescString);
+
         Log("Local SDP (offer) ready for copy/paste.");
     }
 
@@ -392,7 +409,10 @@ public class SimpleWebRTCPair : MonoBehaviour
             }
 
             Log($"LocalDescription set (answer). SignalingState={_pc.SignalingState}");
-            SetInputFieldText(localSdpOutput, SerializeSdpJson(answerDesc));
+            string answerDescString = SerializeSdpJson(answerDesc);
+            SetInputFieldText(localSdpOutput, answerDescString);
+            //Receiver SDP created event invocation
+            SDPCreated?.Invoke(answerDescString);
             Log("Local SDP (answer) ready for copy/paste.");
         }
     }
@@ -493,6 +513,9 @@ public class SimpleWebRTCPair : MonoBehaviour
             Log($"Local ICE gathered: {Truncate(json, 180)}");
 
         AppendInputFieldLine(localIceOutput, json);
+
+        // ICE created event invocation
+        ICECreated?.Invoke(json);
     }
 
     // =========================

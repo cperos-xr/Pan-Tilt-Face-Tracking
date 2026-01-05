@@ -24,6 +24,9 @@ public class QRCodeScanner : MonoBehaviour
     public TMP_Text popUpWindowText;
     public Button popUpButton;
 
+    [Header("Debug")]
+    public bool enableDebugLogs = false;
+
 
     //private string qrText = "";
 
@@ -176,77 +179,57 @@ public class QRCodeScanner : MonoBehaviour
                 Destroy(snap);
                 if (result != null)
                 {
+                    Debug.Log($"[QRCodeScanner] Raw QR code text: '{(result.Text != null ? result.Text : "<null>")}'");
                     _isScanning = false;
                     _webCamTexture.Stop();
-                    //qrText += result.Text;
-                    //resultText.text = qrText;
                     QRCode qRCode = GetCurrentQRCodeFromText(result.Text);
-
-                    if (QRCodesArray == null)
+                    if (QRCodesArray == null && qRCode != null)
                     {
                         QRCodesArray = new QRCode[qRCode.Total];
                     }
-
                     if (qRCode != null)
                     {
                         QRCodesArray[qRCode.Index] = qRCode;
-                        Debug.Log($"Scanned QR Code Chunk: ID={qRCode.Id}, Index={qRCode.Index}, Total={qRCode.Total}");
-                        statusText.text = $"QR Code {qRCode.Id} found! Chunk {qRCode.Index + 1} of {qRCode.Total} added.";
+                        if (statusText != null)
+                            statusText.text = $"QR Code {qRCode.Id} found! Chunk {qRCode.Index + 1} of {qRCode.Total} added.";
                         int totalQrCodesRemaining = qrCodesRemaining(QRCodesArray);
                         if (totalQrCodesRemaining == 0)
                         {
-                            statusText.text = $"All {qRCode.Total} chunks scanned for QR Code {qRCode.Id}. Decompressing.";
-                            Debug.Log($"All {qRCode.Total} chunks scanned for QR Code {qRCode.Id}.");
+                            if (statusText != null)
+                                statusText.text = $"All {qRCode.Total} chunks scanned for QR Code {qRCode.Id}. Decompressing.";
                             DecompressText();
-                            popUpWindow.SetActive(true);
-                            popUpWindowText.text = $"All {qRCode.Total} chunks scanned successfully.\nWe can now decompress the data.";
+                            if (popUpWindow != null)
+                                popUpWindow.SetActive(true);
+                            if (popUpWindowText != null)
+                                popUpWindowText.text = $"All {qRCode.Total} chunks scanned successfully.\nWe can now decompress the data.";
                         }
                         else
                         {
-                            popUpWindow.SetActive(true);
-                            popUpWindowText.text = $"Scanned chunk {qRCode.Index + 1} of {qRCode.Total}.\n{totalQrCodesRemaining} chunks remaining.";
+                            if (popUpWindow != null)
+                                popUpWindow.SetActive(true);
+                            if (popUpWindowText != null)
+                                popUpWindowText.text = $"Scanned chunk {qRCode.Index + 1} of {qRCode.Total}.\n{totalQrCodesRemaining} chunks remaining.";
                         }
-                        
-
-                        
-                        Debug.Log($"QR Code {qRCode.Id} decoded: {qRCode.Data}");
                     }
                     else
                     {
-                        statusText.text = "Scanned QR Code but failed to parse chunk info.";
-                        Debug.Log("Scanned QR Code but failed to parse chunk info.");
+                        if (statusText != null)
+                            statusText.text = "Scanned QR Code but failed to parse chunk info.";
                     }
-
                 }
                 else
                 {
-                    statusText.text = "Scanning...";
+                    if (statusText != null)
+                        statusText.text = "Scanning...";
                 }
             }
             catch (Exception e)
             {
-                statusText.text = $"Error: {e.Message}";
+                if (statusText != null)
+                    statusText.text = $"Error: {e.Message}";
                 Debug.LogError($"QR Code scanning error: {e}");
             }
             yield return new WaitForSeconds(0.2f);
         }
-    }
-
-    public void StopScanning()
-    {
-        _isScanning = false;
-        if (_webCamTexture != null)
-        {
-            _webCamTexture.Stop();
-            cameraPreview.texture = null;
-        }
-        statusText.text = "Stopped.";
-    }
-
-    void OnDestroy()
-    {
-        StopScanning();
-        if (scanButton != null)
-            scanButton.onClick.RemoveListener(StartScanning);
     }
 }

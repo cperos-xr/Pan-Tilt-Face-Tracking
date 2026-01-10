@@ -48,21 +48,25 @@ public class ConnectionManager : MonoBehaviour
         {
             completeConnectionDataSet.SdpData = connectionData.data;
             Debug.Log("SDP Data received: " + connectionData.data);
-
+            
+            // Trigger update immediately when SDP is received
+            ConnectionDataCompleted?.Invoke(completeConnectionDataSet);
         }
         else if (connectionData.type == QRCodeType.ICE)
         {
             completeConnectionDataSet.IceData = connectionData.data;
             Debug.Log("ICE Data received: " + connectionData.data);
+            
+            // Trigger update immediately when ICE is received
+            ConnectionDataCompleted?.Invoke(completeConnectionDataSet);
         }
 
+        // Check if we have both pieces for UI updates
         if (!string.IsNullOrEmpty(completeConnectionDataSet.SdpData) && !string.IsNullOrEmpty(completeConnectionDataSet.IceData))
         {
-            Debug.Log("Both SDP and ICE data received. Ready to establish connection.");
+            Debug.Log("Both SDP and ICE data received. Connection data complete.");
             readQRPanel.SetActive(false);
             ConnectionEstablishedPanel.SetActive(true);
-            ConnectionDataCompleted?.Invoke(completeConnectionDataSet);
-            // Proceed with connection establishment logic here
         }
     }
 

@@ -33,6 +33,9 @@ public class QRCodeScanner : MonoBehaviour
     public delegate void OnReadQRCode(ConnectionData decodedText);
     public static event OnReadQRCode QRCodeRead;
 
+    public delegate void OnQRScanningStarted();
+    public static event OnQRScanningStarted QRScanningStarted;
+
     private WebCamTexture _webCamTexture;
     private bool _isScanning = false;
     private IBarcodeReader _barcodeReader;
@@ -98,6 +101,10 @@ public class QRCodeScanner : MonoBehaviour
     public void StartScanning()
     {
         if (_isScanning) return;
+        
+        // Fire event to pause WebRTC video before starting QR scanner
+        QRScanningStarted?.Invoke();
+        
         popUpWindow.SetActive(false);
         //qrText = "";
         //QRCodes.Clear();
@@ -115,6 +122,9 @@ public class QRCodeScanner : MonoBehaviour
             statusText.text = "QR Code scanning complete.";
             return;
         }
+
+        // Fire event to pause WebRTC video before resuming QR scanner
+        QRScanningStarted?.Invoke();
 
         statusText.text = "Starting camera again...";
         StartCoroutine(StartCamera());

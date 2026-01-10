@@ -105,6 +105,7 @@ public class SimpleWebRTCPair : MonoBehaviour
 
     // Sender capture
     private WebCamTexture _webcamTex;
+    private RenderTexture _webcamRenderTexture;
     private VideoStreamTrack _localVideoTrack;
 
     // Receiver display
@@ -113,6 +114,13 @@ public class SimpleWebRTCPair : MonoBehaviour
     private int _remoteFrameCount;
 
     private Coroutine _webrtcUpdateCoroutine;
+    
+    // WebRTC initialization tracking
+    private bool _webrtcInitialized = false;
+
+    // Camera resource management
+    private bool _videoPausedForQR = false;
+    private Coroutine _webcamCopyCoroutine;
 
     // Static Event/Delegate instance to manage subscription/unsubscription
     public delegate void OnSDPCreated(string desc);
@@ -152,15 +160,66 @@ public class SimpleWebRTCPair : MonoBehaviour
 
     private void Start()
     {
-        // Optional on older package lines; newer ones removed these APIs.
-        TryInvokeWebRTCStatic("Initialize");
-
-        // WebRTC event pump
-        _webrtcUpdateCoroutine = StartCoroutine(WebRTC.Update());
-        Log("WebRTC update coroutine started.");
-
         WireButtons();
         ClearUiOutputs();
+    }
+    
+    private IEnumerator InitializeWebRTCAndCreatePeer()
+    {
+        if (!_webrtcInitialized)
+        {
+            Log("Initializing WebRTC...");
+            
+            // Try to initialize WebRTC (some package versions require this)
+            TryInvokeWebRTCStatic("Initialize");
+            
+            // Wait a couple frames for initialization to complete
+            yield return null;
+            yield return null;
+            
+            // Start WebRTC event pump
+            _webrtcUpdateCoroutine = StartCoroutine(WebRTC.Update());
+            Log("WebRTC update coroutine started.");
+            
+            _webrtcInitialized = true;
+            Log("WebRTC initialized successfully.");
+        }
+        
+        // Now create the peer connection
+        EnsurePeerConnection();
+    }
+
+    void OnEnable()
+    {
+        ConnectionManager.ConnectionDataCompleted += SetConnectionData;
+        // Subscribe to QR scanner events for camera resource management
+        QRCodeScanner.QRCodeRead += OnQRCodeScanStarted;
+        QRCodeScanner.QRScanningStarted += OnQRScanningStarted;
+    }
+
+    void OnDisable()
+    {
+        ConnectionManager.ConnectionDataCompleted -= SetConnectionData;
+        // Unsubscribe from QR scanner events
+        QRCodeScanner.QRCodeRead -= OnQRCodeScanStarted;
+        QRCodeScanner.QRScanningStarted -= OnQRScanningStarted;
+    }
+
+    private void SetConnectionData(ConnectionDataSet connectionData)
+    {
+        // Update SDP field if we have SDP data
+        if (!string.IsNullOrEmpty(connectionData.SdpData))
+        {
+            remoteSdpInput.text = connectionData.SdpData;
+            Log("Remote SDP field updated from QR scan.");
+        }
+        
+        // Update ICE field if we have ICE data  
+        if (!string.IsNullOrEmpty(connectionData.IceData))
+        {
+            remoteIceInput.text = connectionData.IceData;
+            Log("Remote ICE field updated from QR scan.");
+        }
     }
 
     private void OnDestroy()
@@ -249,9 +308,15 @@ public class SimpleWebRTCPair : MonoBehaviour
         Log("Role set to Receiver.");
         ClearUiOutputs();
 
-        EnsurePeerConnection();
+        StartCoroutine(JoinReceiveRoutine());
+    }
+    
+    private IEnumerator JoinReceiveRoutine()
+    {
+        // Initialize WebRTC and create peer connection
+        yield return StartCoroutine(InitializeWebRTCAndCreatePeer());
+        
         Log("Receiver ready. Paste remote OFFER into Remote SDP and click Set Remote SDP.");
-        ReadSDP?.Invoke();
     }
 
     public void SetRemoteSdp()
@@ -287,9 +352,29 @@ public class SimpleWebRTCPair : MonoBehaviour
             return;
         }
 
+        AddRemoteIceCandidates(text);
+    }
+
+    /// <summary>
+    /// Overload that accepts ICE candidates directly as a string (one per line).
+    /// </summary>
+    public void AddRemoteIceCandidates(string candidates)
+    {
+        if (_pc == null)
+        {
+            LogWarning("PeerConnection not created. Click Create (Send) or Join (Receive) first.");
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(candidates))
+        {
+            LogWarning("ICE candidates string is empty.");
+            return;
+        }
+
         int added = 0, failed = 0;
 
-        foreach (var line in SplitNonEmptyLines(text))
+        foreach (var line in SplitNonEmptyLines(candidates))
         {
             if (!TryParseIce(line, out var ice))
             {
@@ -321,7 +406,9 @@ public class SimpleWebRTCPair : MonoBehaviour
 
     private IEnumerator SenderRoutine_CreateOffer()
     {
-        EnsurePeerConnection();
+        // Initialize WebRTC and create peer connection
+        yield return StartCoroutine(InitializeWebRTCAndCreatePeer());
+        
         StartLocalWebcam();
 
         if (_webcamTex == null)
@@ -330,7 +417,13 @@ public class SimpleWebRTCPair : MonoBehaviour
             yield break;
         }
 
-        _localVideoTrack = new VideoStreamTrack(_webcamTex);
+        // Wait a frame for webcam to initialize
+        yield return null;
+        
+        // Create RenderTexture with WebRTC-compatible format
+        CreateCompatibleRenderTexture();
+        
+        _localVideoTrack = new VideoStreamTrack(_webcamRenderTexture);
         _pc.AddTrack(_localVideoTrack);
         Log("Local webcam track added.");
 
@@ -426,48 +519,56 @@ public class SimpleWebRTCPair : MonoBehaviour
     {
         if (_pc != null) return;
 
-        var config = GetConfig();
-        _pc = new RTCPeerConnection(ref config);
-
-        _pc.OnIceCandidate = OnIceCandidate;
-        _pc.OnIceConnectionChange = state => Log($"ICE connection state: {state}");
-        _pc.OnIceGatheringStateChange = state =>
+        try
         {
-            Log($"ICE gathering state: {state}");
-            if (state == RTCIceGatheringState.Complete)
-            {
-                ICECreated?.Invoke(allLocalIceOutput);
-            }
-        };
-        _pc.OnConnectionStateChange = state => Log($"Peer connection state: {state}");
+            var config = GetConfig();
+            _pc = new RTCPeerConnection(ref config);
 
-        _pc.OnTrack = e =>
-        {
-            Log($"OnTrack fired. kind={e.Track.Kind}");
-
-            if (e.Track is VideoStreamTrack v)
+            _pc.OnIceCandidate = OnIceCandidate;
+            _pc.OnIceConnectionChange = state => Log($"ICE connection state: {state}");
+            _pc.OnIceGatheringStateChange = state =>
             {
-                // Unsubscribe old
-                if (_remoteVideoTrack != null && _onRemoteVideoReceivedHandler != null)
+                Log($"ICE gathering state: {state}");
+                if (state == RTCIceGatheringState.Complete)
                 {
-                    try { _remoteVideoTrack.OnVideoReceived -= _onRemoteVideoReceivedHandler; }
-                    catch { /* ignore */ }
+                    ICECreated?.Invoke(allLocalIceOutput);
                 }
+            };
+            _pc.OnConnectionStateChange = state => Log($"Peer connection state: {state}");
 
-                _remoteVideoTrack = v;
-                _remoteFrameCount = 0;
+            _pc.OnTrack = e =>
+            {
+                Log($"OnTrack fired. kind={e.Track.Kind}");
 
-                // Create a handler of EXACT delegate type
-                _onRemoteVideoReceivedHandler = OnRemoteVideoReceived;
+                if (e.Track is VideoStreamTrack v)
+                {
+                    // Unsubscribe old
+                    if (_remoteVideoTrack != null && _onRemoteVideoReceivedHandler != null)
+                    {
+                        try { _remoteVideoTrack.OnVideoReceived -= _onRemoteVideoReceivedHandler; }
+                        catch { /* ignore */ }
+                    }
 
-                // Subscribe
-                _remoteVideoTrack.OnVideoReceived += _onRemoteVideoReceivedHandler;
+                    _remoteVideoTrack = v;
+                    _remoteFrameCount = 0;
 
-                Log("Remote VideoStreamTrack connected; waiting for frames...");
-            }
-        };
+                    // Create a handler of EXACT delegate type
+                    _onRemoteVideoReceivedHandler = OnRemoteVideoReceived;
 
-        Log("PeerConnection created.");
+                    // Subscribe
+                    _remoteVideoTrack.OnVideoReceived += _onRemoteVideoReceivedHandler;
+
+                    Log("Remote VideoStreamTrack connected; waiting for frames...");
+                }
+            };
+
+            Log("PeerConnection created.");
+        }
+        catch (Exception e)
+        {
+            LogError($"Failed to create RTCPeerConnection: {e.Message}");
+            LogError("This may happen if WebRTC native library is not properly loaded on this platform.");
+        }
     }
 
     private void OnRemoteVideoReceived(Texture tex)
@@ -555,6 +656,117 @@ public class SimpleWebRTCPair : MonoBehaviour
         Log($"Webcam started: {deviceName}");
     }
 
+    /// <summary>
+    /// Pause video streaming to allow QR scanner to use camera.
+    /// Called before QR scanning starts.
+    /// </summary>
+    public void PauseVideoForQRScanning()
+    {
+        if (CurrentRole != Role.Sender || _webcamTex == null)
+            return;
+
+        Log("Pausing video stream for QR scanning...");
+        _videoPausedForQR = true;
+        
+        if (_webcamTex.isPlaying)
+        {
+            _webcamTex.Stop();
+        }
+
+        // Clear local video display
+        UnityMainThreadDispatcher.Enqueue(() =>
+        {
+            if (localVideoImage != null)
+                localVideoImage.texture = null;
+        });
+    }
+
+    /// <summary>
+    /// Resume video streaming after QR scanning completes.
+    /// Restarts the camera and reconnects it to WebRTC.
+    /// </summary>
+    public void ResumeVideoAfterQRScanning()
+    {
+        if (CurrentRole != Role.Sender || _webcamTex == null || !_videoPausedForQR)
+            return;
+
+        Log("Resuming video stream after QR scanning...");
+        
+        // Restart the webcam
+        _webcamTex.Play();
+        
+        // Wait a frame then resume copying
+        StartCoroutine(ResumeVideoAfterDelay());
+    }
+
+    private System.Collections.IEnumerator ResumeVideoAfterDelay()
+    {
+        // Wait for camera to fully restart
+        yield return new WaitForSeconds(0.5f);
+        
+        _videoPausedForQR = false;
+        
+        // Restore local video display
+        UnityMainThreadDispatcher.Enqueue(() =>
+        {
+            if (localVideoImage != null && _webcamTex != null)
+            {
+                localVideoImage.texture = _webcamTex;
+                localVideoImage.SetNativeSize();
+            }
+        });
+
+        Log("Video stream resumed successfully.");
+    }
+
+    /// <summary>
+    /// Called when QR scanning completes - automatically resumes video.
+    /// </summary>
+    private void OnQRCodeScanStarted(ConnectionData connectionData)
+    {
+        // QR scanning completed, resume video
+        ResumeVideoAfterQRScanning();
+    }
+
+    /// <summary>
+    /// Called when QR scanning starts - pause video for camera access.
+    /// </summary>
+    private void OnQRScanningStarted()
+    {
+        PauseVideoForQRScanning();
+    }
+    
+    private void CreateCompatibleRenderTexture()
+    {
+        if (_webcamRenderTexture != null)
+        {
+            _webcamRenderTexture.Release();
+            _webcamRenderTexture = null;
+        }
+        
+        // Create RenderTexture with WebRTC-compatible format
+        _webcamRenderTexture = new RenderTexture(_webcamTex.width, _webcamTex.height, 0, 
+            UnityEngine.Experimental.Rendering.GraphicsFormat.B8G8R8A8_UNorm);
+        
+        Log($"Created compatible RenderTexture: {_webcamTex.width}x{_webcamTex.height}, format: B8G8R8A8_UNorm");
+        
+        // Start coroutine to continuously copy webcam to render texture
+        _webcamCopyCoroutine = StartCoroutine(CopyWebcamToRenderTexture());
+    }
+    
+    private IEnumerator CopyWebcamToRenderTexture()
+    {
+        while (_webcamTex != null && _webcamRenderTexture != null)
+        {
+            // Only copy if not paused for QR scanning and webcam is playing
+            if (!_videoPausedForQR && _webcamTex.isPlaying)
+            {
+                Graphics.Blit(_webcamTex, _webcamRenderTexture);
+            }
+            yield return null; // Copy every frame
+        }
+    }
+
     // =========================
     // Cleanup
     // =========================
@@ -582,11 +794,25 @@ public class SimpleWebRTCPair : MonoBehaviour
             _localVideoTrack = null;
         }
 
+        if (_webcamCopyCoroutine != null)
+        {
+            StopCoroutine(_webcamCopyCoroutine);
+            _webcamCopyCoroutine = null;
+        }
+
         if (_webcamTex != null)
         {
             if (_webcamTex.isPlaying) _webcamTex.Stop();
             _webcamTex = null;
         }
+        
+        if (_webcamRenderTexture != null)
+        {
+            _webcamRenderTexture.Release();
+            _webcamRenderTexture = null;
+        }
+
+        _videoPausedForQR = false;
 
         if (_pc != null)
         {

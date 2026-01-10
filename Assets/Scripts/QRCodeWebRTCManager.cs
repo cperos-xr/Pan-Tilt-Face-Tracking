@@ -41,7 +41,7 @@ public class QRCodeWebRTCManager : MonoBehaviour
     private int currentSDPChunkIndex = 0;
     private int currentICEChunkIndex = 0;
 
-    private int maxChunkDataLen = 800; // Tune for QR capacity
+    private int maxChunkDataLen = 400; // Tune for QR capacity
     //private int totalChunks = 1;
     private int totalSDPChunks = 1;
     private int totalICEChunks = 1;

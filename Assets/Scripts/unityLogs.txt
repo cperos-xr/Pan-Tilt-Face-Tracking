@@ -1,0 +1,1214 @@
+0001/01/01 00:00:00.000 -1 -1 Info  --------- beginning of main
+2026/01/04 23:23:05.794 9966 9992 Info Unity [SimpleWebRTCPair][Sender] Role set to Sender.
+2026/01/04 23:23:05.794 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:23:05.794 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:23:05.794 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:23:05.794 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:23:05.794 9966 9992 Info Unity  #4 0x7bbe0953c8 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.794 9966 9992 Info Unity  #5 0x7bbe095454 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.794 9966 9992 Info Unity  #6 0x7bbf72b568 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.794 9966 9992 Info Unity  #7 0x7bbe431778 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.794 9966 9992 Info Unity  #8 0x7bbf92600c (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.794 9966 9992 Info Unity  #9 0x7bbf92576c (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.794 9966 9992 Info Unity  #10 0x7bbf92550c (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.794 9966 9992 Info Unity  #11 0x7bbdfa9074 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.794 9966 9992 Info Unity  #12 0x7bbdfa8fc0 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.794 9966 9992 Info Unity  #13 0x7bd2219328 (libunity.so) scripting_method_invoke(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingArguments&, ScriptingExceptionPtr*, bool) 0xb0
+2026/01/04 23:23:05.794 9966 9992 Info Unity  #1
+2026/01/04 23:23:05.796 9966 9992 Info Unity [SimpleWebRTCPair][Sender] Initializing WebRTC...
+2026/01/04 23:23:05.796 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:23:05.796 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:23:05.796 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:23:05.796 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:23:05.796 9966 9992 Info Unity  #4 0x7bbe0953c8 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.796 9966 9992 Info Unity  #5 0x7bbe0983e8 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.796 9966 9992 Info Unity  #6 0x7bbf7191e0 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.796 9966 9992 Info Unity  #7 0x7bbdfa9074 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.796 9966 9992 Info Unity  #8 0x7bbdfa8fc0 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.796 9966 9992 Info Unity  #9 0x7bd2219328 (libunity.so) scripting_method_invoke(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingArguments&, ScriptingExceptionPtr*, bool) 0xb0
+2026/01/04 23:23:05.796 9966 9992 Info Unity  #10 0x7bd222bf6c (libunity.so) ScriptingInvocation::Invoke(ScriptingExceptionPtr*, bool) 0x9c
+2026/01/04 23:23:05.796 9966 9992 Info Unity  #11 0x7bd22337e0 (libunity.so) Coroutine::InvokeMoveNext(Scr
+2026/01/04 23:23:05.798 9966 9992 Info Unity [SimpleWebRTCPair][Sender] WebRTC.Initialize not present in this package version (OK).
+2026/01/04 23:23:05.798 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:23:05.798 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:23:05.798 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:23:05.798 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:23:05.798 9966 9992 Info Unity  #4 0x7bbe0953c8 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.798 9966 9992 Info Unity  #5 0x7bbe095200 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.798 9966 9992 Info Unity  #6 0x7bbe098400 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.798 9966 9992 Info Unity  #7 0x7bbf7191e0 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.798 9966 9992 Info Unity  #8 0x7bbdfa9074 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.798 9966 9992 Info Unity  #9 0x7bbdfa8fc0 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.798 9966 9992 Info Unity  #10 0x7bd2219328 (libunity.so) scripting_method_invoke(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingArguments&, ScriptingExceptionPtr*, bool) 0xb0
+2026/01/04 23:23:05.798 9966 9992 Info Unity  #11 0x7bd222bf6c (libunity.so) ScriptingInvocation::Invoke(ScriptingExceptionPt
+2026/01/04 23:23:05.859 9966 9992 Info Unity [SimpleWebRTCPair][Sender] WebRTC update coroutine started.
+2026/01/04 23:23:05.859 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:23:05.859 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:23:05.859 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:23:05.859 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:23:05.859 9966 9992 Info Unity  #4 0x7bbe0953c8 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.859 9966 9992 Info Unity  #5 0x7bbe09846c (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.859 9966 9992 Info Unity  #6 0x7bbf7191e0 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.859 9966 9992 Info Unity  #7 0x7bbdfa9074 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.859 9966 9992 Info Unity  #8 0x7bbdfa8fc0 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.859 9966 9992 Info Unity  #9 0x7bd2219328 (libunity.so) scripting_method_invoke(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingArguments&, ScriptingExceptionPtr*, bool) 0xb0
+2026/01/04 23:23:05.859 9966 9992 Info Unity  #10 0x7bd222bf6c (libunity.so) ScriptingInvocation::Invoke(ScriptingExceptionPtr*, bool) 0x9c
+2026/01/04 23:23:05.859 9966 9992 Info Unity  #11 0x7bd22337e0 (libunity.so) Coroutine::InvokeMo
+2026/01/04 23:23:05.860 9966 9992 Info Unity [SimpleWebRTCPair][Sender] WebRTC initialized successfully.
+2026/01/04 23:23:05.860 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:23:05.860 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:23:05.860 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:23:05.860 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:23:05.860 9966 9992 Info Unity  #4 0x7bbe0953c8 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.860 9966 9992 Info Unity  #5 0x7bbe09848c (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.860 9966 9992 Info Unity  #6 0x7bbf7191e0 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.860 9966 9992 Info Unity  #7 0x7bbdfa9074 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.860 9966 9992 Info Unity  #8 0x7bbdfa8fc0 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.860 9966 9992 Info Unity  #9 0x7bd2219328 (libunity.so) scripting_method_invoke(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingArguments&, ScriptingExceptionPtr*, bool) 0xb0
+2026/01/04 23:23:05.860 9966 9992 Info Unity  #10 0x7bd222bf6c (libunity.so) ScriptingInvocation::Invoke(ScriptingExceptionPtr*, bool) 0x9c
+2026/01/04 23:23:05.860 9966 9992 Info Unity  #11 0x7bd22337e0 (libunity.so) Coroutine::InvokeMo
+2026/01/04 23:23:05.862 9966 9992 Info Unity [SimpleWebRTCPair][Sender] RTCConfiguration: STUN enabled (stun:stun.l.google.com:19302)
+2026/01/04 23:23:05.862 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:23:05.862 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:23:05.862 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:23:05.862 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:23:05.862 9966 9992 Info Unity  #4 0x7bbe0953c8 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.862 9966 9992 Info Unity  #5 0x7bbe0967e8 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.862 9966 9992 Info Unity  #6 0x7bbe096358 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.862 9966 9992 Info Unity  #7 0x7bbe098498 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.862 9966 9992 Info Unity  #8 0x7bbf7191e0 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.862 9966 9992 Info Unity  #9 0x7bbdfa9074 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.862 9966 9992 Info Unity  #10 0x7bbdfa8fc0 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.862 9966 9992 Info Unity  #11 0x7bd2219328 (libunity.so) scripting_method_invoke(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingArguments&, ScriptingExceptionPtr*, bool) 0xb0
+2026/01/04 23:23:05.862 9966 9992 Info Unity  #12 0x7bd222bf6c (libunity.so) Scripti
+2026/01/04 23:23:05.886 9966 9992 Info Unity [SimpleWebRTCPair][Sender] PeerConnection created.
+2026/01/04 23:23:05.886 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:23:05.886 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:23:05.886 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:23:05.886 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:23:05.886 9966 9992 Info Unity  #4 0x7bbe0953c8 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.886 9966 9992 Info Unity  #5 0x7bbe0964f8 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.886 9966 9992 Info Unity  #6 0x7bbe098498 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.886 9966 9992 Info Unity  #7 0x7bbf7191e0 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.886 9966 9992 Info Unity  #8 0x7bbdfa9074 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.886 9966 9992 Info Unity  #9 0x7bbdfa8fc0 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:05.886 9966 9992 Info Unity  #10 0x7bd2219328 (libunity.so) scripting_method_invoke(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingArguments&, ScriptingExceptionPtr*, bool) 0xb0
+2026/01/04 23:23:05.886 9966 9992 Info Unity  #11 0x7bd222bf6c (libunity.so) ScriptingInvocation::Invoke(ScriptingExceptionPtr*, bool) 0x9c
+2026/01/04 23:23:05.886 9966 9992 Info Unity  #12 0x7bd22337e0 (li
+2026/01/04 23:23:05.891 9966 9992 Info CameraManagerGlobal Connecting to camera service
+2026/01/04 23:23:05.903 9966 9992 Info Unity Camera2: focal length4.71
+2026/01/04 23:23:05.904 9966 9992 Info Unity Camera2: sensor size 6.4 x 4.8
+2026/01/04 23:23:05.904 9966 9992 Info Unity Camera2: focal length equivalent 26
+2026/01/04 23:23:05.923 9966 9992 Info Unity Camera2: focal length2.78
+2026/01/04 23:23:05.923 9966 9992 Info Unity Camera2: sensor size 3.65568 x 2.74176
+2026/01/04 23:23:05.923 9966 9992 Info Unity Camera2: focal length equivalent 27
+2026/01/04 23:23:05.938 9966 9992 Info Unity Camera2: Hardware level: 3
+2026/01/04 23:23:05.946 9966 9992 Info Unity Camera2: FrameSize 4000 x 2250 [3.3774808550448396]
+2026/01/04 23:23:05.946 9966 9992 Info Unity Camera2: FrameSize 4000 x 1800 [3.15433730373063]
+2026/01/04 23:23:05.946 9966 9992 Info Unity Camera2: FrameSize 3264 x 2448 [3.25848107946056]
+2026/01/04 23:23:05.946 9966 9992 Info Unity Camera2: FrameSize 3264 x 1836 [2.970799007008779]
+2026/01/04 23:23:05.946 9966 9992 Info Unity Camera2: FrameSize 3264 x 1468 [2.747110645002804]
+2026/01/04 23:23:05.946 9966 9992 Info Unity Camera2: FrameSize 1920 x 1920 [2.4849066497880004]
+2026/01/04 23:23:05.946 9966 9992 Info Unity Camera2: FrameSize 1920 x 1080 [1.9095425048844386]
+2026/01/04 23:23:05.946 9966 9992 Info Unity Camera2: FrameSize 1920 x 864 [1.6863989535702286]
+2026/01/04 23:23:05.946 9966 9992 Info Unity Camera2: FrameSize 1600 x 1200 [1.83258146374831]
+2026/01/04 23:23:05.946 9966 9992 Info Unity Camera2: FrameSize 1440 x 1080 [1.6218604324326575]
+2026/01/04 23:23:05.946 9966 9992 Info Unity Camera2: FrameSize 1600 x 900 [1.5448993912965292]
+2026/01/04 23:23:05.946 9966 9992 Info Unity Camera2: FrameSize 1600 x 720 [1.3217558399823195]
+2026/01/04 23:23:05.946 9966 9992 Info Unity Camera2: FrameSize 1504 x 720 [1.259880436264232]
+2026/01/04 23:23:05.946 9966 9992 Info Unity Camera2: FrameSize 1280 x 720 [1.0986122886681098]
+2026/01/04 23:23:05.947 9966 9992 Info Unity Camera2: FrameSize 1280 x 576 [0.8754687373538999]
+2026/01/04 23:23:05.947 9966 9992 Info Unity Camera2: FrameSize 1200 x 540 [0.7463916950787577]
+2026/01/04 23:23:05.947 9966 9992 Info Unity Camera2: FrameSize 1024 x 768 [0.9400072584914712]
+2026/01/04 23:23:05.947 9966 9992 Info Unity Camera2: FrameSize 1120 x 504 [0.6084059521048548]
+2026/01/04 23:23:05.947 9966 9992 Info Unity Camera2: FrameSize 960 x 720 [0.8109302162163289]
+2026/01/04 23:23:05.947 9966 9992 Info Unity Camera2: FrameSize 960 x 540 [0.523248143764548]
+2026/01/04 23:23:05.947 9966 9992 Info Unity Camera2: FrameSize 720 x 540 [0.23556607131276702]
+2026/01/04 23:23:05.947 9966 9992 Info Unity Camera2: FrameSize 720 x 480 [0.11778303565638351]
+2026/01/04 23:23:05.947 9966 9992 Info Unity Camera2: FrameSize 640 x 480 [0.0]
+2026/01/04 23:23:05.947 9966 9992 Info Unity Camera2: FrameSize 352 x 288 [1.1086626245216111]
+2026/01/04 23:23:05.947 9966 9992 Info Unity Camera2: FrameSize 320 x 240 [1.3862943611198906]
+2026/01/04 23:23:05.947 9966 9992 Info Unity Camera2: FrameSize 256 x 192 [1.8325814637483102]
+2026/01/04 23:23:05.947 9966 9992 Info Unity Camera2: FrameSize 240 x 320 [1.3862943611198906]
+2026/01/04 23:23:05.947 9966 9992 Info Unity Camera2: FrameSize 176 x 144 [2.494956985641502]
+2026/01/04 23:23:05.949 9966 9992 Info Unity Camera2: FPS requested: 24 set: 24
+2026/01/04 23:23:05.969 9966 10078 Info Unity Camera2: CameraDevice opened.
+2026/01/04 23:23:05.974 9966 9992 Info Unity Camera2: Start preview.
+2026/01/04 23:23:06.082 9966 10078 Info Unity Camera2: CaptureSession is configured.
+2026/01/04 23:23:06.083 9966 9992 Info Unity [SimpleWebRTCPair][Sender] Webcam started: Camera 0
+2026/01/04 23:23:06.083 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:23:06.083 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:23:06.083 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:23:06.083 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:23:06.083 9966 9992 Info Unity  #4 0x7bbe0953c8 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.083 9966 9992 Info Unity  #5 0x7bbe098744 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.083 9966 9992 Info Unity  #6 0x7bbf7191e0 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.083 9966 9992 Info Unity  #7 0x7bbdfa9074 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.083 9966 9992 Info Unity  #8 0x7bbdfa8fc0 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.083 9966 9992 Info Unity  #9 0x7bd2219328 (libunity.so) scripting_method_invoke(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingArguments&, ScriptingExceptionPtr*, bool) 0xb0
+2026/01/04 23:23:06.083 9966 9992 Info Unity  #10 0x7bd222bf6c (libunity.so) ScriptingInvocation::Invoke(ScriptingExceptionPtr*, bool) 0x9c
+2026/01/04 23:23:06.083 9966 9992 Info Unity  #11 0x7bd22337e0 (libunity.so) Coroutine::InvokeMoveNext(S
+2026/01/04 23:23:06.093 9966 9992 Info Unity [SimpleWebRTCPair][Sender] Created compatible RenderTexture: 640x480, format: B8G8R8A8_UNorm
+2026/01/04 23:23:06.093 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:23:06.093 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:23:06.093 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:23:06.093 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:23:06.093 9966 9992 Info Unity  #4 0x7bbe0953c8 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.093 9966 9992 Info Unity  #5 0x7bbe097284 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.093 9966 9992 Info Unity  #6 0x7bbe0987a8 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.093 9966 9992 Info Unity  #7 0x7bbf7191e0 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.093 9966 9992 Info Unity  #8 0x7bbdfa9074 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.093 9966 9992 Info Unity  #9 0x7bbdfa8fc0 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.093 9966 9992 Info Unity  #10 0x7bd2219328 (libunity.so) scripting_method_invoke(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingArguments&, ScriptingExceptionPtr*, bool) 0xb0
+2026/01/04 23:23:06.093 9966 9992 Info Unity  #11 0x7bd222bf6c (libunity.so) ScriptingInvocation::Invoke(ScriptingExcep
+2026/01/04 23:23:06.163 9966 9992 Info Unity [SimpleWebRTCPair][Sender] Local webcam track added.
+2026/01/04 23:23:06.163 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:23:06.163 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:23:06.163 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:23:06.163 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:23:06.163 9966 9992 Info Unity  #4 0x7bbe0953c8 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.163 9966 9992 Info Unity  #5 0x7bbe098820 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.163 9966 9992 Info Unity  #6 0x7bbf7191e0 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.163 9966 9992 Info Unity  #7 0x7bbdfa9074 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.163 9966 9992 Info Unity  #8 0x7bbdfa8fc0 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.163 9966 9992 Info Unity  #9 0x7bd2219328 (libunity.so) scripting_method_invoke(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingArguments&, ScriptingExceptionPtr*, bool) 0xb0
+2026/01/04 23:23:06.163 9966 9992 Info Unity  #10 0x7bd222bf6c (libunity.so) ScriptingInvocation::Invoke(ScriptingExceptionPtr*, bool) 0x9c
+2026/01/04 23:23:06.163 9966 9992 Info Unity  #11 0x7bd22337e0 (libunity.so) Coroutine::InvokeMoveNext(
+2026/01/04 23:23:06.191 9966 9992 Info Unity [SimpleWebRTCPair][Sender] SDP offer created. type=Offer
+2026/01/04 23:23:06.191 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:23:06.191 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:23:06.191 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:23:06.191 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:23:06.191 9966 9992 Info Unity  #4 0x7bbe0953c8 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.191 9966 9992 Info Unity  #5 0x7bbe098970 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.191 9966 9992 Info Unity  #6 0x7bbf7191e0 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.191 9966 9992 Info Unity  #7 0x7bbdfa9074 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.191 9966 9992 Info Unity  #8 0x7bbdfa8fc0 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.191 9966 9992 Info Unity  #9 0x7bd2219328 (libunity.so) scripting_method_invoke(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingArguments&, ScriptingExceptionPtr*, bool) 0xb0
+2026/01/04 23:23:06.191 9966 9992 Info Unity  #10 0x7bd222bf6c (libunity.so) ScriptingInvocation::Invoke(ScriptingExceptionPtr*, bool) 0x9c
+2026/01/04 23:23:06.191 9966 9992 Info Unity  #11 0x7bd22337e0 (libunity.so) Coroutine::InvokeMoveN
+2026/01/04 23:23:06.208 9966 9992 Info Unity [SimpleWebRTCPair][Sender] ICE gathering state: Gathering
+2026/01/04 23:23:06.208 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:23:06.208 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:23:06.208 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:23:06.208 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:23:06.208 9966 9992 Info Unity  #4 0x7bbe0953c8 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.208 9966 9992 Info Unity  #5 0x7bbe0979d8 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.208 9966 9992 Info Unity  #6 0x7bbf685c70 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.208 9966 9992 Info Unity  #7 0x7bbf6d202c (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.208 9966 9992 Info Unity  #8 0x7bbf67d6f0 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.208 9966 9992 Info Unity  #9 0x7bbf67d528 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.208 9966 9992 Info Unity  #10 0x7bbf67d818 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.208 9966 9992 Info Unity  #11 0x7bbf71f9e4 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.208 9966 9992 Info Unity  #12 0x7bbf71f92c (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.208 9966 9992 Info Unity  #13 0x7bbdfa9074 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.208 9966 9992 Info Unity  #14 0x7bbdfa8fc0 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.208 9966 9992 Info Unity  #15 0x7bd2219328 (libunity.so) scripting_method_invoke(ScriptingM
+2026/01/04 23:23:06.223 9966 9992 Info Unity [SimpleWebRTCPair][Sender] LocalDescription set (offer).
+2026/01/04 23:23:06.223 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:23:06.223 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:23:06.223 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:23:06.223 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:23:06.223 9966 9992 Info Unity  #4 0x7bbe0953c8 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.223 9966 9992 Info Unity  #5 0x7bbe0989e4 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.223 9966 9992 Info Unity  #6 0x7bbf7191e0 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.223 9966 9992 Info Unity  #7 0x7bbdfa9074 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.223 9966 9992 Info Unity  #8 0x7bbdfa8fc0 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.223 9966 9992 Info Unity  #9 0x7bd2219328 (libunity.so) scripting_method_invoke(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingArguments&, ScriptingExceptionPtr*, bool) 0xb0
+2026/01/04 23:23:06.223 9966 9992 Info Unity  #10 0x7bd222bf6c (libunity.so) ScriptingInvocation::Invoke(ScriptingExceptionPtr*, bool) 0x9c
+2026/01/04 23:23:06.223 9966 9992 Info Unity  #11 0x7bd22337e0 (libunity.so) Coroutine::InvokeMoveN
+2026/01/04 23:23:06.241 9966 9992 Info Unity SDP Created: {"type":"offer","sdp":"v=0\r\no=- 5805929788882639496 2 IN IP4 127.0.0.1\r\ns=-\r\nt=0 0\r\na=group:BUNDLE 0\r\na=extmap-allow-mixed\r\na=msid-semantic: WMS\r\nm=video 9 UDP/TLS/RTP/SAVPF 127 120 125 119 123 117 39 40 122 116 115 109 121\r\nc=IN IP4 0.0.0.0\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=ice-ufrag:hkeW\r\na=ice-pwd:vN87wRqQmbt4b4Rq1HCwi49p\r\na=ice-options:trickle\r\na=fingerprint:sha-256 C8:BD:72:75:95:9A:49:FA:B0:1F:2F:62:4E:D6:80:6D:EF:88:ED:C7:98:20:7D:54:94:E9:0F:3F:D3:CE:06:9E\r\na=setup:actpass\r\na=mid:0\r\na=extmap:1 urn:ietf:params:rtp-hdrext:toffset\r\na=extmap:2 http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time\r\na=extmap:3 urn:3gpp:video-orientation\r\na=extmap:4 http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01\r\na=extmap:5 http://www.webrtc.org/experiments/rtp-hdrext/playout-delay\r\na=extmap:6 http://www.webrtc.org/experiments/rtp-hdrext/video-content-type\r\na=extmap:7 http://www.webrtc.org/experiments/rtp-hdrext/video-timing\r\na=extmap:8 htt
+2026/01/04 23:23:06.314 9966 9992 Info Unity [SimpleWebRTCPair][Sender] Local SDP (offer) ready for copy/paste.
+2026/01/04 23:23:06.314 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:23:06.314 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:23:06.314 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:23:06.314 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:23:06.314 9966 9992 Info Unity  #4 0x7bbe0953c8 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.314 9966 9992 Info Unity  #5 0x7bbe098a58 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.314 9966 9992 Info Unity  #6 0x7bbf7191e0 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.314 9966 9992 Info Unity  #7 0x7bbdfa9074 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.314 9966 9992 Info Unity  #8 0x7bbdfa8fc0 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.314 9966 9992 Info Unity  #9 0x7bd2219328 (libunity.so) scripting_method_invoke(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingArguments&, ScriptingExceptionPtr*, bool) 0xb0
+2026/01/04 23:23:06.314 9966 9992 Info Unity  #10 0x7bd222bf6c (libunity.so) ScriptingInvocation::Invoke(ScriptingExceptionPtr*, bool) 0x9c
+2026/01/04 23:23:06.314 9966 9992 Info Unity  #11 0x7bd22337e0 (libunity.so) Coroutine::I
+2026/01/04 23:23:06.318 9966 9992 Info Unity [SimpleWebRTCPair][Sender] Local ICE gathered: {"candidate":"candidate:709821009 1 udp 2122260223 192.168.0.11 42697 typ host generation 0 ufrag hkeW network-id 3 network-cost 10","sdpMid":"0","sdpMLineIndex":0,"usernameFragmen...
+2026/01/04 23:23:06.318 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:23:06.318 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:23:06.318 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:23:06.318 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:23:06.318 9966 9992 Info Unity  #4 0x7bbe0953c8 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.318 9966 9992 Info Unity  #5 0x7bbe096d20 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.318 9966 9992 Info Unity  #6 0x7bbf6859b8 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.318 9966 9992 Info Unity  #7 0x7bbf6d202c (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.318 9966 9992 Info Unity  #8 0x7bbf67d6f0 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.318 9966 9992 Info Unity  #9 0x7bbf67d528 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.318 9966 9992 Info Unity  #10 0x7bbf67d818 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.318 9966 9992 Info Unity  #11 0x7bbf71f9e4 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.318 9966 9992 Info Unity  #12 0x7bb
+2026/01/04 23:23:06.320 9966 9992 Info Unity [SimpleWebRTCPair][Sender] Local ICE gathered: {"candidate":"candidate:3571832517 1 tcp 1518280447 192.168.0.11 45913 typ host tcptype passive generation 0 ufrag hkeW network-id 3 network-cost 10","sdpMid":"0","sdpMLineIndex":0...
+2026/01/04 23:23:06.320 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:23:06.320 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:23:06.320 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:23:06.320 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:23:06.320 9966 9992 Info Unity  #4 0x7bbe0953c8 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.320 9966 9992 Info Unity  #5 0x7bbe096d20 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.320 9966 9992 Info Unity  #6 0x7bbf6859b8 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.320 9966 9992 Info Unity  #7 0x7bbf6d202c (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.320 9966 9992 Info Unity  #8 0x7bbf67d6f0 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.320 9966 9992 Info Unity  #9 0x7bbf67d528 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.320 9966 9992 Info Unity  #10 0x7bbf67d818 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.320 9966 9992 Info Unity  #11 0x7bbf71f9e4 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.320 9966 9992 Info Unity  #12 0x7bb
+2026/01/04 23:23:06.323 9966 9992 Info AdrenoVK-0 QGLCLoadShaderBinary failed.  A blob from the cache failed to load.  Stage=Vertex.  Hash=371BD4C5
+2026/01/04 23:23:06.325 9966 9992 Info AdrenoVK-0 QGLCLoadShaderBinary failed.  A blob from the cache failed to load.  Stage=Fragment.  Hash=F1BE468D
+2026/01/04 23:23:06.358 9966 9992 Info Unity [SimpleWebRTCPair][Sender] Local ICE gathered: {"candidate":"candidate:726626423 1 udp 1686052607 72.130.148.230 42697 typ srflx raddr 192.168.0.11 rport 42697 generation 0 ufrag hkeW network-id 3 network-cost 10","sdpMid":"0",...
+2026/01/04 23:23:06.358 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:23:06.358 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:23:06.358 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:23:06.358 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:23:06.358 9966 9992 Info Unity  #4 0x7bbe0953c8 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.358 9966 9992 Info Unity  #5 0x7bbe096d20 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.358 9966 9992 Info Unity  #6 0x7bbf6859b8 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.358 9966 9992 Info Unity  #7 0x7bbf6d202c (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.358 9966 9992 Info Unity  #8 0x7bbf67d6f0 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.358 9966 9992 Info Unity  #9 0x7bbf67d528 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.358 9966 9992 Info Unity  #10 0x7bbf67d818 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.358 9966 9992 Info Unity  #11 0x7bbf71f9e4 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.358 9966 9992 Info Unity  #12 0x7bb
+2026/01/04 23:23:06.363 9966 9992 Info Unity [SimpleWebRTCPair][Sender] ICE gathering state: Complete
+2026/01/04 23:23:06.363 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:23:06.363 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:23:06.363 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:23:06.363 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:23:06.363 9966 9992 Info Unity  #4 0x7bbe0953c8 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.363 9966 9992 Info Unity  #5 0x7bbe0979d8 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.363 9966 9992 Info Unity  #6 0x7bbf685c70 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.363 9966 9992 Info Unity  #7 0x7bbf6d202c (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.363 9966 9992 Info Unity  #8 0x7bbf67d6f0 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.363 9966 9992 Info Unity  #9 0x7bbf67d528 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.363 9966 9992 Info Unity  #10 0x7bbf67d818 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.363 9966 9992 Info Unity  #11 0x7bbf71f9e4 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.363 9966 9992 Info Unity  #12 0x7bbf71f92c (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.363 9966 9992 Info Unity  #13 0x7bbdfa9074 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.363 9966 9992 Info Unity  #14 0x7bbdfa8fc0 (libil2cpp.so) ? 0x0
+2026/01/04 23:23:06.363 9966 9992 Info Unity  #15 0x7bd2219328 (libunity.so) scripting_method_invoke(ScriptingMe
+2026/01/04 23:23:06.364 9966 9992 Info Unity ICE Created: {"candidate":"candidate:709821009 1 udp 2122260223 192.168.0.11 42697 typ host generation 0 ufrag hkeW network-id 3 network-cost 10","sdpMid":"0","sdpMLineIndex":0,"usernameFragment":""}
+2026/01/04 23:23:06.364 9966 9992 Info Unity {"candidate":"candidate:3571832517 1 tcp 1518280447 192.168.0.11 45913 typ host tcptype passive generation 0 ufrag hkeW network-id 3 network-cost 10","sdpMid":"0","sdpMLineIndex":0,"usernameFragment":""}
+2026/01/04 23:23:06.364 9966 9992 Info Unity {"candidate":"candidate:726626423 1 udp 1686052607 72.130.148.230 42697 typ srflx raddr 192.168.0.11 rport 42697 generation 0 ufrag hkeW network-id 3 network-cost 10","sdpMid":"0","sdpMLineIndex":0,"usernameFragment":""}
+2026/01/04 23:23:06.364 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:23:06.364 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:23:06.364 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:23:06.364 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, Scriptin
+2026/01/04 23:23:31.535 9966 10044 Warn Choreographer Frame time is 0.050173 ms in the future!  Check that graphics HAL is generating vsync timestamps using the correct timebase.
+2026/01/04 23:23:36.307 9966 9966 Info Unity onPause
+2026/01/04 23:23:36.323 9966 10079 Warn MessageQueue Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {66c030} sending message to a Handler on a dead thread
+2026/01/04 23:23:36.323 9966 10079 Warn MessageQueue java.lang.IllegalStateException: Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {66c030} sending message to a Handler on a dead thread
+2026/01/04 23:23:36.323 9966 10079 Warn MessageQueue 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:567)
+2026/01/04 23:23:36.323 9966 10079 Warn MessageQueue 	at android.os.Handler.enqueueMessage(Handler.java:778)
+2026/01/04 23:23:36.323 9966 10079 Warn MessageQueue 	at android.os.Handler.sendMessageAtTime(Handler.java:727)
+2026/01/04 23:23:36.323 9966 10079 Warn MessageQueue 	at android.os.Handler.sendMessageDelayed(Handler.java:697)
+2026/01/04 23:23:36.323 9966 10079 Warn MessageQueue 	at android.os.Handler.sendMessage(Handler.java:635)
+2026/01/04 23:23:36.323 9966 10079 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate.sendDisplayEvent(DisplayManagerGlobal.java:754)
+2026/01/04 23:23:36.323 9966 10079 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.handleDisplayEvent(DisplayManagerGlobal.java:368)
+2026/01/04 23:23:36.323 9966 10079 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.access$200(DisplayManagerGlobal.java:57)
+2026/01/04 23:23:36.323 9966 10079 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayManagerCallback.onDisplayEvent(DisplayManagerGlobal.java:740)
+2026/01/04 23:23:36.323 9966 10079 Warn MessageQueue 	at android.hardware.display.IDisplayManagerCallback$Stub.onTransact(IDisplayManagerCallback.java:84)
+2026/01/04 23:23:36.323 9966 10079 Warn MessageQueue 	at android.os.Binder.execTransactInternal(Binder.java:1173)
+2026/01/04 23:23:36.323 9966 10079 Warn MessageQueue 	at android.os.Binder.execTransact(Binder.java:1132)
+2026/01/04 23:23:36.365 9966 9992 Info Unity Camera2: Pause preview.
+2026/01/04 23:23:36.367 9966 9992 Info Unity Camera2: Close.
+2026/01/04 23:23:36.367 9966 9992 Info Unity Camera2: Stop preview.
+2026/01/04 23:23:36.447 9966 10078 Info Unity Camera2: CameraDevice closed.
+2026/01/04 23:23:36.535 9966 9992 Debug Unity Vulkan PSO: data extracted [new size=80908, old size=73954, incomplete=0]
+2026/01/04 23:23:36.541 9966 9992 Debug Unity Vulkan PSO: Saved size[80908] path[/storage/emulated/0/Android/data/com.cperos.xr.com.unity.template.mobile2D/cache/vulkan_pso_cache.bin] success=1 headerChanged=0 sizeChanged=1
+2026/01/04 23:23:36.578 9966 10030 Debug AudioTrack stop(182): called with 1024512 frames delivered
+2026/01/04 23:23:36.581 9966 10030 Debug AudioTrack ~AudioTrack(): RelativeVolumeFeature mSessionId:2857, clientId:160
+2026/01/04 23:23:36.587 9966 9992 Debug Unity Sensor :        Accelerometer ( 1) ; 0.004788 / 0.00s ; icm4x6xx Accelerometer Non-wakeup / TDK-Invensense 
+2026/01/04 23:23:36.604 9966 9966 Debug Unity PersistentUnitySurface.preserveContent: com.unity3d.player.a{7afaf5c VFE...... .F....I. 0,0-720,1600 #7f020000 app:id/unitySurfaceView aid=1073741824}
+2026/01/04 23:23:36.609 9966 9966 Debug Unity PersistentUnitySurface.PlaceholderView.Copy: com.unity3d.player.a{7afaf5c VFE...... .F....I. 0,0-720,1600 #7f020000 app:id/unitySurfaceView aid=1073741824} Width 720 Height 1600
+2026/01/04 23:23:36.625 9966 10134 Info AdrenoGLES-0 QUALCOMM build                   : 704ecd9a2b, Ib3f3e69395
+2026/01/04 23:23:36.625 9966 10134 Info AdrenoGLES-0 Build Date                       : 12/29/20
+2026/01/04 23:23:36.625 9966 10134 Info AdrenoGLES-0 OpenGL ES Shader Compiler Version: EV031.32.02.06
+2026/01/04 23:23:36.625 9966 10134 Info AdrenoGLES-0 Local Branch                     : 
+2026/01/04 23:23:36.625 9966 10134 Info AdrenoGLES-0 Remote Branch                    : 
+2026/01/04 23:23:36.625 9966 10134 Info AdrenoGLES-0 Remote Branch                    : 
+2026/01/04 23:23:36.625 9966 10134 Info AdrenoGLES-0 Reconstruct Branch               : 
+2026/01/04 23:23:36.625 9966 10134 Info AdrenoGLES-0 Build Config                     : S P 10.0.7 AArch64
+2026/01/04 23:23:36.625 9966 10134 Info AdrenoGLES-0 Driver Path                      : /vendor/lib64/egl/libGLESv2_adreno.so
+2026/01/04 23:23:36.636 9966 10134 Info AdrenoGLES-0 PFP: 0x016ee190, ME: 0x00000000
+2026/01/04 23:23:36.774 9966 9992 Debug Unity SetWindow 0 0x0
+2026/01/04 23:23:36.787 9966 10040 Info SwappyDisplayManager Terminating looper thread
+2026/01/04 23:23:36.864 9966 9966 Debug Unity onPixelCopyFinished: 0
+2026/01/04 23:23:36.884 9966 9966 Info Unity windowFocusChanged: false
+2026/01/04 23:23:37.065 9966 10132 Warn MessageQueue Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {66c030} sending message to a Handler on a dead thread
+2026/01/04 23:23:37.065 9966 10132 Warn MessageQueue java.lang.IllegalStateException: Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {66c030} sending message to a Handler on a dead thread
+2026/01/04 23:23:37.065 9966 10132 Warn MessageQueue 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:567)
+2026/01/04 23:23:37.065 9966 10132 Warn MessageQueue 	at android.os.Handler.enqueueMessage(Handler.java:778)
+2026/01/04 23:23:37.065 9966 10132 Warn MessageQueue 	at android.os.Handler.sendMessageAtTime(Handler.java:727)
+2026/01/04 23:23:37.065 9966 10132 Warn MessageQueue 	at android.os.Handler.sendMessageDelayed(Handler.java:697)
+2026/01/04 23:23:37.065 9966 10132 Warn MessageQueue 	at android.os.Handler.sendMessage(Handler.java:635)
+2026/01/04 23:23:37.065 9966 10132 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate.sendDisplayEvent(DisplayManagerGlobal.java:754)
+2026/01/04 23:23:37.065 9966 10132 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.handleDisplayEvent(DisplayManagerGlobal.java:368)
+2026/01/04 23:23:37.065 9966 10132 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.access$200(DisplayManagerGlobal.java:57)
+2026/01/04 23:23:37.065 9966 10132 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayManagerCallback.onDisplayEvent(DisplayManagerGlobal.java:740)
+2026/01/04 23:23:37.065 9966 10132 Warn MessageQueue 	at android.hardware.display.IDisplayManagerCallback$Stub.onTransact(IDisplayManagerCallback.java:84)
+2026/01/04 23:23:37.065 9966 10132 Warn MessageQueue 	at android.os.Binder.execTransactInternal(Binder.java:1173)
+2026/01/04 23:23:37.065 9966 10132 Warn MessageQueue 	at android.os.Binder.execTransact(Binder.java:1132)
+2026/01/04 23:23:37.073 9966 10132 Warn MessageQueue Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {8b53fe1} sending message to a Handler on a dead thread
+2026/01/04 23:23:37.073 9966 10132 Warn MessageQueue java.lang.IllegalStateException: Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {8b53fe1} sending message to a Handler on a dead thread
+2026/01/04 23:23:37.073 9966 10132 Warn MessageQueue 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:567)
+2026/01/04 23:23:37.073 9966 10132 Warn MessageQueue 	at android.os.Handler.enqueueMessage(Handler.java:778)
+2026/01/04 23:23:37.073 9966 10132 Warn MessageQueue 	at android.os.Handler.sendMessageAtTime(Handler.java:727)
+2026/01/04 23:23:37.073 9966 10132 Warn MessageQueue 	at android.os.Handler.sendMessageDelayed(Handler.java:697)
+2026/01/04 23:23:37.073 9966 10132 Warn MessageQueue 	at android.os.Handler.sendMessage(Handler.java:635)
+2026/01/04 23:23:37.073 9966 10132 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate.sendDisplayEvent(DisplayManagerGlobal.java:754)
+2026/01/04 23:23:37.073 9966 10132 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.handleDisplayEvent(DisplayManagerGlobal.java:368)
+2026/01/04 23:23:37.073 9966 10132 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.access$200(DisplayManagerGlobal.java:57)
+2026/01/04 23:23:37.073 9966 10132 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayManagerCallback.onDisplayEvent(DisplayManagerGlobal.java:740)
+2026/01/04 23:23:37.073 9966 10132 Warn MessageQueue 	at android.hardware.display.IDisplayManagerCallback$Stub.onTransact(IDisplayManagerCallback.java:84)
+2026/01/04 23:23:37.073 9966 10132 Warn MessageQueue 	at android.os.Binder.execTransactInternal(Binder.java:1173)
+2026/01/04 23:23:37.073 9966 10132 Warn MessageQueue 	at android.os.Binder.execTransact(Binder.java:1132)
+2026/01/04 23:23:41.368 9966 9982 Warn System A resource failed to call release. 
+2026/01/04 23:23:43.597 9966 9984 Warn MessageQueue Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {66c030} sending message to a Handler on a dead thread
+2026/01/04 23:23:43.597 9966 9984 Warn MessageQueue java.lang.IllegalStateException: Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {66c030} sending message to a Handler on a dead thread
+2026/01/04 23:23:43.597 9966 9984 Warn MessageQueue 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:567)
+2026/01/04 23:23:43.597 9966 9984 Warn MessageQueue 	at android.os.Handler.enqueueMessage(Handler.java:778)
+2026/01/04 23:23:43.597 9966 9984 Warn MessageQueue 	at android.os.Handler.sendMessageAtTime(Handler.java:727)
+2026/01/04 23:23:43.597 9966 9984 Warn MessageQueue 	at android.os.Handler.sendMessageDelayed(Handler.java:697)
+2026/01/04 23:23:43.597 9966 9984 Warn MessageQueue 	at android.os.Handler.sendMessage(Handler.java:635)
+2026/01/04 23:23:43.597 9966 9984 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate.sendDisplayEvent(DisplayManagerGlobal.java:754)
+2026/01/04 23:23:43.597 9966 9984 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.handleDisplayEvent(DisplayManagerGlobal.java:368)
+2026/01/04 23:23:43.597 9966 9984 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.access$200(DisplayManagerGlobal.java:57)
+2026/01/04 23:23:43.597 9966 9984 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayManagerCallback.onDisplayEvent(DisplayManagerGlobal.java:740)
+2026/01/04 23:23:43.597 9966 9984 Warn MessageQueue 	at android.hardware.display.IDisplayManagerCallback$Stub.onTransact(IDisplayManagerCallback.java:84)
+2026/01/04 23:23:43.597 9966 9984 Warn MessageQueue 	at android.os.Binder.execTransactInternal(Binder.java:1173)
+2026/01/04 23:23:43.597 9966 9984 Warn MessageQueue 	at android.os.Binder.execTransact(Binder.java:1132)
+2026/01/04 23:23:43.599 9966 9984 Warn MessageQueue Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {8b53fe1} sending message to a Handler on a dead thread
+2026/01/04 23:23:43.599 9966 9984 Warn MessageQueue java.lang.IllegalStateException: Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {8b53fe1} sending message to a Handler on a dead thread
+2026/01/04 23:23:43.599 9966 9984 Warn MessageQueue 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:567)
+2026/01/04 23:23:43.599 9966 9984 Warn MessageQueue 	at android.os.Handler.enqueueMessage(Handler.java:778)
+2026/01/04 23:23:43.599 9966 9984 Warn MessageQueue 	at android.os.Handler.sendMessageAtTime(Handler.java:727)
+2026/01/04 23:23:43.599 9966 9984 Warn MessageQueue 	at android.os.Handler.sendMessageDelayed(Handler.java:697)
+2026/01/04 23:23:43.599 9966 9984 Warn MessageQueue 	at android.os.Handler.sendMessage(Handler.java:635)
+2026/01/04 23:23:43.599 9966 9984 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate.sendDisplayEvent(DisplayManagerGlobal.java:754)
+2026/01/04 23:23:43.599 9966 9984 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.handleDisplayEvent(DisplayManagerGlobal.java:368)
+2026/01/04 23:23:43.599 9966 9984 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.access$200(DisplayManagerGlobal.java:57)
+2026/01/04 23:23:43.599 9966 9984 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayManagerCallback.onDisplayEvent(DisplayManagerGlobal.java:740)
+2026/01/04 23:23:43.599 9966 9984 Warn MessageQueue 	at android.hardware.display.IDisplayManagerCallback$Stub.onTransact(IDisplayManagerCallback.java:84)
+2026/01/04 23:23:43.599 9966 9984 Warn MessageQueue 	at android.os.Binder.execTransactInternal(Binder.java:1173)
+2026/01/04 23:23:43.599 9966 9984 Warn MessageQueue 	at android.os.Binder.execTransact(Binder.java:1132)
+2026/01/04 23:23:45.037 9966 9984 Warn MessageQueue Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {66c030} sending message to a Handler on a dead thread
+2026/01/04 23:23:45.037 9966 9984 Warn MessageQueue java.lang.IllegalStateException: Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {66c030} sending message to a Handler on a dead thread
+2026/01/04 23:23:45.037 9966 9984 Warn MessageQueue 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:567)
+2026/01/04 23:23:45.037 9966 9984 Warn MessageQueue 	at android.os.Handler.enqueueMessage(Handler.java:778)
+2026/01/04 23:23:45.037 9966 9984 Warn MessageQueue 	at android.os.Handler.sendMessageAtTime(Handler.java:727)
+2026/01/04 23:23:45.037 9966 9984 Warn MessageQueue 	at android.os.Handler.sendMessageDelayed(Handler.java:697)
+2026/01/04 23:23:45.037 9966 9984 Warn MessageQueue 	at android.os.Handler.sendMessage(Handler.java:635)
+2026/01/04 23:23:45.037 9966 9984 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate.sendDisplayEvent(DisplayManagerGlobal.java:754)
+2026/01/04 23:23:45.037 9966 9984 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.handleDisplayEvent(DisplayManagerGlobal.java:368)
+2026/01/04 23:23:45.037 9966 9984 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.access$200(DisplayManagerGlobal.java:57)
+2026/01/04 23:23:45.037 9966 9984 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayManagerCallback.onDisplayEvent(DisplayManagerGlobal.java:740)
+2026/01/04 23:23:45.037 9966 9984 Warn MessageQueue 	at android.hardware.display.IDisplayManagerCallback$Stub.onTransact(IDisplayManagerCallback.java:84)
+2026/01/04 23:23:45.037 9966 9984 Warn MessageQueue 	at android.os.Binder.execTransactInternal(Binder.java:1173)
+2026/01/04 23:23:45.037 9966 9984 Warn MessageQueue 	at android.os.Binder.execTransact(Binder.java:1132)
+2026/01/04 23:23:45.040 9966 9984 Warn MessageQueue Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {8b53fe1} sending message to a Handler on a dead thread
+2026/01/04 23:23:45.040 9966 9984 Warn MessageQueue java.lang.IllegalStateException: Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {8b53fe1} sending message to a Handler on a dead thread
+2026/01/04 23:23:45.040 9966 9984 Warn MessageQueue 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:567)
+2026/01/04 23:23:45.040 9966 9984 Warn MessageQueue 	at android.os.Handler.enqueueMessage(Handler.java:778)
+2026/01/04 23:23:45.040 9966 9984 Warn MessageQueue 	at android.os.Handler.sendMessageAtTime(Handler.java:727)
+2026/01/04 23:23:45.040 9966 9984 Warn MessageQueue 	at android.os.Handler.sendMessageDelayed(Handler.java:697)
+2026/01/04 23:23:45.040 9966 9984 Warn MessageQueue 	at android.os.Handler.sendMessage(Handler.java:635)
+2026/01/04 23:23:45.040 9966 9984 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate.sendDisplayEvent(DisplayManagerGlobal.java:754)
+2026/01/04 23:23:45.040 9966 9984 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.handleDisplayEvent(DisplayManagerGlobal.java:368)
+2026/01/04 23:23:45.040 9966 9984 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.access$200(DisplayManagerGlobal.java:57)
+2026/01/04 23:23:45.040 9966 9984 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayManagerCallback.onDisplayEvent(DisplayManagerGlobal.java:740)
+2026/01/04 23:23:45.040 9966 9984 Warn MessageQueue 	at android.hardware.display.IDisplayManagerCallback$Stub.onTransact(IDisplayManagerCallback.java:84)
+2026/01/04 23:23:45.040 9966 9984 Warn MessageQueue 	at android.os.Binder.execTransactInternal(Binder.java:1173)
+2026/01/04 23:23:45.040 9966 9984 Warn MessageQueue 	at android.os.Binder.execTransact(Binder.java:1132)
+2026/01/04 23:23:46.716 9966 9966 Info Unity onResume
+2026/01/04 23:23:46.799 9966 9992 Debug Unity SetWindow 0 0xb400007dbdd9de90
+2026/01/04 23:23:46.799 9966 9992 Debug Unity SetWindow 0 0xb400007dbdd9de90
+2026/01/04 23:23:48.486 9966 9966 Info Unity windowFocusChanged: true
+2026/01/04 23:23:48.487 9966 9992 Debug Unity AndroidDisplayManagerVulkan::AttachWindow(0xb400007dbdd9de90, 0)
+2026/01/04 23:23:48.494 9966 9992 Debug Unity InitializeOrResetSwapChain 720x1600 hdr=0 samples=0
+2026/01/04 23:23:48.513 9966 10221 Info SwappyDisplayManager Starting looper thread
+2026/01/04 23:23:48.513 9966 9992 Verbose SwappyVk SwappyVk initialized for VkDevice 0xb400007c4dda8d30 using VK_GOOGLE_display_timing on Android
+2026/01/04 23:23:48.514 9966 9992 Info SwappyVk Returning refresh duration of 16666666 nsec (approx 60.000002 Hz)
+2026/01/04 23:23:48.528 9966 9992 Debug Unity Sensor :        Accelerometer ( 1) ; 0.004788 / 0.00s ; icm4x6xx Accelerometer Non-wakeup / TDK-Invensense 
+2026/01/04 23:23:48.528 9966 9992 Debug Unity Choreographer available: Enabling VSYNC timing
+2026/01/04 23:23:48.532 9966 9992 Info Unity Camera2: Hardware level: 3
+2026/01/04 23:23:48.537 9966 9992 Info Unity Camera2: FrameSize 4000 x 2250 [3.3774808550448396]
+2026/01/04 23:23:48.537 9966 9992 Info Unity Camera2: FrameSize 4000 x 1800 [3.15433730373063]
+2026/01/04 23:23:48.537 9966 9992 Info Unity Camera2: FrameSize 3264 x 2448 [3.25848107946056]
+2026/01/04 23:23:48.537 9966 9992 Info Unity Camera2: FrameSize 3264 x 1836 [2.970799007008779]
+2026/01/04 23:23:48.537 9966 9992 Info Unity Camera2: FrameSize 3264 x 1468 [2.747110645002804]
+2026/01/04 23:23:48.537 9966 9992 Info Unity Camera2: FrameSize 1920 x 1920 [2.4849066497880004]
+2026/01/04 23:23:48.537 9966 9992 Info Unity Camera2: FrameSize 1920 x 1080 [1.9095425048844386]
+2026/01/04 23:23:48.537 9966 9992 Info Unity Camera2: FrameSize 1920 x 864 [1.6863989535702286]
+2026/01/04 23:23:48.537 9966 9992 Info Unity Camera2: FrameSize 1600 x 1200 [1.83258146374831]
+2026/01/04 23:23:48.537 9966 9992 Info Unity Camera2: FrameSize 1440 x 1080 [1.6218604324326575]
+2026/01/04 23:23:48.537 9966 9992 Info Unity Camera2: FrameSize 1600 x 900 [1.5448993912965292]
+2026/01/04 23:23:48.537 9966 9992 Info Unity Camera2: FrameSize 1600 x 720 [1.3217558399823195]
+2026/01/04 23:23:48.538 9966 9992 Info Unity Camera2: FrameSize 1504 x 720 [1.259880436264232]
+2026/01/04 23:23:48.538 9966 9992 Info Unity Camera2: FrameSize 1280 x 720 [1.0986122886681098]
+2026/01/04 23:23:48.538 9966 9992 Info Unity Camera2: FrameSize 1280 x 576 [0.8754687373538999]
+2026/01/04 23:23:48.538 9966 9992 Info Unity Camera2: FrameSize 1200 x 540 [0.7463916950787577]
+2026/01/04 23:23:48.538 9966 9992 Info Unity Camera2: FrameSize 1024 x 768 [0.9400072584914712]
+2026/01/04 23:23:48.538 9966 9992 Info Unity Camera2: FrameSize 1120 x 504 [0.6084059521048548]
+2026/01/04 23:23:48.538 9966 9992 Info Unity Camera2: FrameSize 960 x 720 [0.8109302162163289]
+2026/01/04 23:23:48.538 9966 9992 Info Unity Camera2: FrameSize 960 x 540 [0.523248143764548]
+2026/01/04 23:23:48.538 9966 9992 Info Unity Camera2: FrameSize 720 x 540 [0.23556607131276702]
+2026/01/04 23:23:48.538 9966 9992 Info Unity Camera2: FrameSize 720 x 480 [0.11778303565638351]
+2026/01/04 23:23:48.538 9966 9992 Info Unity Camera2: FrameSize 640 x 480 [0.0]
+2026/01/04 23:23:48.538 9966 9992 Info Unity Camera2: FrameSize 352 x 288 [1.1086626245216111]
+2026/01/04 23:23:48.538 9966 9992 Info Unity Camera2: FrameSize 320 x 240 [1.3862943611198906]
+2026/01/04 23:23:48.538 9966 9992 Info Unity Camera2: FrameSize 256 x 192 [1.8325814637483102]
+2026/01/04 23:23:48.538 9966 9992 Info Unity Camera2: FrameSize 240 x 320 [1.3862943611198906]
+2026/01/04 23:23:48.538 9966 9992 Info Unity Camera2: FrameSize 176 x 144 [2.494956985641502]
+2026/01/04 23:23:48.538 9966 9992 Info Unity Camera2: FPS requested: 24 set: 24
+2026/01/04 23:23:48.561 9966 10223 Info Unity Camera2: CameraDevice opened.
+2026/01/04 23:23:48.565 9966 9992 Info Unity Camera2: Start preview.
+2026/01/04 23:23:48.675 9966 9992 Debug Unity Found 1 interfaces on host motorola_moto_g_power_(2021)@192.168.0.11:
+2026/01/04 23:23:48.675 9966 9992 Debug Unity  0) 192.168.0.11
+2026/01/04 23:23:48.675 9966 9992 Debug Unity 
+2026/01/04 23:23:48.675 9966 10223 Info Unity Camera2: CaptureSession is configured.
+2026/01/04 23:23:48.676 9966 9992 Debug Unity Player connection [531798457536]  Target information:
+2026/01/04 23:23:48.676 9966 9992 Debug Unity 
+2026/01/04 23:23:48.676 9966 9992 Debug Unity Player connection [531798457536]  * "[IP] 192.168.0.11 [Port] 55000 [Flags] 2 [Guid] 2889417514 [EditorId] 61618466 [Version] 1048832 [Id] AndroidPlayer(11,motorola_moto_g_power_(2021)@192.168.0.11) [Debug] 0 [PackageName] AndroidPlayer [ProjectName] ESP32" 
+2026/01/04 23:23:48.676 9966 9992 Debug Unity 
+2026/01/04 23:23:48.676 9966 9992 Debug Unity Player connection [531798457536] Started UDP target info broadcast (1) on [225.0.0.222:54997].
+2026/01/04 23:23:48.676 9966 9992 Debug Unity 
+2026/01/04 23:23:48.676 9966 9992 Debug Unity Player connection [531798457536] Started UDP target info broadcast (1) on [225.0.0.222:54997].
+2026/01/04 23:23:48.676 9966 9992 Debug Unity 
+2026/01/04 23:23:48.692 9966 10240 Debug AudioTrack createTrack_l(): RelativeVolumeFeature, mStreamType -1, streamType 3, attributes: usage=1 content=2 flags=0x800 tags=[], percentage=1.000000 clientId=161
+2026/01/04 23:23:48.693 9966 10240 Debug AudioTrack createTrack_l: RelativeVolumeFeature, mRelativePercentage:1.000000
+2026/01/04 23:23:48.696 9966 10240 Warn AudioTrack Use of stream types is deprecated for operations other than volume control
+2026/01/04 23:23:48.696 9966 10240 Warn AudioTrack See the documentation of AudioTrack() for what to use instead with android.media.AudioAttributes to qualify your playback use case
+2026/01/04 23:23:48.702 9966 9966 Verbose MediaRouter Selecting route: RouteInfo{ name=Phone, description=null, status=null, category=RouteCategory{ name=System types=ROUTE_TYPE_LIVE_AUDIO ROUTE_TYPE_LIVE_VIDEO  groupable=false }, supportedTypes=ROUTE_TYPE_LIVE_AUDIO ROUTE_TYPE_LIVE_VIDEO , presentationDisplay=null }
+2026/01/04 23:23:48.702 9966 9966 Verbose MediaRouter Selecting route ignored,not new route
+2026/01/04 23:23:48.900 9966 9992 Info AdrenoVK-0 QGLCLoadShaderBinary failed.  A blob from the cache failed to load.  Stage=Vertex.  Hash=371BD4C5
+2026/01/04 23:23:48.902 9966 9992 Info AdrenoVK-0 QGLCLoadShaderBinary failed.  A blob from the cache failed to load.  Stage=Fragment.  Hash=F1BE468D
+2026/01/04 23:24:19.924 9966 9966 Debug CompatibilityChangeReporter Compat change id reported: 150939131; UID 10329; state: ENABLED
+2026/01/04 23:24:21.052 9966 9966 Info Unity onPause
+2026/01/04 23:24:21.074 9966 10132 Warn MessageQueue Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {66c030} sending message to a Handler on a dead thread
+2026/01/04 23:24:21.074 9966 10132 Warn MessageQueue java.lang.IllegalStateException: Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {66c030} sending message to a Handler on a dead thread
+2026/01/04 23:24:21.074 9966 10132 Warn MessageQueue 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:567)
+2026/01/04 23:24:21.074 9966 10132 Warn MessageQueue 	at android.os.Handler.enqueueMessage(Handler.java:778)
+2026/01/04 23:24:21.074 9966 10132 Warn MessageQueue 	at android.os.Handler.sendMessageAtTime(Handler.java:727)
+2026/01/04 23:24:21.074 9966 10132 Warn MessageQueue 	at android.os.Handler.sendMessageDelayed(Handler.java:697)
+2026/01/04 23:24:21.074 9966 10132 Warn MessageQueue 	at android.os.Handler.sendMessage(Handler.java:635)
+2026/01/04 23:24:21.074 9966 10132 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate.sendDisplayEvent(DisplayManagerGlobal.java:754)
+2026/01/04 23:24:21.074 9966 10132 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.handleDisplayEvent(DisplayManagerGlobal.java:368)
+2026/01/04 23:24:21.074 9966 10132 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.access$200(DisplayManagerGlobal.java:57)
+2026/01/04 23:24:21.074 9966 10132 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayManagerCallback.onDisplayEvent(DisplayManagerGlobal.java:740)
+2026/01/04 23:24:21.074 9966 10132 Warn MessageQueue 	at android.hardware.display.IDisplayManagerCallback$Stub.onTransact(IDisplayManagerCallback.java:84)
+2026/01/04 23:24:21.074 9966 10132 Warn MessageQueue 	at android.os.Binder.execTransactInternal(Binder.java:1173)
+2026/01/04 23:24:21.074 9966 10132 Warn MessageQueue 	at android.os.Binder.execTransact(Binder.java:1132)
+2026/01/04 23:24:21.076 9966 10132 Warn MessageQueue Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {8b53fe1} sending message to a Handler on a dead thread
+2026/01/04 23:24:21.076 9966 10132 Warn MessageQueue java.lang.IllegalStateException: Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {8b53fe1} sending message to a Handler on a dead thread
+2026/01/04 23:24:21.076 9966 10132 Warn MessageQueue 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:567)
+2026/01/04 23:24:21.076 9966 10132 Warn MessageQueue 	at android.os.Handler.enqueueMessage(Handler.java:778)
+2026/01/04 23:24:21.076 9966 10132 Warn MessageQueue 	at android.os.Handler.sendMessageAtTime(Handler.java:727)
+2026/01/04 23:24:21.076 9966 10132 Warn MessageQueue 	at android.os.Handler.sendMessageDelayed(Handler.java:697)
+2026/01/04 23:24:21.076 9966 10132 Warn MessageQueue 	at android.os.Handler.sendMessage(Handler.java:635)
+2026/01/04 23:24:21.076 9966 10132 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate.sendDisplayEvent(DisplayManagerGlobal.java:754)
+2026/01/04 23:24:21.076 9966 10132 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.handleDisplayEvent(DisplayManagerGlobal.java:368)
+2026/01/04 23:24:21.076 9966 10132 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.access$200(DisplayManagerGlobal.java:57)
+2026/01/04 23:24:21.076 9966 10132 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayManagerCallback.onDisplayEvent(DisplayManagerGlobal.java:740)
+2026/01/04 23:24:21.076 9966 10132 Warn MessageQueue 	at android.hardware.display.IDisplayManagerCallback$Stub.onTransact(IDisplayManagerCallback.java:84)
+2026/01/04 23:24:21.076 9966 10132 Warn MessageQueue 	at android.os.Binder.execTransactInternal(Binder.java:1173)
+2026/01/04 23:24:21.076 9966 10132 Warn MessageQueue 	at android.os.Binder.execTransact(Binder.java:1132)
+2026/01/04 23:24:21.095 9966 9992 Info Unity Camera2: Pause preview.
+2026/01/04 23:24:21.096 9966 9992 Info Unity Camera2: Close.
+2026/01/04 23:24:21.096 9966 9992 Info Unity Camera2: Stop preview.
+2026/01/04 23:24:21.181 9966 10223 Info Unity Camera2: CameraDevice closed.
+2026/01/04 23:24:21.270 9966 9992 Debug Unity Vulkan PSO: Pipeline cache has not changed skipping save handle[fddb2090]
+2026/01/04 23:24:21.336 9966 10240 Debug AudioTrack stop(183): called with 785920 frames delivered
+2026/01/04 23:24:21.340 9966 10240 Debug AudioTrack ~AudioTrack(): RelativeVolumeFeature mSessionId:2873, clientId:161
+2026/01/04 23:24:21.349 9966 9992 Debug Unity Sensor :        Accelerometer ( 1) ; 0.004788 / 0.00s ; icm4x6xx Accelerometer Non-wakeup / TDK-Invensense 
+2026/01/04 23:24:21.370 9966 9966 Debug Unity PersistentUnitySurface.preserveContent: com.unity3d.player.a{7afaf5c VFE...... .F....I. 0,0-720,1600 #7f020000 app:id/unitySurfaceView aid=1073741824}
+2026/01/04 23:24:21.371 9966 9966 Debug Unity PersistentUnitySurface.PlaceholderView.Copy: com.unity3d.player.a{7afaf5c VFE...... .F....I. 0,0-720,1600 #7f020000 app:id/unitySurfaceView aid=1073741824} Width 720 Height 1600
+2026/01/04 23:24:21.399 9966 9992 Debug Unity SetWindow 0 0x0
+2026/01/04 23:24:21.415 9966 10221 Info SwappyDisplayManager Terminating looper thread
+2026/01/04 23:24:21.486 9966 9966 Debug Unity onPixelCopyFinished: 0
+2026/01/04 23:24:21.510 9966 9966 Info Unity windowFocusChanged: false
+2026/01/04 23:24:26.110 9966 9982 Warn System A resource failed to call release. 
+2026/01/04 23:24:27.057 9966 9986 Warn MessageQueue Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {66c030} sending message to a Handler on a dead thread
+2026/01/04 23:24:27.057 9966 9986 Warn MessageQueue java.lang.IllegalStateException: Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {66c030} sending message to a Handler on a dead thread
+2026/01/04 23:24:27.057 9966 9986 Warn MessageQueue 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:567)
+2026/01/04 23:24:27.057 9966 9986 Warn MessageQueue 	at android.os.Handler.enqueueMessage(Handler.java:778)
+2026/01/04 23:24:27.057 9966 9986 Warn MessageQueue 	at android.os.Handler.sendMessageAtTime(Handler.java:727)
+2026/01/04 23:24:27.057 9966 9986 Warn MessageQueue 	at android.os.Handler.sendMessageDelayed(Handler.java:697)
+2026/01/04 23:24:27.057 9966 9986 Warn MessageQueue 	at android.os.Handler.sendMessage(Handler.java:635)
+2026/01/04 23:24:27.057 9966 9986 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate.sendDisplayEvent(DisplayManagerGlobal.java:754)
+2026/01/04 23:24:27.057 9966 9986 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.handleDisplayEvent(DisplayManagerGlobal.java:368)
+2026/01/04 23:24:27.057 9966 9986 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.access$200(DisplayManagerGlobal.java:57)
+2026/01/04 23:24:27.057 9966 9986 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayManagerCallback.onDisplayEvent(DisplayManagerGlobal.java:740)
+2026/01/04 23:24:27.057 9966 9986 Warn MessageQueue 	at android.hardware.display.IDisplayManagerCallback$Stub.onTransact(IDisplayManagerCallback.java:84)
+2026/01/04 23:24:27.057 9966 9986 Warn MessageQueue 	at android.os.Binder.execTransactInternal(Binder.java:1173)
+2026/01/04 23:24:27.057 9966 9986 Warn MessageQueue 	at android.os.Binder.execTransact(Binder.java:1132)
+2026/01/04 23:24:27.058 9966 9986 Warn MessageQueue Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {8b53fe1} sending message to a Handler on a dead thread
+2026/01/04 23:24:27.058 9966 9986 Warn MessageQueue java.lang.IllegalStateException: Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {8b53fe1} sending message to a Handler on a dead thread
+2026/01/04 23:24:27.058 9966 9986 Warn MessageQueue 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:567)
+2026/01/04 23:24:27.058 9966 9986 Warn MessageQueue 	at android.os.Handler.enqueueMessage(Handler.java:778)
+2026/01/04 23:24:27.058 9966 9986 Warn MessageQueue 	at android.os.Handler.sendMessageAtTime(Handler.java:727)
+2026/01/04 23:24:27.058 9966 9986 Warn MessageQueue 	at android.os.Handler.sendMessageDelayed(Handler.java:697)
+2026/01/04 23:24:27.058 9966 9986 Warn MessageQueue 	at android.os.Handler.sendMessage(Handler.java:635)
+2026/01/04 23:24:27.058 9966 9986 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate.sendDisplayEvent(DisplayManagerGlobal.java:754)
+2026/01/04 23:24:27.058 9966 9986 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.handleDisplayEvent(DisplayManagerGlobal.java:368)
+2026/01/04 23:24:27.058 9966 9986 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.access$200(DisplayManagerGlobal.java:57)
+2026/01/04 23:24:27.058 9966 9986 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayManagerCallback.onDisplayEvent(DisplayManagerGlobal.java:740)
+2026/01/04 23:24:27.058 9966 9986 Warn MessageQueue 	at android.hardware.display.IDisplayManagerCallback$Stub.onTransact(IDisplayManagerCallback.java:84)
+2026/01/04 23:24:27.058 9966 9986 Warn MessageQueue 	at android.os.Binder.execTransactInternal(Binder.java:1173)
+2026/01/04 23:24:27.058 9966 9986 Warn MessageQueue 	at android.os.Binder.execTransact(Binder.java:1132)
+2026/01/04 23:24:27.066 9966 9986 Warn MessageQueue Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {b5b638d} sending message to a Handler on a dead thread
+2026/01/04 23:24:27.066 9966 9986 Warn MessageQueue java.lang.IllegalStateException: Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {b5b638d} sending message to a Handler on a dead thread
+2026/01/04 23:24:27.066 9966 9986 Warn MessageQueue 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:567)
+2026/01/04 23:24:27.066 9966 9986 Warn MessageQueue 	at android.os.Handler.enqueueMessage(Handler.java:778)
+2026/01/04 23:24:27.066 9966 9986 Warn MessageQueue 	at android.os.Handler.sendMessageAtTime(Handler.java:727)
+2026/01/04 23:24:27.066 9966 9986 Warn MessageQueue 	at android.os.Handler.sendMessageDelayed(Handler.java:697)
+2026/01/04 23:24:27.066 9966 9986 Warn MessageQueue 	at android.os.Handler.sendMessage(Handler.java:635)
+2026/01/04 23:24:27.066 9966 9986 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate.sendDisplayEvent(DisplayManagerGlobal.java:754)
+2026/01/04 23:24:27.066 9966 9986 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.handleDisplayEvent(DisplayManagerGlobal.java:368)
+2026/01/04 23:24:27.066 9966 9986 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.access$200(DisplayManagerGlobal.java:57)
+2026/01/04 23:24:27.066 9966 9986 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayManagerCallback.onDisplayEvent(DisplayManagerGlobal.java:740)
+2026/01/04 23:24:27.066 9966 9986 Warn MessageQueue 	at android.hardware.display.IDisplayManagerCallback$Stub.onTransact(IDisplayManagerCallback.java:84)
+2026/01/04 23:24:27.066 9966 9986 Warn MessageQueue 	at android.os.Binder.execTransactInternal(Binder.java:1173)
+2026/01/04 23:24:27.066 9966 9986 Warn MessageQueue 	at android.os.Binder.execTransact(Binder.java:1132)
+2026/01/04 23:24:27.125 9966 9966 Info Unity onResume
+2026/01/04 23:24:27.162 9966 9992 Debug Unity SetWindow 0 0xb400007dbddca9e0
+2026/01/04 23:24:27.163 9966 9992 Debug Unity SetWindow 0 0xb400007dbddca9e0
+2026/01/04 23:24:27.213 9966 9966 Info Unity windowFocusChanged: true
+2026/01/04 23:24:27.214 9966 9992 Debug Unity AndroidDisplayManagerVulkan::AttachWindow(0xb400007dbddca9e0, 0)
+2026/01/04 23:24:27.216 9966 9992 Debug Unity InitializeOrResetSwapChain 720x1600 hdr=0 samples=0
+2026/01/04 23:24:27.238 9966 10301 Info SwappyDisplayManager Starting looper thread
+2026/01/04 23:24:27.239 9966 9992 Verbose SwappyVk SwappyVk initialized for VkDevice 0xb400007c4dda8d30 using VK_GOOGLE_display_timing on Android
+2026/01/04 23:24:27.239 9966 9992 Info SwappyVk Returning refresh duration of 16666666 nsec (approx 60.000002 Hz)
+2026/01/04 23:24:27.254 9966 9992 Debug Unity Sensor :        Accelerometer ( 1) ; 0.004788 / 0.00s ; icm4x6xx Accelerometer Non-wakeup / TDK-Invensense 
+2026/01/04 23:24:27.254 9966 9992 Debug Unity Choreographer available: Enabling VSYNC timing
+2026/01/04 23:24:27.257 9966 9992 Info Unity Camera2: Hardware level: 3
+2026/01/04 23:24:27.260 9966 9992 Info Unity Camera2: FrameSize 4000 x 2250 [3.3774808550448396]
+2026/01/04 23:24:27.261 9966 9992 Info Unity Camera2: FrameSize 4000 x 1800 [3.15433730373063]
+2026/01/04 23:24:27.261 9966 9992 Info Unity Camera2: FrameSize 3264 x 2448 [3.25848107946056]
+2026/01/04 23:24:27.261 9966 9992 Info Unity Camera2: FrameSize 3264 x 1836 [2.970799007008779]
+2026/01/04 23:24:27.261 9966 9992 Info Unity Camera2: FrameSize 3264 x 1468 [2.747110645002804]
+2026/01/04 23:24:27.261 9966 9992 Info Unity Camera2: FrameSize 1920 x 1920 [2.4849066497880004]
+2026/01/04 23:24:27.261 9966 9992 Info Unity Camera2: FrameSize 1920 x 1080 [1.9095425048844386]
+2026/01/04 23:24:27.261 9966 9992 Info Unity Camera2: FrameSize 1920 x 864 [1.6863989535702286]
+2026/01/04 23:24:27.261 9966 9992 Info Unity Camera2: FrameSize 1600 x 1200 [1.83258146374831]
+2026/01/04 23:24:27.261 9966 9992 Info Unity Camera2: FrameSize 1440 x 1080 [1.6218604324326575]
+2026/01/04 23:24:27.261 9966 9992 Info Unity Camera2: FrameSize 1600 x 900 [1.5448993912965292]
+2026/01/04 23:24:27.261 9966 9992 Info Unity Camera2: FrameSize 1600 x 720 [1.3217558399823195]
+2026/01/04 23:24:27.261 9966 9992 Info Unity Camera2: FrameSize 1504 x 720 [1.259880436264232]
+2026/01/04 23:24:27.261 9966 9992 Info Unity Camera2: FrameSize 1280 x 720 [1.0986122886681098]
+2026/01/04 23:24:27.261 9966 9992 Info Unity Camera2: FrameSize 1280 x 576 [0.8754687373538999]
+2026/01/04 23:24:27.261 9966 9992 Info Unity Camera2: FrameSize 1200 x 540 [0.7463916950787577]
+2026/01/04 23:24:27.261 9966 9992 Info Unity Camera2: FrameSize 1024 x 768 [0.9400072584914712]
+2026/01/04 23:24:27.261 9966 9992 Info Unity Camera2: FrameSize 1120 x 504 [0.6084059521048548]
+2026/01/04 23:24:27.261 9966 9992 Info Unity Camera2: FrameSize 960 x 720 [0.8109302162163289]
+2026/01/04 23:24:27.261 9966 9992 Info Unity Camera2: FrameSize 960 x 540 [0.523248143764548]
+2026/01/04 23:24:27.261 9966 9992 Info Unity Camera2: FrameSize 720 x 540 [0.23556607131276702]
+2026/01/04 23:24:27.262 9966 9992 Info Unity Camera2: FrameSize 720 x 480 [0.11778303565638351]
+2026/01/04 23:24:27.262 9966 9992 Info Unity Camera2: FrameSize 640 x 480 [0.0]
+2026/01/04 23:24:27.262 9966 9992 Info Unity Camera2: FrameSize 352 x 288 [1.1086626245216111]
+2026/01/04 23:24:27.262 9966 9992 Info Unity Camera2: FrameSize 320 x 240 [1.3862943611198906]
+2026/01/04 23:24:27.262 9966 9992 Info Unity Camera2: FrameSize 256 x 192 [1.8325814637483102]
+2026/01/04 23:24:27.262 9966 9992 Info Unity Camera2: FrameSize 240 x 320 [1.3862943611198906]
+2026/01/04 23:24:27.262 9966 9992 Info Unity Camera2: FrameSize 176 x 144 [2.494956985641502]
+2026/01/04 23:24:27.262 9966 9992 Info Unity Camera2: FPS requested: 24 set: 24
+2026/01/04 23:24:27.279 9966 10303 Info Unity Camera2: CameraDevice opened.
+2026/01/04 23:24:27.284 9966 9992 Info Unity Camera2: Start preview.
+2026/01/04 23:24:27.408 9966 9992 Debug Unity Found 1 interfaces on host motorola_moto_g_power_(2021)@192.168.0.11:
+2026/01/04 23:24:27.408 9966 9992 Debug Unity  0) 192.168.0.11
+2026/01/04 23:24:27.408 9966 9992 Debug Unity 
+2026/01/04 23:24:27.408 9966 10303 Info Unity Camera2: CaptureSession is configured.
+2026/01/04 23:24:27.410 9966 9992 Debug Unity Player connection [531798457536]  Target information:
+2026/01/04 23:24:27.410 9966 9992 Debug Unity 
+2026/01/04 23:24:27.410 9966 9992 Debug Unity Player connection [531798457536]  * "[IP] 192.168.0.11 [Port] 55000 [Flags] 2 [Guid] 2889417514 [EditorId] 61618466 [Version] 1048832 [Id] AndroidPlayer(11,motorola_moto_g_power_(2021)@192.168.0.11) [Debug] 0 [PackageName] AndroidPlayer [ProjectName] ESP32" 
+2026/01/04 23:24:27.410 9966 9992 Debug Unity 
+2026/01/04 23:24:27.410 9966 9992 Debug Unity Player connection [531798457536] Started UDP target info broadcast (1) on [225.0.0.222:54997].
+2026/01/04 23:24:27.410 9966 9992 Debug Unity 
+2026/01/04 23:24:27.410 9966 9992 Debug Unity Player connection [531798457536] Started UDP target info broadcast (1) on [225.0.0.222:54997].
+2026/01/04 23:24:27.410 9966 9992 Debug Unity 
+2026/01/04 23:24:27.427 9966 10323 Debug AudioTrack createTrack_l(): RelativeVolumeFeature, mStreamType -1, streamType 3, attributes: usage=1 content=2 flags=0x800 tags=[], percentage=1.000000 clientId=162
+2026/01/04 23:24:27.430 9966 10323 Debug AudioTrack createTrack_l: RelativeVolumeFeature, mRelativePercentage:1.000000
+2026/01/04 23:24:27.433 9966 10323 Warn AudioTrack Use of stream types is deprecated for operations other than volume control
+2026/01/04 23:24:27.433 9966 10323 Warn AudioTrack See the documentation of AudioTrack() for what to use instead with android.media.AudioAttributes to qualify your playback use case
+2026/01/04 23:24:27.435 9966 9966 Verbose MediaRouter Selecting route: RouteInfo{ name=Phone, description=null, status=null, category=RouteCategory{ name=System types=ROUTE_TYPE_LIVE_AUDIO ROUTE_TYPE_LIVE_VIDEO  groupable=false }, supportedTypes=ROUTE_TYPE_LIVE_AUDIO ROUTE_TYPE_LIVE_VIDEO , presentationDisplay=null }
+2026/01/04 23:24:27.435 9966 9966 Verbose MediaRouter Selecting route ignored,not new route
+2026/01/04 23:24:27.664 9966 9992 Info AdrenoVK-0 QGLCLoadShaderBinary failed.  A blob from the cache failed to load.  Stage=Vertex.  Hash=371BD4C5
+2026/01/04 23:24:27.666 9966 9992 Info AdrenoVK-0 QGLCLoadShaderBinary failed.  A blob from the cache failed to load.  Stage=Fragment.  Hash=F1BE468D
+2026/01/04 23:24:54.999 9966 9992 Info Unity ShowNextQRChunk called
+2026/01/04 23:24:54.999 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:24:54.999 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:24:54.999 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:24:54.999 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:24:54.999 9966 9992 Info Unity  #4 0x7bbe08c850 (libil2cpp.so) ? 0x0
+2026/01/04 23:24:54.999 9966 9992 Info Unity  #5 0x7bbf72b568 (libil2cpp.so) ? 0x0
+2026/01/04 23:24:54.999 9966 9992 Info Unity  #6 0x7bbe431778 (libil2cpp.so) ? 0x0
+2026/01/04 23:24:54.999 9966 9992 Info Unity  #7 0x7bbf92600c (libil2cpp.so) ? 0x0
+2026/01/04 23:24:54.999 9966 9992 Info Unity  #8 0x7bbf92576c (libil2cpp.so) ? 0x0
+2026/01/04 23:24:54.999 9966 9992 Info Unity  #9 0x7bbf92550c (libil2cpp.so) ? 0x0
+2026/01/04 23:24:54.999 9966 9992 Info Unity  #10 0x7bbdfa9074 (libil2cpp.so) ? 0x0
+2026/01/04 23:24:54.999 9966 9992 Info Unity  #11 0x7bbdfa8fc0 (libil2cpp.so) ? 0x0
+2026/01/04 23:24:54.999 9966 9992 Info Unity  #12 0x7bd2219328 (libunity.so) scripting_method_invoke(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingArguments&, ScriptingExceptionPtr*, bool) 0xb0
+2026/01/04 23:24:54.999 9966 9992 Info Unity  #13 0x7bd222bf6c (libunity.so) ScriptingInvocation::Invoke(Script
+2026/01/04 23:25:01.311 9966 10044 Warn Choreographer Frame time is 0.081354 ms in the future!  Check that graphics HAL is generating vsync timestamps using the correct timebase.
+2026/01/04 23:25:19.290 9966 10044 Warn Choreographer Frame time is 0.001936 ms in the future!  Check that graphics HAL is generating vsync timestamps using the correct timebase.
+2026/01/04 23:25:20.125 9966 10044 Warn Choreographer Frame time is 0.114863 ms in the future!  Check that graphics HAL is generating vsync timestamps using the correct timebase.
+2026/01/04 23:25:25.572 9966 10044 Warn Choreographer Frame time is 0.165074 ms in the future!  Check that graphics HAL is generating vsync timestamps using the correct timebase.
+2026/01/04 23:25:28.412 9966 10044 Warn Choreographer Frame time is 0.043975 ms in the future!  Check that graphics HAL is generating vsync timestamps using the correct timebase.
+2026/01/04 23:25:37.769 9966 10044 Warn Choreographer Frame time is 0.145471 ms in the future!  Check that graphics HAL is generating vsync timestamps using the correct timebase.
+2026/01/04 23:25:39.807 9966 10044 Warn Choreographer Frame time is 0.006995 ms in the future!  Check that graphics HAL is generating vsync timestamps using the correct timebase.
+2026/01/04 23:25:41.013 9966 9992 Info Unity [SimpleWebRTCPair][Sender] Peer connection state: Connecting
+2026/01/04 23:25:41.013 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:25:41.013 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:25:41.013 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:25:41.013 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:25:41.013 9966 9992 Info Unity  #4 0x7bbe0953c8 (libil2cpp.so) ? 0x0
+2026/01/04 23:25:41.013 9966 9992 Info Unity  #5 0x7bbe097aa4 (libil2cpp.so) ? 0x0
+2026/01/04 23:25:41.013 9966 9992 Info Unity  #6 0x7bbf685b88 (libil2cpp.so) ? 0x0
+2026/01/04 23:25:41.013 9966 9992 Info Unity  #7 0x7bbf6d202c (libil2cpp.so) ? 0x0
+2026/01/04 23:25:41.013 9966 9992 Info Unity  #8 0x7bbf67d6f0 (libil2cpp.so) ? 0x0
+2026/01/04 23:25:41.013 9966 9992 Info Unity  #9 0x7bbf67d528 (libil2cpp.so) ? 0x0
+2026/01/04 23:25:41.013 9966 9992 Info Unity  #10 0x7bbf67d818 (libil2cpp.so) ? 0x0
+2026/01/04 23:25:41.013 9966 9992 Info Unity  #11 0x7bbf71f9e4 (libil2cpp.so) ? 0x0
+2026/01/04 23:25:41.013 9966 9992 Info Unity  #12 0x7bbf71f92c (libil2cpp.so) ? 0x0
+2026/01/04 23:25:41.013 9966 9992 Info Unity  #13 0x7bbdfa9074 (libil2cpp.so) ? 0x0
+2026/01/04 23:25:41.013 9966 9992 Info Unity  #14 0x7bbdfa8fc0 (libil2cpp.so) ? 0x0
+2026/01/04 23:25:41.013 9966 9992 Info Unity  #15 0x7bd2219328 (libunity.so) scripting_method_invoke(Scripti
+2026/01/04 23:25:41.236 9966 9966 Info Unity onPause
+2026/01/04 23:25:41.256 9966 10132 Warn MessageQueue Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {66c030} sending message to a Handler on a dead thread
+2026/01/04 23:25:41.256 9966 10132 Warn MessageQueue java.lang.IllegalStateException: Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {66c030} sending message to a Handler on a dead thread
+2026/01/04 23:25:41.256 9966 10132 Warn MessageQueue 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:567)
+2026/01/04 23:25:41.256 9966 10132 Warn MessageQueue 	at android.os.Handler.enqueueMessage(Handler.java:778)
+2026/01/04 23:25:41.256 9966 10132 Warn MessageQueue 	at android.os.Handler.sendMessageAtTime(Handler.java:727)
+2026/01/04 23:25:41.256 9966 10132 Warn MessageQueue 	at android.os.Handler.sendMessageDelayed(Handler.java:697)
+2026/01/04 23:25:41.256 9966 10132 Warn MessageQueue 	at android.os.Handler.sendMessage(Handler.java:635)
+2026/01/04 23:25:41.256 9966 10132 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate.sendDisplayEvent(DisplayManagerGlobal.java:754)
+2026/01/04 23:25:41.256 9966 10132 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.handleDisplayEvent(DisplayManagerGlobal.java:368)
+2026/01/04 23:25:41.256 9966 10132 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.access$200(DisplayManagerGlobal.java:57)
+2026/01/04 23:25:41.256 9966 10132 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayManagerCallback.onDisplayEvent(DisplayManagerGlobal.java:740)
+2026/01/04 23:25:41.256 9966 10132 Warn MessageQueue 	at android.hardware.display.IDisplayManagerCallback$Stub.onTransact(IDisplayManagerCallback.java:84)
+2026/01/04 23:25:41.256 9966 10132 Warn MessageQueue 	at android.os.Binder.execTransactInternal(Binder.java:1173)
+2026/01/04 23:25:41.256 9966 10132 Warn MessageQueue 	at android.os.Binder.execTransact(Binder.java:1132)
+2026/01/04 23:25:41.258 9966 10132 Warn MessageQueue Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {8b53fe1} sending message to a Handler on a dead thread
+2026/01/04 23:25:41.258 9966 10132 Warn MessageQueue java.lang.IllegalStateException: Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {8b53fe1} sending message to a Handler on a dead thread
+2026/01/04 23:25:41.258 9966 10132 Warn MessageQueue 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:567)
+2026/01/04 23:25:41.258 9966 10132 Warn MessageQueue 	at android.os.Handler.enqueueMessage(Handler.java:778)
+2026/01/04 23:25:41.258 9966 10132 Warn MessageQueue 	at android.os.Handler.sendMessageAtTime(Handler.java:727)
+2026/01/04 23:25:41.258 9966 10132 Warn MessageQueue 	at android.os.Handler.sendMessageDelayed(Handler.java:697)
+2026/01/04 23:25:41.258 9966 10132 Warn MessageQueue 	at android.os.Handler.sendMessage(Handler.java:635)
+2026/01/04 23:25:41.258 9966 10132 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate.sendDisplayEvent(DisplayManagerGlobal.java:754)
+2026/01/04 23:25:41.258 9966 10132 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.handleDisplayEvent(DisplayManagerGlobal.java:368)
+2026/01/04 23:25:41.258 9966 10132 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.access$200(DisplayManagerGlobal.java:57)
+2026/01/04 23:25:41.258 9966 10132 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayManagerCallback.onDisplayEvent(DisplayManagerGlobal.java:740)
+2026/01/04 23:25:41.258 9966 10132 Warn MessageQueue 	at android.hardware.display.IDisplayManagerCallback$Stub.onTransact(IDisplayManagerCallback.java:84)
+2026/01/04 23:25:41.258 9966 10132 Warn MessageQueue 	at android.os.Binder.execTransactInternal(Binder.java:1173)
+2026/01/04 23:25:41.258 9966 10132 Warn MessageQueue 	at android.os.Binder.execTransact(Binder.java:1132)
+2026/01/04 23:25:41.272 9966 10132 Warn MessageQueue Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {b5b638d} sending message to a Handler on a dead thread
+2026/01/04 23:25:41.272 9966 10132 Warn MessageQueue java.lang.IllegalStateException: Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {b5b638d} sending message to a Handler on a dead thread
+2026/01/04 23:25:41.272 9966 10132 Warn MessageQueue 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:567)
+2026/01/04 23:25:41.272 9966 10132 Warn MessageQueue 	at android.os.Handler.enqueueMessage(Handler.java:778)
+2026/01/04 23:25:41.272 9966 10132 Warn MessageQueue 	at android.os.Handler.sendMessageAtTime(Handler.java:727)
+2026/01/04 23:25:41.272 9966 10132 Warn MessageQueue 	at android.os.Handler.sendMessageDelayed(Handler.java:697)
+2026/01/04 23:25:41.272 9966 10132 Warn MessageQueue 	at android.os.Handler.sendMessage(Handler.java:635)
+2026/01/04 23:25:41.272 9966 10132 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate.sendDisplayEvent(DisplayManagerGlobal.java:754)
+2026/01/04 23:25:41.272 9966 10132 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.handleDisplayEvent(DisplayManagerGlobal.java:368)
+2026/01/04 23:25:41.272 9966 10132 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.access$200(DisplayManagerGlobal.java:57)
+2026/01/04 23:25:41.272 9966 10132 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayManagerCallback.onDisplayEvent(DisplayManagerGlobal.java:740)
+2026/01/04 23:25:41.272 9966 10132 Warn MessageQueue 	at android.hardware.display.IDisplayManagerCallback$Stub.onTransact(IDisplayManagerCallback.java:84)
+2026/01/04 23:25:41.272 9966 10132 Warn MessageQueue 	at android.os.Binder.execTransactInternal(Binder.java:1173)
+2026/01/04 23:25:41.272 9966 10132 Warn MessageQueue 	at android.os.Binder.execTransact(Binder.java:1132)
+2026/01/04 23:25:41.277 9966 9992 Info Unity Camera2: Pause preview.
+2026/01/04 23:25:41.278 9966 9992 Info Unity Camera2: Close.
+2026/01/04 23:25:41.278 9966 9992 Info Unity Camera2: Stop preview.
+2026/01/04 23:25:41.367 9966 10303 Info Unity Camera2: CameraDevice closed.
+2026/01/04 23:25:41.475 9966 9992 Debug Unity Vulkan PSO: Pipeline cache has not changed skipping save handle[fddb2090]
+2026/01/04 23:25:41.514 9966 10323 Debug AudioTrack stop(184): called with 1779200 frames delivered
+2026/01/04 23:25:41.518 9966 10323 Debug AudioTrack ~AudioTrack(): RelativeVolumeFeature mSessionId:2881, clientId:162
+2026/01/04 23:25:41.531 9966 9992 Debug Unity Sensor :        Accelerometer ( 1) ; 0.004788 / 0.00s ; icm4x6xx Accelerometer Non-wakeup / TDK-Invensense 
+2026/01/04 23:25:41.546 9966 9966 Debug Unity PersistentUnitySurface.preserveContent: com.unity3d.player.a{7afaf5c VFE...... .F....I. 0,0-720,1600 #7f020000 app:id/unitySurfaceView aid=1073741824}
+2026/01/04 23:25:41.547 9966 9966 Debug Unity PersistentUnitySurface.PlaceholderView.Copy: com.unity3d.player.a{7afaf5c VFE...... .F....I. 0,0-720,1600 #7f020000 app:id/unitySurfaceView aid=1073741824} Width 720 Height 1600
+2026/01/04 23:25:41.572 9966 9992 Debug Unity SetWindow 0 0x0
+2026/01/04 23:25:41.581 9966 10301 Info SwappyDisplayManager Terminating looper thread
+2026/01/04 23:25:41.635 9966 9966 Debug Unity onPixelCopyFinished: 0
+2026/01/04 23:25:41.653 9966 9966 Info Unity windowFocusChanged: false
+2026/01/04 23:25:44.113 9966 10079 Warn MessageQueue Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {66c030} sending message to a Handler on a dead thread
+2026/01/04 23:25:44.113 9966 10079 Warn MessageQueue java.lang.IllegalStateException: Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {66c030} sending message to a Handler on a dead thread
+2026/01/04 23:25:44.113 9966 10079 Warn MessageQueue 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:567)
+2026/01/04 23:25:44.113 9966 10079 Warn MessageQueue 	at android.os.Handler.enqueueMessage(Handler.java:778)
+2026/01/04 23:25:44.113 9966 10079 Warn MessageQueue 	at android.os.Handler.sendMessageAtTime(Handler.java:727)
+2026/01/04 23:25:44.113 9966 10079 Warn MessageQueue 	at android.os.Handler.sendMessageDelayed(Handler.java:697)
+2026/01/04 23:25:44.113 9966 10079 Warn MessageQueue 	at android.os.Handler.sendMessage(Handler.java:635)
+2026/01/04 23:25:44.113 9966 10079 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate.sendDisplayEvent(DisplayManagerGlobal.java:754)
+2026/01/04 23:25:44.113 9966 10079 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.handleDisplayEvent(DisplayManagerGlobal.java:368)
+2026/01/04 23:25:44.113 9966 10079 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.access$200(DisplayManagerGlobal.java:57)
+2026/01/04 23:25:44.113 9966 10079 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayManagerCallback.onDisplayEvent(DisplayManagerGlobal.java:740)
+2026/01/04 23:25:44.113 9966 10079 Warn MessageQueue 	at android.hardware.display.IDisplayManagerCallback$Stub.onTransact(IDisplayManagerCallback.java:84)
+2026/01/04 23:25:44.113 9966 10079 Warn MessageQueue 	at android.os.Binder.execTransactInternal(Binder.java:1173)
+2026/01/04 23:25:44.113 9966 10079 Warn MessageQueue 	at android.os.Binder.execTransact(Binder.java:1132)
+2026/01/04 23:25:44.119 9966 10079 Warn MessageQueue Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {8b53fe1} sending message to a Handler on a dead thread
+2026/01/04 23:25:44.119 9966 10079 Warn MessageQueue java.lang.IllegalStateException: Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {8b53fe1} sending message to a Handler on a dead thread
+2026/01/04 23:25:44.119 9966 10079 Warn MessageQueue 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:567)
+2026/01/04 23:25:44.119 9966 10079 Warn MessageQueue 	at android.os.Handler.enqueueMessage(Handler.java:778)
+2026/01/04 23:25:44.119 9966 10079 Warn MessageQueue 	at android.os.Handler.sendMessageAtTime(Handler.java:727)
+2026/01/04 23:25:44.119 9966 10079 Warn MessageQueue 	at android.os.Handler.sendMessageDelayed(Handler.java:697)
+2026/01/04 23:25:44.119 9966 10079 Warn MessageQueue 	at android.os.Handler.sendMessage(Handler.java:635)
+2026/01/04 23:25:44.119 9966 10079 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate.sendDisplayEvent(DisplayManagerGlobal.java:754)
+2026/01/04 23:25:44.119 9966 10079 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.handleDisplayEvent(DisplayManagerGlobal.java:368)
+2026/01/04 23:25:44.119 9966 10079 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.access$200(DisplayManagerGlobal.java:57)
+2026/01/04 23:25:44.119 9966 10079 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayManagerCallback.onDisplayEvent(DisplayManagerGlobal.java:740)
+2026/01/04 23:25:44.119 9966 10079 Warn MessageQueue 	at android.hardware.display.IDisplayManagerCallback$Stub.onTransact(IDisplayManagerCallback.java:84)
+2026/01/04 23:25:44.119 9966 10079 Warn MessageQueue 	at android.os.Binder.execTransactInternal(Binder.java:1173)
+2026/01/04 23:25:44.119 9966 10079 Warn MessageQueue 	at android.os.Binder.execTransact(Binder.java:1132)
+2026/01/04 23:25:44.120 9966 10079 Warn MessageQueue Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {b5b638d} sending message to a Handler on a dead thread
+2026/01/04 23:25:44.120 9966 10079 Warn MessageQueue java.lang.IllegalStateException: Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {b5b638d} sending message to a Handler on a dead thread
+2026/01/04 23:25:44.120 9966 10079 Warn MessageQueue 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:567)
+2026/01/04 23:25:44.120 9966 10079 Warn MessageQueue 	at android.os.Handler.enqueueMessage(Handler.java:778)
+2026/01/04 23:25:44.120 9966 10079 Warn MessageQueue 	at android.os.Handler.sendMessageAtTime(Handler.java:727)
+2026/01/04 23:25:44.120 9966 10079 Warn MessageQueue 	at android.os.Handler.sendMessageDelayed(Handler.java:697)
+2026/01/04 23:25:44.120 9966 10079 Warn MessageQueue 	at android.os.Handler.sendMessage(Handler.java:635)
+2026/01/04 23:25:44.120 9966 10079 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate.sendDisplayEvent(DisplayManagerGlobal.java:754)
+2026/01/04 23:25:44.120 9966 10079 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.handleDisplayEvent(DisplayManagerGlobal.java:368)
+2026/01/04 23:25:44.120 9966 10079 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.access$200(DisplayManagerGlobal.java:57)
+2026/01/04 23:25:44.120 9966 10079 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayManagerCallback.onDisplayEvent(DisplayManagerGlobal.java:740)
+2026/01/04 23:25:44.120 9966 10079 Warn MessageQueue 	at android.hardware.display.IDisplayManagerCallback$Stub.onTransact(IDisplayManagerCallback.java:84)
+2026/01/04 23:25:44.120 9966 10079 Warn MessageQueue 	at android.os.Binder.execTransactInternal(Binder.java:1173)
+2026/01/04 23:25:44.120 9966 10079 Warn MessageQueue 	at android.os.Binder.execTransact(Binder.java:1132)
+2026/01/04 23:25:44.122 9966 10079 Warn MessageQueue Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {521654} sending message to a Handler on a dead thread
+2026/01/04 23:25:44.122 9966 10079 Warn MessageQueue java.lang.IllegalStateException: Handler (android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate) {521654} sending message to a Handler on a dead thread
+2026/01/04 23:25:44.122 9966 10079 Warn MessageQueue 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:567)
+2026/01/04 23:25:44.122 9966 10079 Warn MessageQueue 	at android.os.Handler.enqueueMessage(Handler.java:778)
+2026/01/04 23:25:44.122 9966 10079 Warn MessageQueue 	at android.os.Handler.sendMessageAtTime(Handler.java:727)
+2026/01/04 23:25:44.122 9966 10079 Warn MessageQueue 	at android.os.Handler.sendMessageDelayed(Handler.java:697)
+2026/01/04 23:25:44.122 9966 10079 Warn MessageQueue 	at android.os.Handler.sendMessage(Handler.java:635)
+2026/01/04 23:25:44.122 9966 10079 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate.sendDisplayEvent(DisplayManagerGlobal.java:754)
+2026/01/04 23:25:44.122 9966 10079 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.handleDisplayEvent(DisplayManagerGlobal.java:368)
+2026/01/04 23:25:44.122 9966 10079 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal.access$200(DisplayManagerGlobal.java:57)
+2026/01/04 23:25:44.122 9966 10079 Warn MessageQueue 	at android.hardware.display.DisplayManagerGlobal$DisplayManagerCallback.onDisplayEvent(DisplayManagerGlobal.java:740)
+2026/01/04 23:25:44.122 9966 10079 Warn MessageQueue 	at android.hardware.display.IDisplayManagerCallback$Stub.onTransact(IDisplayManagerCallback.java:84)
+2026/01/04 23:25:44.122 9966 10079 Warn MessageQueue 	at android.os.Binder.execTransactInternal(Binder.java:1173)
+2026/01/04 23:25:44.122 9966 10079 Warn MessageQueue 	at android.os.Binder.execTransact(Binder.java:1132)
+2026/01/04 23:25:46.285 9966 9966 Info Unity onResume
+2026/01/04 23:25:46.330 9966 9992 Debug Unity SetWindow 0 0xb400007dbdddfe80
+2026/01/04 23:25:46.331 9966 9992 Debug Unity SetWindow 0 0xb400007dbdddfe80
+2026/01/04 23:25:46.393 9966 9966 Info Unity windowFocusChanged: true
+2026/01/04 23:25:46.393 9966 9992 Debug Unity AndroidDisplayManagerVulkan::AttachWindow(0xb400007dbdddfe80, 0)
+2026/01/04 23:25:46.395 9966 9992 Debug Unity InitializeOrResetSwapChain 720x1600 hdr=0 samples=0
+2026/01/04 23:25:46.416 9966 10420 Info SwappyDisplayManager Starting looper thread
+2026/01/04 23:25:46.417 9966 9992 Verbose SwappyVk SwappyVk initialized for VkDevice 0xb400007c4dda8d30 using VK_GOOGLE_display_timing on Android
+2026/01/04 23:25:46.417 9966 9992 Info SwappyVk Returning refresh duration of 16666666 nsec (approx 60.000002 Hz)
+2026/01/04 23:25:46.439 9966 9992 Debug Unity Sensor :        Accelerometer ( 1) ; 0.004788 / 0.00s ; icm4x6xx Accelerometer Non-wakeup / TDK-Invensense 
+2026/01/04 23:25:46.439 9966 9992 Debug Unity Choreographer available: Enabling VSYNC timing
+2026/01/04 23:25:46.453 9966 9992 Info Unity Camera2: Hardware level: 3
+2026/01/04 23:25:46.456 9966 9992 Info Unity Camera2: FrameSize 4000 x 2250 [3.3774808550448396]
+2026/01/04 23:25:46.457 9966 9992 Info Unity Camera2: FrameSize 4000 x 1800 [3.15433730373063]
+2026/01/04 23:25:46.457 9966 9992 Info Unity Camera2: FrameSize 3264 x 2448 [3.25848107946056]
+2026/01/04 23:25:46.457 9966 9992 Info Unity Camera2: FrameSize 3264 x 1836 [2.970799007008779]
+2026/01/04 23:25:46.457 9966 9992 Info Unity Camera2: FrameSize 3264 x 1468 [2.747110645002804]
+2026/01/04 23:25:46.457 9966 9992 Info Unity Camera2: FrameSize 1920 x 1920 [2.4849066497880004]
+2026/01/04 23:25:46.457 9966 9992 Info Unity Camera2: FrameSize 1920 x 1080 [1.9095425048844386]
+2026/01/04 23:25:46.457 9966 9992 Info Unity Camera2: FrameSize 1920 x 864 [1.6863989535702286]
+2026/01/04 23:25:46.457 9966 9992 Info Unity Camera2: FrameSize 1600 x 1200 [1.83258146374831]
+2026/01/04 23:25:46.457 9966 9992 Info Unity Camera2: FrameSize 1440 x 1080 [1.6218604324326575]
+2026/01/04 23:25:46.457 9966 9992 Info Unity Camera2: FrameSize 1600 x 900 [1.5448993912965292]
+2026/01/04 23:25:46.457 9966 9992 Info Unity Camera2: FrameSize 1600 x 720 [1.3217558399823195]
+2026/01/04 23:25:46.457 9966 9992 Info Unity Camera2: FrameSize 1504 x 720 [1.259880436264232]
+2026/01/04 23:25:46.457 9966 9992 Info Unity Camera2: FrameSize 1280 x 720 [1.0986122886681098]
+2026/01/04 23:25:46.457 9966 9992 Info Unity Camera2: FrameSize 1280 x 576 [0.8754687373538999]
+2026/01/04 23:25:46.457 9966 9992 Info Unity Camera2: FrameSize 1200 x 540 [0.7463916950787577]
+2026/01/04 23:25:46.457 9966 9992 Info Unity Camera2: FrameSize 1024 x 768 [0.9400072584914712]
+2026/01/04 23:25:46.458 9966 9992 Info Unity Camera2: FrameSize 1120 x 504 [0.6084059521048548]
+2026/01/04 23:25:46.458 9966 9992 Info Unity Camera2: FrameSize 960 x 720 [0.8109302162163289]
+2026/01/04 23:25:46.458 9966 9992 Info Unity Camera2: FrameSize 960 x 540 [0.523248143764548]
+2026/01/04 23:25:46.458 9966 9992 Info Unity Camera2: FrameSize 720 x 540 [0.23556607131276702]
+2026/01/04 23:25:46.458 9966 9992 Info Unity Camera2: FrameSize 720 x 480 [0.11778303565638351]
+2026/01/04 23:25:46.458 9966 9992 Info Unity Camera2: FrameSize 640 x 480 [0.0]
+2026/01/04 23:25:46.458 9966 9992 Info Unity Camera2: FrameSize 352 x 288 [1.1086626245216111]
+2026/01/04 23:25:46.458 9966 9992 Info Unity Camera2: FrameSize 320 x 240 [1.3862943611198906]
+2026/01/04 23:25:46.458 9966 9992 Info Unity Camera2: FrameSize 256 x 192 [1.8325814637483102]
+2026/01/04 23:25:46.458 9966 9992 Info Unity Camera2: FrameSize 240 x 320 [1.3862943611198906]
+2026/01/04 23:25:46.458 9966 9992 Info Unity Camera2: FrameSize 176 x 144 [2.494956985641502]
+2026/01/04 23:25:46.458 9966 9992 Info Unity Camera2: FPS requested: 24 set: 24
+2026/01/04 23:25:46.498 9966 10423 Info Unity Camera2: CameraDevice opened.
+2026/01/04 23:25:46.511 9966 9992 Info Unity Camera2: Start preview.
+2026/01/04 23:25:46.630 9966 9992 Debug Unity Found 1 interfaces on host motorola_moto_g_power_(2021)@192.168.0.11:
+2026/01/04 23:25:46.630 9966 9992 Debug Unity  0) 192.168.0.11
+2026/01/04 23:25:46.630 9966 9992 Debug Unity 
+2026/01/04 23:25:46.630 9966 10423 Info Unity Camera2: CaptureSession is configured.
+2026/01/04 23:25:46.631 9966 9992 Debug Unity Player connection [531798457536]  Target information:
+2026/01/04 23:25:46.631 9966 9992 Debug Unity 
+2026/01/04 23:25:46.631 9966 9992 Debug Unity Player connection [531798457536]  * "[IP] 192.168.0.11 [Port] 55000 [Flags] 2 [Guid] 2889417514 [EditorId] 61618466 [Version] 1048832 [Id] AndroidPlayer(11,motorola_moto_g_power_(2021)@192.168.0.11) [Debug] 0 [PackageName] AndroidPlayer [ProjectName] ESP32" 
+2026/01/04 23:25:46.631 9966 9992 Debug Unity 
+2026/01/04 23:25:46.631 9966 9992 Debug Unity Player connection [531798457536] Started UDP target info broadcast (1) on [225.0.0.222:54997].
+2026/01/04 23:25:46.631 9966 9992 Debug Unity 
+2026/01/04 23:25:46.631 9966 9992 Debug Unity Player connection [531798457536] Started UDP target info broadcast (1) on [225.0.0.222:54997].
+2026/01/04 23:25:46.631 9966 9992 Debug Unity 
+2026/01/04 23:25:46.655 9966 10440 Debug AudioTrack createTrack_l(): RelativeVolumeFeature, mStreamType -1, streamType 3, attributes: usage=1 content=2 flags=0x800 tags=[], percentage=1.000000 clientId=163
+2026/01/04 23:25:46.656 9966 10440 Debug AudioTrack createTrack_l: RelativeVolumeFeature, mRelativePercentage:1.000000
+2026/01/04 23:25:46.665 9966 10440 Warn AudioTrack Use of stream types is deprecated for operations other than volume control
+2026/01/04 23:25:46.665 9966 10440 Warn AudioTrack See the documentation of AudioTrack() for what to use instead with android.media.AudioAttributes to qualify your playback use case
+2026/01/04 23:25:46.668 9966 9966 Verbose MediaRouter Selecting route: RouteInfo{ name=Phone, description=null, status=null, category=RouteCategory{ name=System types=ROUTE_TYPE_LIVE_AUDIO ROUTE_TYPE_LIVE_VIDEO  groupable=false }, supportedTypes=ROUTE_TYPE_LIVE_AUDIO ROUTE_TYPE_LIVE_VIDEO , presentationDisplay=null }
+2026/01/04 23:25:46.668 9966 9966 Verbose MediaRouter Selecting route ignored,not new route
+2026/01/04 23:25:46.877 9966 9992 Info AdrenoVK-0 QGLCLoadShaderBinary failed.  A blob from the cache failed to load.  Stage=Vertex.  Hash=371BD4C5
+2026/01/04 23:25:46.879 9966 9992 Info AdrenoVK-0 QGLCLoadShaderBinary failed.  A blob from the cache failed to load.  Stage=Fragment.  Hash=F1BE468D
+2026/01/04 23:25:55.399 9966 9992 Info Unity Camera2: Close.
+2026/01/04 23:25:55.399 9966 9992 Info Unity Camera2: Stop preview.
+2026/01/04 23:25:55.496 9966 10423 Info Unity Camera2: CameraDevice closed.
+2026/01/04 23:25:55.499 9966 9992 Info Unity Camera2: Hardware level: 3
+2026/01/04 23:25:55.501 9966 9992 Info Unity Camera2: FrameSize 4000 x 2250 [3.3774808550448396]
+2026/01/04 23:25:55.502 9966 9992 Info Unity Camera2: FrameSize 4000 x 1800 [3.15433730373063]
+2026/01/04 23:25:55.502 9966 9992 Info Unity Camera2: FrameSize 3264 x 2448 [3.25848107946056]
+2026/01/04 23:25:55.502 9966 9992 Info Unity Camera2: FrameSize 3264 x 1836 [2.970799007008779]
+2026/01/04 23:25:55.502 9966 9992 Info Unity Camera2: FrameSize 3264 x 1468 [2.747110645002804]
+2026/01/04 23:25:55.502 9966 9992 Info Unity Camera2: FrameSize 1920 x 1920 [2.4849066497880004]
+2026/01/04 23:25:55.502 9966 9992 Info Unity Camera2: FrameSize 1920 x 1080 [1.9095425048844386]
+2026/01/04 23:25:55.502 9966 9992 Info Unity Camera2: FrameSize 1920 x 864 [1.6863989535702286]
+2026/01/04 23:25:55.502 9966 9992 Info Unity Camera2: FrameSize 1600 x 1200 [1.83258146374831]
+2026/01/04 23:25:55.502 9966 9992 Info Unity Camera2: FrameSize 1440 x 1080 [1.6218604324326575]
+2026/01/04 23:25:55.502 9966 9992 Info Unity Camera2: FrameSize 1600 x 900 [1.5448993912965292]
+2026/01/04 23:25:55.502 9966 9992 Info Unity Camera2: FrameSize 1600 x 720 [1.3217558399823195]
+2026/01/04 23:25:55.502 9966 9992 Info Unity Camera2: FrameSize 1504 x 720 [1.259880436264232]
+2026/01/04 23:25:55.502 9966 9992 Info Unity Camera2: FrameSize 1280 x 720 [1.0986122886681098]
+2026/01/04 23:25:55.502 9966 9992 Info Unity Camera2: FrameSize 1280 x 576 [0.8754687373538999]
+2026/01/04 23:25:55.502 9966 9992 Info Unity Camera2: FrameSize 1200 x 540 [0.7463916950787577]
+2026/01/04 23:25:55.502 9966 9992 Info Unity Camera2: FrameSize 1024 x 768 [0.9400072584914712]
+2026/01/04 23:25:55.503 9966 9992 Info Unity Camera2: FrameSize 1120 x 504 [0.6084059521048548]
+2026/01/04 23:25:55.503 9966 9992 Info Unity Camera2: FrameSize 960 x 720 [0.8109302162163289]
+2026/01/04 23:25:55.503 9966 9992 Info Unity Camera2: FrameSize 960 x 540 [0.523248143764548]
+2026/01/04 23:25:55.503 9966 9992 Info Unity Camera2: FrameSize 720 x 540 [0.23556607131276702]
+2026/01/04 23:25:55.503 9966 9992 Info Unity Camera2: FrameSize 720 x 480 [0.11778303565638351]
+2026/01/04 23:25:55.503 9966 9992 Info Unity Camera2: FrameSize 640 x 480 [0.0]
+2026/01/04 23:25:55.503 9966 9992 Info Unity Camera2: FrameSize 352 x 288 [1.1086626245216111]
+2026/01/04 23:25:55.503 9966 9992 Info Unity Camera2: FrameSize 320 x 240 [1.3862943611198906]
+2026/01/04 23:25:55.503 9966 9992 Info Unity Camera2: FrameSize 256 x 192 [1.8325814637483102]
+2026/01/04 23:25:55.503 9966 9992 Info Unity Camera2: FrameSize 240 x 320 [1.3862943611198906]
+2026/01/04 23:25:55.503 9966 9992 Info Unity Camera2: FrameSize 176 x 144 [2.494956985641502]
+2026/01/04 23:25:55.503 9966 9992 Info Unity Camera2: FPS requested: 24 set: 24
+2026/01/04 23:25:55.520 9966 10463 Info Unity Camera2: CameraDevice opened.
+2026/01/04 23:25:55.524 9966 9992 Info Unity Camera2: Start preview.
+2026/01/04 23:25:55.628 9966 10463 Info Unity Camera2: CaptureSession is configured.
+2026/01/04 23:25:55.960 9966 9992 Info AdrenoVK-0 QGLCLoadShaderBinary failed.  A blob from the cache failed to load.  Stage=Vertex.  Hash=371BD4C5
+2026/01/04 23:25:55.962 9966 9992 Info AdrenoVK-0 QGLCLoadShaderBinary failed.  A blob from the cache failed to load.  Stage=Fragment.  Hash=F1BE468D
+2026/01/04 23:25:58.182 9966 9992 Info Unity [QRCodeScanner] Raw QR code text: '9ad24a43ca4349d08c7dd174df78a407|SDP|0|2|H4sIAAAAAAAACp1VXW/iOBT9KxbP68YhCZBb5YFC0aKZrVDb6UirkVau44DVOLEcA2VG+9/3hlDR0MBuFxQ5vh/H9xxfO796bmdkD3q8qLbS9n7rVanB6SZhP+yPokwoGQXMD3zWj1kcx+EgjCNG+mR+R+aLkPj94RXDv19HVwmtB5cwss/mydKWawM33+6mX2/fbPLVaW4oz/NyS7V6lWlj15VKaSU1L5wSQL7/8VDbdbJRqSxJTL5NF97j1wfv/nHhPYyfFrN6cXwYPhHx/RjHAMchCWISotVHK6ut++JEciiZ7Qs+FGOdMBCTLpcSkq4zy5fw/fFmcLSZbQrxahBt0i/zaO5/YX8+3i/u/bUInuQxqjROlUUFzirxkh8cmSqW0hqrCgfVitN+NMASIZjC9BamU7iZQchgjC8T6PsQjKHPIL6FKIJBDGwGszGMIhiNYeJDOIHJFGIfpsPa609gFkMwhD4G+DAYgT/FxGbhSjrcBy6c2hxK0SqF1oaAT9a2ACVdBoZbriuwztBVatEPrswyBGkl9MnKOQOet91ur7byGbW8Ku3Sk69GWqVl4SrvCOHx5wq3t0ipQ18LKNivHCyNgf1m09IqzOa1gq3A8P2KdaX79VTqpZZnjq7KXEtLrRbcUWexpU1pHd0iJhWCIogsqnpXKPNbuNHnmJic78q1o6nElxbQ4HNADVtRFlgYVownsYU2/D9oqC52WQtn9DkcUealpZXhol1OfKlBqlRWgE3Vbin2ryn1vHJWck1Pky82ZJMsDVdWprQDxUqxKYt8dzzn'
+2026/01/04 23:25:58.182 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:25:58.182 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:25:58.182 9966 9992 Info Unity  #2 0
+2026/01/04 23:25:58.182 9966 9992 Info Unity Camera2: Close.
+2026/01/04 23:25:58.182 9966 9992 Info Unity Camera2: Stop preview.
+2026/01/04 23:25:58.268 9966 10463 Info Unity Camera2: CameraDevice closed.
+2026/01/04 23:25:58.271 9966 9992 Info Unity Parsed QR Chunk - ID: 9ad24a43ca4349d08c7dd174df78a407, Type: SDP, Index: 0, Total: 2
+2026/01/04 23:25:58.271 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:25:58.271 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:25:58.271 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:25:58.271 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:25:58.271 9966 9992 Info Unity  #4 0x7bbe08a3e4 (libil2cpp.so) ? 0x0
+2026/01/04 23:25:58.271 9966 9992 Info Unity  #5 0x7bbe08ab74 (libil2cpp.so) ? 0x0
+2026/01/04 23:25:58.271 9966 9992 Info Unity  #6 0x7bbf7191e0 (libil2cpp.so) ? 0x0
+2026/01/04 23:25:58.271 9966 9992 Info Unity  #7 0x7bbdfa9074 (libil2cpp.so) ? 0x0
+2026/01/04 23:25:58.271 9966 9992 Info Unity  #8 0x7bbdfa8fc0 (libil2cpp.so) ? 0x0
+2026/01/04 23:25:58.271 9966 9992 Info Unity  #9 0x7bd2219328 (libunity.so) scripting_method_invoke(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingArguments&, ScriptingExceptionPtr*, bool) 0xb0
+2026/01/04 23:25:58.271 9966 9992 Info Unity  #10 0x7bd222bf6c (libunity.so) ScriptingInvocation::Invoke(ScriptingExceptionPtr*, bool) 0x9c
+2026/01/04 23:25:58.271 9966 9992 Info Unity  #11 0x7bd22337e0 (libuni
+2026/01/04 23:25:59.316 9966 9992 Info Unity Camera2: Hardware level: 3
+2026/01/04 23:25:59.319 9966 9992 Info Unity Camera2: FrameSize 4000 x 2250 [3.3774808550448396]
+2026/01/04 23:25:59.319 9966 9992 Info Unity Camera2: FrameSize 4000 x 1800 [3.15433730373063]
+2026/01/04 23:25:59.319 9966 9992 Info Unity Camera2: FrameSize 3264 x 2448 [3.25848107946056]
+2026/01/04 23:25:59.319 9966 9992 Info Unity Camera2: FrameSize 3264 x 1836 [2.970799007008779]
+2026/01/04 23:25:59.319 9966 9992 Info Unity Camera2: FrameSize 3264 x 1468 [2.747110645002804]
+2026/01/04 23:25:59.319 9966 9992 Info Unity Camera2: FrameSize 1920 x 1920 [2.4849066497880004]
+2026/01/04 23:25:59.319 9966 9992 Info Unity Camera2: FrameSize 1920 x 1080 [1.9095425048844386]
+2026/01/04 23:25:59.320 9966 9992 Info Unity Camera2: FrameSize 1920 x 864 [1.6863989535702286]
+2026/01/04 23:25:59.320 9966 9992 Info Unity Camera2: FrameSize 1600 x 1200 [1.83258146374831]
+2026/01/04 23:25:59.320 9966 9992 Info Unity Camera2: FrameSize 1440 x 1080 [1.6218604324326575]
+2026/01/04 23:25:59.320 9966 9992 Info Unity Camera2: FrameSize 1600 x 900 [1.5448993912965292]
+2026/01/04 23:25:59.320 9966 9992 Info Unity Camera2: FrameSize 1600 x 720 [1.3217558399823195]
+2026/01/04 23:25:59.320 9966 9992 Info Unity Camera2: FrameSize 1504 x 720 [1.259880436264232]
+2026/01/04 23:25:59.320 9966 9992 Info Unity Camera2: FrameSize 1280 x 720 [1.0986122886681098]
+2026/01/04 23:25:59.320 9966 9992 Info Unity Camera2: FrameSize 1280 x 576 [0.8754687373538999]
+2026/01/04 23:25:59.320 9966 9992 Info Unity Camera2: FrameSize 1200 x 540 [0.7463916950787577]
+2026/01/04 23:25:59.320 9966 9992 Info Unity Camera2: FrameSize 1024 x 768 [0.9400072584914712]
+2026/01/04 23:25:59.320 9966 9992 Info Unity Camera2: FrameSize 1120 x 504 [0.6084059521048548]
+2026/01/04 23:25:59.320 9966 9992 Info Unity Camera2: FrameSize 960 x 720 [0.8109302162163289]
+2026/01/04 23:25:59.320 9966 9992 Info Unity Camera2: FrameSize 960 x 540 [0.523248143764548]
+2026/01/04 23:25:59.320 9966 9992 Info Unity Camera2: FrameSize 720 x 540 [0.23556607131276702]
+2026/01/04 23:25:59.320 9966 9992 Info Unity Camera2: FrameSize 720 x 480 [0.11778303565638351]
+2026/01/04 23:25:59.320 9966 9992 Info Unity Camera2: FrameSize 640 x 480 [0.0]
+2026/01/04 23:25:59.320 9966 9992 Info Unity Camera2: FrameSize 352 x 288 [1.1086626245216111]
+2026/01/04 23:25:59.320 9966 9992 Info Unity Camera2: FrameSize 320 x 240 [1.3862943611198906]
+2026/01/04 23:25:59.321 9966 9992 Info Unity Camera2: FrameSize 256 x 192 [1.8325814637483102]
+2026/01/04 23:25:59.321 9966 9992 Info Unity Camera2: FrameSize 240 x 320 [1.3862943611198906]
+2026/01/04 23:25:59.321 9966 9992 Info Unity Camera2: FrameSize 176 x 144 [2.494956985641502]
+2026/01/04 23:25:59.321 9966 9992 Info Unity Camera2: FPS requested: 24 set: 24
+2026/01/04 23:25:59.347 9966 10492 Info Unity Camera2: CameraDevice opened.
+2026/01/04 23:25:59.350 9966 9992 Info Unity Camera2: Start preview.
+2026/01/04 23:25:59.453 9966 10492 Info Unity Camera2: CaptureSession is configured.
+2026/01/04 23:25:59.809 9966 9992 Info AdrenoVK-0 QGLCLoadShaderBinary failed.  A blob from the cache failed to load.  Stage=Vertex.  Hash=371BD4C5
+2026/01/04 23:25:59.811 9966 9992 Info AdrenoVK-0 QGLCLoadShaderBinary failed.  A blob from the cache failed to load.  Stage=Fragment.  Hash=F1BE468D
+2026/01/04 23:26:04.133 9966 9992 Info Unity [QRCodeScanner] Raw QR code text: '9ad24a43ca4349d08c7dd174df78a407|SDP|1|2|VK9f381spX7Kt7nZr4j3ydNi5MUMf+8is+e9a1mWS2qlfv7oOjabEB+9QmiSKfvRUXDx0m0lJleHO0O7pjKlTS7127n4q+BaJnPsHFvw/IQGI9a9vqdxAGGEG5cg2El8hLTjbtrRedrRRdrROdpRJ+2om3Z0kfa1sWWmcombnrA2J/wcdGqA9kaD6ESDgPzeH4TdIgTnRQguihCcEyHoFCHoFiHoFOFuMylTKa5zuZE55dVOa+nsrvmwyjTxr/EEv0infu6TqMbo2niQrElD4cK+ZEFwot7wjHrDg3rtePzgjp/8Lu3Qc0Y69JxXDp2dwqH9o24H44lsaP3PJybsPjBhc16C+ESciOCd02bbeNiZpmOHpvNPmw6vuNxkUhxTen//A92j60KTCQAA'
+2026/01/04 23:26:04.133 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:26:04.133 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:26:04.133 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:26:04.133 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:26:04.133 9966 9992 Info Unity  #4 0x7bbe08ab40 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:04.133 9966 9992 Info Unity  #5 0x7bbf7191e0 (libil2cpp.so)
+2026/01/04 23:26:04.133 9966 9992 Info Unity Camera2: Close.
+2026/01/04 23:26:04.133 9966 9992 Info Unity Camera2: Stop preview.
+2026/01/04 23:26:04.219 9966 10492 Info Unity Camera2: CameraDevice closed.
+2026/01/04 23:26:04.221 9966 9992 Info Unity Parsed QR Chunk - ID: 9ad24a43ca4349d08c7dd174df78a407, Type: SDP, Index: 1, Total: 2
+2026/01/04 23:26:04.221 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:26:04.221 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:26:04.221 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:26:04.221 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:26:04.221 9966 9992 Info Unity  #4 0x7bbe08a3e4 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:04.221 9966 9992 Info Unity  #5 0x7bbe08ab74 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:04.221 9966 9992 Info Unity  #6 0x7bbf7191e0 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:04.221 9966 9992 Info Unity  #7 0x7bbdfa9074 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:04.221 9966 9992 Info Unity  #8 0x7bbdfa8fc0 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:04.221 9966 9992 Info Unity  #9 0x7bd2219328 (libunity.so) scripting_method_invoke(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingArguments&, ScriptingExceptionPtr*, bool) 0xb0
+2026/01/04 23:26:04.221 9966 9992 Info Unity  #10 0x7bd222bf6c (libunity.so) ScriptingInvocation::Invoke(ScriptingExceptionPtr*, bool) 0x9c
+2026/01/04 23:26:04.221 9966 9992 Info Unity  #11 0x7bd22337e0 (libuni
+2026/01/04 23:26:04.225 9966 9992 Info Unity Decompressed QR Text: {"type":"answer","sdp":"v=0\r\no=- 8301310290999464950 2 IN IP4 127.0.0.1\r\ns=-\r\nt=0 0\r\na=group:BUNDLE 0\r\na=extmap-allow-mixed\r\na=msid-semantic: WMS\r\nm=video 9 UDP/TLS/RTP/SAVPF 127 120 125 119 123 117 39 40 115 109 121\r\nc=IN IP4 0.0.0.0\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=ice-ufrag:WTB6\r\na=ice-pwd:9h65vdKI5I1K0ZTRPR1uc3Ve\r\na=ice-options:trickle\r\na=fingerprint:sha-256 10:3D:DE:DD:BF:40:AD:BC:21:3A:20:9E:55:69:0F:FA:85:8A:C1:4C:CD:91:D7:69:1C:F9:37:25:81:68:1D:55\r\na=setup:active\r\na=mid:0\r\na=extmap:1 urn:ietf:params:rtp-hdrext:toffset\r\na=extmap:2 http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time\r\na=extmap:3 urn:3gpp:video-orientation\r\na=extmap:4 http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01\r\na=extmap:5 http://www.webrtc.org/experiments/rtp-hdrext/playout-delay\r\na=extmap:6 http://www.webrtc.org/experiments/rtp-hdrext/video-content-type\r\na=extmap:7 http://www.webrtc.org/experiments/rtp-hdrext/video-timing\r\na=extmap:8 ht
+2026/01/04 23:26:04.225 9966 9992 Info Unity SDP Data received: {"type":"answer","sdp":"v=0\r\no=- 8301310290999464950 2 IN IP4 127.0.0.1\r\ns=-\r\nt=0 0\r\na=group:BUNDLE 0\r\na=extmap-allow-mixed\r\na=msid-semantic: WMS\r\nm=video 9 UDP/TLS/RTP/SAVPF 127 120 125 119 123 117 39 40 115 109 121\r\nc=IN IP4 0.0.0.0\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=ice-ufrag:WTB6\r\na=ice-pwd:9h65vdKI5I1K0ZTRPR1uc3Ve\r\na=ice-options:trickle\r\na=fingerprint:sha-256 10:3D:DE:DD:BF:40:AD:BC:21:3A:20:9E:55:69:0F:FA:85:8A:C1:4C:CD:91:D7:69:1C:F9:37:25:81:68:1D:55\r\na=setup:active\r\na=mid:0\r\na=extmap:1 urn:ietf:params:rtp-hdrext:toffset\r\na=extmap:2 http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time\r\na=extmap:3 urn:3gpp:video-orientation\r\na=extmap:4 http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01\r\na=extmap:5 http://www.webrtc.org/experiments/rtp-hdrext/playout-delay\r\na=extmap:6 http://www.webrtc.org/experiments/rtp-hdrext/video-content-type\r\na=extmap:7 http://www.webrtc.org/experiments/rtp-hdrext/video-timing\r\na=extmap:8 http:
+2026/01/04 23:26:09.472 9966 9992 Info Unity Camera2: Hardware level: 3
+2026/01/04 23:26:09.475 9966 9992 Info Unity Camera2: FrameSize 4000 x 2250 [3.3774808550448396]
+2026/01/04 23:26:09.475 9966 9992 Info Unity Camera2: FrameSize 4000 x 1800 [3.15433730373063]
+2026/01/04 23:26:09.475 9966 9992 Info Unity Camera2: FrameSize 3264 x 2448 [3.25848107946056]
+2026/01/04 23:26:09.475 9966 9992 Info Unity Camera2: FrameSize 3264 x 1836 [2.970799007008779]
+2026/01/04 23:26:09.476 9966 9992 Info Unity Camera2: FrameSize 3264 x 1468 [2.747110645002804]
+2026/01/04 23:26:09.476 9966 9992 Info Unity Camera2: FrameSize 1920 x 1920 [2.4849066497880004]
+2026/01/04 23:26:09.476 9966 9992 Info Unity Camera2: FrameSize 1920 x 1080 [1.9095425048844386]
+2026/01/04 23:26:09.476 9966 9992 Info Unity Camera2: FrameSize 1920 x 864 [1.6863989535702286]
+2026/01/04 23:26:09.476 9966 9992 Info Unity Camera2: FrameSize 1600 x 1200 [1.83258146374831]
+2026/01/04 23:26:09.476 9966 9992 Info Unity Camera2: FrameSize 1440 x 1080 [1.6218604324326575]
+2026/01/04 23:26:09.476 9966 9992 Info Unity Camera2: FrameSize 1600 x 900 [1.5448993912965292]
+2026/01/04 23:26:09.476 9966 9992 Info Unity Camera2: FrameSize 1600 x 720 [1.3217558399823195]
+2026/01/04 23:26:09.476 9966 9992 Info Unity Camera2: FrameSize 1504 x 720 [1.259880436264232]
+2026/01/04 23:26:09.476 9966 9992 Info Unity Camera2: FrameSize 1280 x 720 [1.0986122886681098]
+2026/01/04 23:26:09.476 9966 9992 Info Unity Camera2: FrameSize 1280 x 576 [0.8754687373538999]
+2026/01/04 23:26:09.476 9966 9992 Info Unity Camera2: FrameSize 1200 x 540 [0.7463916950787577]
+2026/01/04 23:26:09.476 9966 9992 Info Unity Camera2: FrameSize 1024 x 768 [0.9400072584914712]
+2026/01/04 23:26:09.476 9966 9992 Info Unity Camera2: FrameSize 1120 x 504 [0.6084059521048548]
+2026/01/04 23:26:09.477 9966 9992 Info Unity Camera2: FrameSize 960 x 720 [0.8109302162163289]
+2026/01/04 23:26:09.477 9966 9992 Info Unity Camera2: FrameSize 960 x 540 [0.523248143764548]
+2026/01/04 23:26:09.477 9966 9992 Info Unity Camera2: FrameSize 720 x 540 [0.23556607131276702]
+2026/01/04 23:26:09.477 9966 9992 Info Unity Camera2: FrameSize 720 x 480 [0.11778303565638351]
+2026/01/04 23:26:09.477 9966 9992 Info Unity Camera2: FrameSize 640 x 480 [0.0]
+2026/01/04 23:26:09.477 9966 9992 Info Unity Camera2: FrameSize 352 x 288 [1.1086626245216111]
+2026/01/04 23:26:09.477 9966 9992 Info Unity Camera2: FrameSize 320 x 240 [1.3862943611198906]
+2026/01/04 23:26:09.477 9966 9992 Info Unity Camera2: FrameSize 256 x 192 [1.8325814637483102]
+2026/01/04 23:26:09.477 9966 9992 Info Unity Camera2: FrameSize 240 x 320 [1.3862943611198906]
+2026/01/04 23:26:09.477 9966 9992 Info Unity Camera2: FrameSize 176 x 144 [2.494956985641502]
+2026/01/04 23:26:09.477 9966 9992 Info Unity Camera2: FPS requested: 24 set: 24
+2026/01/04 23:26:09.504 9966 10523 Info Unity Camera2: CameraDevice opened.
+2026/01/04 23:26:09.507 9966 9992 Info Unity Camera2: Start preview.
+2026/01/04 23:26:09.613 9966 10523 Info Unity Camera2: CaptureSession is configured.
+2026/01/04 23:26:09.949 9966 9992 Info AdrenoVK-0 QGLCLoadShaderBinary failed.  A blob from the cache failed to load.  Stage=Vertex.  Hash=371BD4C5
+2026/01/04 23:26:09.950 9966 9992 Info AdrenoVK-0 QGLCLoadShaderBinary failed.  A blob from the cache failed to load.  Stage=Fragment.  Hash=F1BE468D
+2026/01/04 23:26:10.670 9966 9992 Info Unity [QRCodeScanner] Raw QR code text: 'c6d8569947a1400797b24d6b27a4375f|ICE|0|1|H4sIAAAAAAAACs2RT0sDMRDF736KIee6TP5uskcPgqA3wXPYpDXUZpckq5Xid3eUlkrBq3h7M7x5/B5zYKPPIQXfIhvOelCca2Os0gY4LGEGwYUQBoWQwJ3ouLEddrQDbaTT0N5neJ5qg03MsfiWpgwIy7r4DTw93hjIsb1NZXudAgWehvHrgiNbsRrmhxQI4TTcpxzvcoh7NuCKLTWW7HfxlvJ2MTcyso+rwy/wxqDsXa/5kZ1gDWqi76EndEngynZC4g/4WtYveyg+hHJRsMxTaUfnf2gnEJ1V7vszbaR2mlthUan+AtwoJcX5M+QlHWH2tabX+KddPgG5aTDfZwIAAA=='
+2026/01/04 23:26:10.670 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:26:10.670 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:26:10.670 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:26:10.670 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:26:10.670 9966 9992 Info Unity  #4 0x7bbe08ab40 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:10.670 9966 9992 Info Unity  #5 0x7bbf7191e0 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:10.670 9966 9992 Info Unity  #6 0x7bbdfa9074 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:10.670 9966 9992 Info Unity  #7 0x7
+2026/01/04 23:26:10.670 9966 9992 Info Unity Camera2: Close.
+2026/01/04 23:26:10.670 9966 9992 Info Unity Camera2: Stop preview.
+2026/01/04 23:26:10.756 9966 10523 Info Unity Camera2: CameraDevice closed.
+2026/01/04 23:26:10.758 9966 9992 Info Unity Parsed QR Chunk - ID: c6d8569947a1400797b24d6b27a4375f, Type: ICE, Index: 0, Total: 1
+2026/01/04 23:26:10.758 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:26:10.758 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:26:10.758 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:26:10.758 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:26:10.758 9966 9992 Info Unity  #4 0x7bbe08a3e4 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:10.758 9966 9992 Info Unity  #5 0x7bbe08ab74 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:10.758 9966 9992 Info Unity  #6 0x7bbf7191e0 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:10.758 9966 9992 Info Unity  #7 0x7bbdfa9074 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:10.758 9966 9992 Info Unity  #8 0x7bbdfa8fc0 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:10.758 9966 9992 Info Unity  #9 0x7bd2219328 (libunity.so) scripting_method_invoke(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingArguments&, ScriptingExceptionPtr*, bool) 0xb0
+2026/01/04 23:26:10.758 9966 9992 Info Unity  #10 0x7bd222bf6c (libunity.so) ScriptingInvocation::Invoke(ScriptingExceptionPtr*, bool) 0x9c
+2026/01/04 23:26:10.758 9966 9992 Info Unity  #11 0x7bd22337e0 (libuni
+2026/01/04 23:26:10.759 9966 9992 Info Unity Decompressed QR Text: {"candidate":"candidate:4115668456 1 udp 2122260223 192.168.0.122 56395 typ host generation 0 ufrag WTB6 network-id 1 network-cost 10","sdpMid":"0","sdpMLineIndex":0,"usernameFragment":""}
+2026/01/04 23:26:10.759 9966 9992 Info Unity {"candidate":"candidate:660379751 1 udp 1686052607 72.130.148.230 56395 typ srflx raddr 192.168.0.122 rport 56395 generation 0 ufrag WTB6 network-id 1 network-cost 10","sdpMid":"0","sdpMLineIndex":0,"usernameFragment":""}
+2026/01/04 23:26:10.759 9966 9992 Info Unity {"candidate":"candidate:200984956 1 tcp 1518280447 192.168.0.122 64432 typ host tcptype passive generation 0 ufrag WTB6 network-id 1 network-cost 10","sdpMid":"0","sdpMLineIndex":0,"usernameFragment":""}
+2026/01/04 23:26:10.759 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:26:10.759 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:26:10.759 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:26:10.759 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOpti
+2026/01/04 23:26:10.759 9966 9992 Info Unity ICE Data received: {"candidate":"candidate:4115668456 1 udp 2122260223 192.168.0.122 56395 typ host generation 0 ufrag WTB6 network-id 1 network-cost 10","sdpMid":"0","sdpMLineIndex":0,"usernameFragment":""}
+2026/01/04 23:26:10.759 9966 9992 Info Unity {"candidate":"candidate:660379751 1 udp 1686052607 72.130.148.230 56395 typ srflx raddr 192.168.0.122 rport 56395 generation 0 ufrag WTB6 network-id 1 network-cost 10","sdpMid":"0","sdpMLineIndex":0,"usernameFragment":""}
+2026/01/04 23:26:10.759 9966 9992 Info Unity {"candidate":"candidate:200984956 1 tcp 1518280447 192.168.0.122 64432 typ host tcptype passive generation 0 ufrag WTB6 network-id 1 network-cost 10","sdpMid":"0","sdpMLineIndex":0,"usernameFragment":""}
+2026/01/04 23:26:10.759 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:26:10.759 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:26:10.759 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:26:10.759 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption,
+2026/01/04 23:26:10.760 9966 9992 Info Unity Both SDP and ICE data received. Ready to establish connection.
+2026/01/04 23:26:10.760 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:26:10.760 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:26:10.760 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:26:10.760 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:26:10.760 9966 9992 Info Unity  #4 0x7bbe083a88 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:10.760 9966 9992 Info Unity  #5 0x7bbe08af7c (libil2cpp.so) ? 0x0
+2026/01/04 23:26:10.760 9966 9992 Info Unity  #6 0x7bbf7191e0 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:10.760 9966 9992 Info Unity  #7 0x7bbdfa9074 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:10.760 9966 9992 Info Unity  #8 0x7bbdfa8fc0 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:10.760 9966 9992 Info Unity  #9 0x7bd2219328 (libunity.so) scripting_method_invoke(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingArguments&, ScriptingExceptionPtr*, bool) 0xb0
+2026/01/04 23:26:10.760 9966 9992 Info Unity  #10 0x7bd222bf6c (libunity.so) ScriptingInvocation::Invoke(ScriptingExceptionPtr*, bool) 0x9c
+2026/01/04 23:26:10.760 9966 9992 Info Unity  #11 0x7bd22337e0 (libunity.so) Coroutine::Invok
+2026/01/04 23:26:15.650 9966 9992 Info Unity [SimpleWebRTCPair][Sender] Setting remote SDP. type=Answer
+2026/01/04 23:26:15.650 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:26:15.650 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:26:15.650 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:26:15.650 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:26:15.650 9966 9992 Info Unity  #4 0x7bbe0953c8 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.650 9966 9992 Info Unity  #5 0x7bbe098bf0 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.650 9966 9992 Info Unity  #6 0x7bbf7191e0 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.650 9966 9992 Info Unity  #7 0x7bbdfa9074 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.650 9966 9992 Info Unity  #8 0x7bbdfa8fc0 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.650 9966 9992 Info Unity  #9 0x7bd2219328 (libunity.so) scripting_method_invoke(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingArguments&, ScriptingExceptionPtr*, bool) 0xb0
+2026/01/04 23:26:15.650 9966 9992 Info Unity  #10 0x7bd222bf6c (libunity.so) ScriptingInvocation::Invoke(ScriptingExceptionPtr*, bool) 0x9c
+2026/01/04 23:26:15.650 9966 9992 Info Unity  #11 0x7bd22337e0 (libunity.so) Coroutine::InvokeMov
+2026/01/04 23:26:15.656 9966 9992 Info Unity [SimpleWebRTCPair][Sender] ICE connection state: Checking
+2026/01/04 23:26:15.656 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:26:15.656 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:26:15.656 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:26:15.656 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:26:15.656 9966 9992 Info Unity  #4 0x7bbe0953c8 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.656 9966 9992 Info Unity  #5 0x7bbe097934 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.656 9966 9992 Info Unity  #6 0x7bbf685aa0 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.656 9966 9992 Info Unity  #7 0x7bbf6d202c (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.656 9966 9992 Info Unity  #8 0x7bbf67d6f0 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.656 9966 9992 Info Unity  #9 0x7bbf67d528 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.656 9966 9992 Info Unity  #10 0x7bbf67d818 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.656 9966 9992 Info Unity  #11 0x7bbf71f9e4 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.656 9966 9992 Info Unity  #12 0x7bbf71f92c (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.656 9966 9992 Info Unity  #13 0x7bbdfa9074 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.656 9966 9992 Info Unity  #14 0x7bbdfa8fc0 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.656 9966 9992 Info Unity  #15 0x7bd2219328 (libunity.so) scripting_method_invoke(ScriptingM
+2026/01/04 23:26:15.683 9966 9992 Info Unity [SimpleWebRTCPair][Sender] RemoteDescription set. SignalingState=Stable
+2026/01/04 23:26:15.683 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:26:15.683 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:26:15.683 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:26:15.683 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:26:15.683 9966 9992 Info Unity  #4 0x7bbe0953c8 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.683 9966 9992 Info Unity  #5 0x7bbe098d84 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.683 9966 9992 Info Unity  #6 0x7bbf7191e0 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.683 9966 9992 Info Unity  #7 0x7bbdfa9074 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.683 9966 9992 Info Unity  #8 0x7bbdfa8fc0 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.683 9966 9992 Info Unity  #9 0x7bd2219328 (libunity.so) scripting_method_invoke(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingArguments&, ScriptingExceptionPtr*, bool) 0xb0
+2026/01/04 23:26:15.683 9966 9992 Info Unity  #10 0x7bd222bf6c (libunity.so) ScriptingInvocation::Invoke(ScriptingExceptionPtr*, bool) 0x9c
+2026/01/04 23:26:15.683 9966 9992 Info Unity  #11 0x7bd22337e0 (libunity.so) Corouti
+2026/01/04 23:26:15.684 9966 9992 Info Unity [SimpleWebRTCPair][Sender] Peer connection state: Connected
+2026/01/04 23:26:15.684 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:26:15.684 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:26:15.684 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:26:15.684 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:26:15.684 9966 9992 Info Unity  #4 0x7bbe0953c8 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.684 9966 9992 Info Unity  #5 0x7bbe097aa4 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.684 9966 9992 Info Unity  #6 0x7bbf685b88 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.684 9966 9992 Info Unity  #7 0x7bbf6d202c (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.684 9966 9992 Info Unity  #8 0x7bbf67d6f0 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.684 9966 9992 Info Unity  #9 0x7bbf67d528 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.684 9966 9992 Info Unity  #10 0x7bbf67d818 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.684 9966 9992 Info Unity  #11 0x7bbf71f9e4 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.684 9966 9992 Info Unity  #12 0x7bbf71f92c (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.684 9966 9992 Info Unity  #13 0x7bbdfa9074 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.684 9966 9992 Info Unity  #14 0x7bbdfa8fc0 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.684 9966 9992 Info Unity  #15 0x7bd2219328 (libunity.so) scripting_method_invoke(Scriptin
+2026/01/04 23:26:15.684 9966 9992 Info Unity [SimpleWebRTCPair][Sender] ICE connection state: Connected
+2026/01/04 23:26:15.684 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:26:15.684 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:26:15.684 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:26:15.684 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:26:15.684 9966 9992 Info Unity  #4 0x7bbe0953c8 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.684 9966 9992 Info Unity  #5 0x7bbe097934 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.684 9966 9992 Info Unity  #6 0x7bbf685aa0 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.684 9966 9992 Info Unity  #7 0x7bbf6d202c (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.684 9966 9992 Info Unity  #8 0x7bbf67d6f0 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.684 9966 9992 Info Unity  #9 0x7bbf67d528 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.684 9966 9992 Info Unity  #10 0x7bbf67d818 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.684 9966 9992 Info Unity  #11 0x7bbf71f9e4 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.684 9966 9992 Info Unity  #12 0x7bbf71f92c (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.684 9966 9992 Info Unity  #13 0x7bbdfa9074 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.684 9966 9992 Info Unity  #14 0x7bbdfa8fc0 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.684 9966 9992 Info Unity  #15 0x7bd2219328 (libunity.so) scripting_method_invoke(Scripting
+2026/01/04 23:26:15.685 9966 9992 Info Unity [SimpleWebRTCPair][Sender] ICE connection state: Completed
+2026/01/04 23:26:15.685 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:26:15.685 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:26:15.685 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:26:15.685 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:26:15.685 9966 9992 Info Unity  #4 0x7bbe0953c8 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.685 9966 9992 Info Unity  #5 0x7bbe097934 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.685 9966 9992 Info Unity  #6 0x7bbf685aa0 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.685 9966 9992 Info Unity  #7 0x7bbf6d202c (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.685 9966 9992 Info Unity  #8 0x7bbf67d6f0 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.685 9966 9992 Info Unity  #9 0x7bbf67d528 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.685 9966 9992 Info Unity  #10 0x7bbf67d818 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.685 9966 9992 Info Unity  #11 0x7bbf71f9e4 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.685 9966 9992 Info Unity  #12 0x7bbf71f92c (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.685 9966 9992 Info Unity  #13 0x7bbdfa9074 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.685 9966 9992 Info Unity  #14 0x7bbdfa8fc0 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:15.685 9966 9992 Info Unity  #15 0x7bd2219328 (libunity.so) scripting_method_invoke(Scripting
+2026/01/04 23:26:16.887 9966 9992 Info Unity [SimpleWebRTCPair][Sender] Added remote ICE: {"candidate":"candidate:4115668456 1 udp 2122260223 192.168.0.122 56395 typ host generation 0 ufrag WTB6 network-id 1 network-cost 10","sdpM...
+2026/01/04 23:26:16.887 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:26:16.887 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:26:16.887 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:26:16.887 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:26:16.887 9966 9992 Info Unity  #4 0x7bbe0953c8 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.887 9966 9992 Info Unity  #5 0x7bbe095c8c (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.887 9966 9992 Info Unity  #6 0x7bbf72b568 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.887 9966 9992 Info Unity  #7 0x7bbe431778 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.887 9966 9992 Info Unity  #8 0x7bbf92600c (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.887 9966 9992 Info Unity  #9 0x7bbf92576c (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.887 9966 9992 Info Unity  #10 0x7bbf92550c (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.887 9966 9992 Info Unity  #11 0x7bbdfa9074 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.887 9966 9992 Info Unity  #12 0x7bbdfa8fc0 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.887 9966 9992 Info Unity  #13 0x7bd221
+2026/01/04 23:26:16.888 9966 9992 Info Unity [SimpleWebRTCPair][Sender] Added remote ICE: {"candidate":"candidate:660379751 1 udp 1686052607 72.130.148.230 56395 typ srflx raddr 192.168.0.122 rport 56395 generation 0 ufrag WTB6 ne...
+2026/01/04 23:26:16.888 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:26:16.888 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:26:16.888 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:26:16.888 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:26:16.888 9966 9992 Info Unity  #4 0x7bbe0953c8 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.888 9966 9992 Info Unity  #5 0x7bbe095c8c (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.888 9966 9992 Info Unity  #6 0x7bbf72b568 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.888 9966 9992 Info Unity  #7 0x7bbe431778 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.888 9966 9992 Info Unity  #8 0x7bbf92600c (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.888 9966 9992 Info Unity  #9 0x7bbf92576c (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.888 9966 9992 Info Unity  #10 0x7bbf92550c (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.888 9966 9992 Info Unity  #11 0x7bbdfa9074 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.888 9966 9992 Info Unity  #12 0x7bbdfa8fc0 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.888 9966 9992 Info Unity  #13 0x7bd221
+2026/01/04 23:26:16.889 9966 9992 Info Unity [SimpleWebRTCPair][Sender] Added remote ICE: {"candidate":"candidate:200984956 1 tcp 1518280447 192.168.0.122 64432 typ host tcptype passive generation 0 ufrag WTB6 network-id 1 network...
+2026/01/04 23:26:16.889 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:26:16.889 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:26:16.889 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:26:16.889 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:26:16.889 9966 9992 Info Unity  #4 0x7bbe0953c8 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.889 9966 9992 Info Unity  #5 0x7bbe095c8c (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.889 9966 9992 Info Unity  #6 0x7bbf72b568 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.889 9966 9992 Info Unity  #7 0x7bbe431778 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.889 9966 9992 Info Unity  #8 0x7bbf92600c (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.889 9966 9992 Info Unity  #9 0x7bbf92576c (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.889 9966 9992 Info Unity  #10 0x7bbf92550c (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.889 9966 9992 Info Unity  #11 0x7bbdfa9074 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.889 9966 9992 Info Unity  #12 0x7bbdfa8fc0 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.889 9966 9992 Info Unity  #13 0x7bd221
+2026/01/04 23:26:16.890 9966 9992 Info Unity [SimpleWebRTCPair][Sender] AddRemoteIceCandidates done. Added=3, Failed=0
+2026/01/04 23:26:16.890 9966 9992 Info Unity  #0 0x7bd2356638 (libunity.so) GetStacktrace(int) 0x44
+2026/01/04 23:26:16.890 9966 9992 Info Unity  #1 0x7bd2919248 (libunity.so) DebugStringToFile(DebugStringToFileData const&) 0x234
+2026/01/04 23:26:16.890 9966 9992 Info Unity  #2 0x7bd1ed5bf0 (libunity.so) DebugLogHandler::Internal_Log(LogType, LogOption, core::basic_string<char, core::StringStorageDefault<char> > const&, Object*) 0x9c
+2026/01/04 23:26:16.890 9966 9992 Info Unity  #3 0x7bd1ed5b00 (libunity.so) DebugLogHandler_CUSTOM_Internal_Log(LogType, LogOption, ScriptingBackendNativeStringPtrOpaque*, ScriptingBackendNativeObjectPtrOpaque*) 0x128
+2026/01/04 23:26:16.890 9966 9992 Info Unity  #4 0x7bbe0953c8 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.890 9966 9992 Info Unity  #5 0x7bbe095da8 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.890 9966 9992 Info Unity  #6 0x7bbf72b568 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.890 9966 9992 Info Unity  #7 0x7bbe431778 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.890 9966 9992 Info Unity  #8 0x7bbf92600c (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.890 9966 9992 Info Unity  #9 0x7bbf92576c (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.890 9966 9992 Info Unity  #10 0x7bbf92550c (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.890 9966 9992 Info Unity  #11 0x7bbdfa9074 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.890 9966 9992 Info Unity  #12 0x7bbdfa8fc0 (libil2cpp.so) ? 0x0
+2026/01/04 23:26:16.890 9966 9992 Info Unity  #13 0x7bd2219328 (libunity.so) scripting_method_invoke(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingArguments&, ScriptingEx
